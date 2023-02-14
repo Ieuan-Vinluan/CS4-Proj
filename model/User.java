@@ -1,10 +1,14 @@
-package model;
+package application.model;
+
+import java.util.ArrayList;
+
 public class User {
 	
 	private String username;
 	private String gradeLevel;
 	private String password;
 	private boolean hasAccess;
+	private static ArrayList<User> users = new ArrayList<>();
 	
 	public String getUsername() {
 		return username;
@@ -22,16 +26,41 @@ public class User {
 		this.gradeLevel = gradeLevel;
 	}
 	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public boolean isHasAccess() {
+		return hasAccess;
+	}
+
+	public void setHasAccess(boolean hasAccess) {
+		this.hasAccess = hasAccess;
+	}
+	
+	public static ArrayList<User> getUsers() {
+		return users;
+	}
+	
+	public static void setUsers(ArrayList<User> users) {
+		User.users = users;
+	}
+	
 	public User(String username, String gradeLevel, String password) {
 		this.username = username;
 		this.gradeLevel = gradeLevel;
 		this.password = password;
-		this.hasAccess = false;
+		this.setHasAccess(false);
+		User.users.add(this);
 	}
 	
 	public void login(String password) { // throws WrongPasswordException
 		if (password.equals(this.password)) {
-			this.hasAccess = true;
+			this.setHasAccess(true);
 		} else {
 			// throw WrongPasswordException
 		}
