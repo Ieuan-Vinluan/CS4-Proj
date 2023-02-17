@@ -55,7 +55,7 @@ public class User {
 		this.gradeLevel = gradeLevel;
 		this.password = password;
 		this.setHasAccess(false);
-		this.users.add(this);
+		User.users.add(this);
 	}
 	
 	public void login(String password) { // throws WrongPasswordException
