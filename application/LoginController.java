@@ -78,10 +78,12 @@ public class LoginController {
 
 		// if user successfully logged in, they can access the rest of the app
 		if (currentUser.isHasAccess()) {
+			// getting current window
 			Node node = (Node) event.getSource();
 			Scene currentScene = node.getScene();
 			Stage currentStage = (Stage) currentScene.getWindow();
 
+			// loading new window
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/subject.fxml"));
 			Parent root = loader.load();
 			Scene newScene = new Scene(root);
@@ -90,9 +92,8 @@ public class LoginController {
 			currentStage.setScene(newScene);
 			currentStage.show();
 
-
 			SubjectController sc = loader.getController();
-			System.out.println("User " + currentUser.getUsername() + " has logged in.");
+			System.out.println("User " + currentUser.getUsername() + " has logged in."); // debug purposes
 			sc.initialize();
 
 		}
