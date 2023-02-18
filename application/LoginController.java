@@ -92,6 +92,7 @@ public class LoginController {
 
 
 			SubjectController sc = loader.getController();
+			System.out.println("User " + currentUser.getUsername() + " has logged in.");
 			sc.initialize();
 
 		}
