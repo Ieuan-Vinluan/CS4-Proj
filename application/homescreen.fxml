@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLScreenController">
+<VBox minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLScreenController">
    <children>
       <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
          <children>
@@ -23,9 +23,9 @@
                   <Image url="@images/computer science.png" />
                </image>
             </ImageView>
-            <Label layoutX="56.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="297.0" text="TEARS - Your No. 1 Study Help" textAlignment="CENTER" textFill="#ffb703" AnchorPane.leftAnchor="60.0">
+            <Label layoutX="56.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="435.0" text="TEARS - Your No. 1 Study Help" textAlignment="CENTER" textFill="#ffb703" AnchorPane.leftAnchor="60.0">
                <font>
-                  <Font name="Times New Roman Bold" size="20.0" />
+                  <Font name="Times New Roman Bold" size="31.0" />
                </font>
             </Label>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1012.0" layoutY="9.0" prefHeight="42.0" prefWidth="64.0" text="Profile" textFill="#ffb307" AnchorPane.rightAnchor="4.0">
@@ -42,29 +42,29 @@
       </AnchorPane>
       <SplitPane>
          <items>
-            <MenuBar maxHeight="-Infinity" minHeight="12.0" prefHeight="26.0" prefWidth="1080.0" style="-fx-background-color: #20465f;">
+            <MenuBar maxHeight="-Infinity" minHeight="12.0" prefHeight="26.0" prefWidth="1080.0" style="-fx-background-color: #20465f; -fx-pref-height: 40px;">
               <menus>
-                <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703;" text="Home">
+                <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703; -fx-font-size: 20px; -fx-text-align: center;" text="Home">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Close" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703;" text="Modules">
+                <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703; -fx-font-size: 20px;" text="Modules">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Delete" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703;" text="Subjects">
+                <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703; -fx-font-size: 20px;" text="Subjects">
                   <items>
                     <MenuItem mnemonicParsing="false" text="About" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703;" text="Quizzes">
+                  <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703; -fx-font-size: 20px;" text="Quizzes">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Delete" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703;" text="Playlist">
+                  <Menu mnemonicParsing="false" style="-fx-background-color: #ffb703; -fx-font-size: 20px;" text="Playlist">
                      <items>
                         <MenuItem mnemonicParsing="false" text="About" />
                      </items>
@@ -85,14 +85,14 @@
                <children>
                   <Label text="Latest Quizzes" textFill="#ffb703">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Math 4 - Trigonometry" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -103,7 +103,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -111,7 +111,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Chemistry 2 - Acids &amp; Bases" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -119,7 +119,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -127,7 +127,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="English 4 - Sonnets &amp; Poems" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -135,7 +135,7 @@
                         </Label>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="326.0" text="Show more..." textAlignment="CENTER" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font name="Poppins Bold" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -152,14 +152,14 @@
                <children>
                   <Label text="Recently Accessed Modules" textFill="#ffb703">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -170,7 +170,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -178,7 +178,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Math 4- Volumes &amp; Surface Areas" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -186,7 +186,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Social Science 4 - Bill of Rights" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -194,7 +194,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="English 4 - College Application Essays" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -202,7 +202,7 @@
                         </Label>
                         <Label alignment="CENTER" prefHeight="40.0" prefWidth="326.0" text="Show more..." textAlignment="CENTER" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font name="Poppins Bold" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -219,14 +219,14 @@
                <children>
                   <Label text="Recent Notes" textFill="#ffb703">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label prefHeight="40.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -237,7 +237,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -245,7 +245,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -262,14 +262,14 @@
                <children>
                   <Label text="Upcoming Deadlines" textFill="#ffb703">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Math LT - Feb 21" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -280,7 +280,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Physics Quiz - Feb 20" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="9.0" top="12.0" />
@@ -288,7 +288,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="9.0" top="12.0" />
@@ -305,14 +305,14 @@
                <children>
                   <Label text="Recently Accessed Subjects" textFill="#ffb703">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Physics 2" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -323,7 +323,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Filipino 4" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -331,7 +331,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Math 4" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -339,7 +339,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Social Science 4" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -347,7 +347,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="English 4" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -355,7 +355,7 @@
                         </Label>
                         <Label alignment="CENTER" prefHeight="40.0" prefWidth="326.0" text="Show more..." textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font name="Poppins Bold" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -372,14 +372,14 @@
                <children>
                   <Label text="Playlist Preview" textFill="#ffb703">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -390,7 +390,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -398,7 +398,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -406,7 +406,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -414,7 +414,7 @@
                         </Label>
                         <Label prefHeight="40.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
@@ -422,7 +422,7 @@
                         </Label>
                         <Label alignment="CENTER" prefHeight="40.0" prefWidth="326.0" text="Show more..." textFill="#023047">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font name="Poppins Bold" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
