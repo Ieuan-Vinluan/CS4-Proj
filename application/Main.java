@@ -18,7 +18,7 @@ public class Main extends Application {
 			User u2 = new User("Yuna", "9", "choo");
 			User u3 = new User("Yoowee", "10", "yuu");
 			
-			Parent root = FXMLLoader.load(getClass().getResource("/application/homescreen.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();

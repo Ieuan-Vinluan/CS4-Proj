@@ -84,7 +84,7 @@ public class LoginController {
 			Stage currentStage = (Stage) currentScene.getWindow();
 
 			// loading new window
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/subject.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/homescreen.fxml"));
 			Parent root = loader.load();
 			Scene newScene = new Scene(root);
 
@@ -92,9 +92,9 @@ public class LoginController {
 			currentStage.setScene(newScene);
 			currentStage.show();
 
-			SubjectController sc = loader.getController();
+			HomeScreenController hsc = loader.getController();
 			System.out.println("User " + currentUser.getUsername() + " has logged in."); // debug purposes
-			sc.initialize();
+			hsc.initialize();
 
 		}
     }
