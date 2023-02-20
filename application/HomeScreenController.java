@@ -43,6 +43,7 @@ public class HomeScreenController {
 
         SubjectController sc = loader.getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
+        sc.initialize();
     }
 
     @FXML
