@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import application.model.Subject;
@@ -25,7 +26,32 @@ public class SubjectController {
     @FXML
     private Button subject;
 
-    private Subject currentSubject;
+    private ArrayList<Subject> prevAccessedSubjs = new ArrayList<>();
+
+    public ArrayList<Subject> getPrevAccessedSubjs() {
+        return prevAccessedSubjs;
+    }
+
+    public void setPrevAccessedSubjs(ArrayList<Subject> prevAccessedSubjs) {
+        this.prevAccessedSubjs = prevAccessedSubjs;
+    }
+
+    public void setLatestPrevSubj(Subject subject) {
+        if (prevAccessedSubjs.size() < 6) {
+            
+            // if not enough subjects have been accessed, add to the ArrayList
+            prevAccessedSubjs.add(subject);
+        } else {
+
+            // shift everything to the left by one index
+            for (int i = 0; i < prevAccessedSubjs.size() - 1; i += 1) {
+                prevAccessedSubjs.set(i, prevAccessedSubjs.get(i + 1));
+            }
+
+            // add new subject
+            prevAccessedSubjs.set(prevAccessedSubjs.size(), subject);
+        }
+    }
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
