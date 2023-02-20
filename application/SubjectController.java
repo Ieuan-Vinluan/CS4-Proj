@@ -3,6 +3,8 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +24,8 @@ public class SubjectController {
 
     @FXML
     private Button subject;
+
+    private Subject currentSubject;
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
