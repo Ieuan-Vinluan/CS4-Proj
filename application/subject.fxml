@@ -103,7 +103,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="318.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="334.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
                               <Cursor fx:constant="OPEN_HAND" />
                            </cursor></ImageView>
@@ -116,7 +116,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub2image" fitHeight="180.0" fitWidth="318.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
                               <Cursor fx:constant="OPEN_HAND" />
                            </cursor></ImageView>
@@ -129,7 +129,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub3image" fitHeight="180.0" fitWidth="318.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
                               <Cursor fx:constant="OPEN_HAND" />
                            </cursor></ImageView>
@@ -142,7 +142,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub4image" fitHeight="180.0" fitWidth="318.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
                               <Cursor fx:constant="OPEN_HAND" />
                            </cursor></ImageView>
@@ -155,7 +155,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub5image" fitHeight="180.0" fitWidth="318.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
                               <Cursor fx:constant="OPEN_HAND" />
                            </cursor></ImageView>
@@ -168,7 +168,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub6image" fitHeight="180.0" fitWidth="318.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
                               <Cursor fx:constant="OPEN_HAND" />
                            </cursor></ImageView>
