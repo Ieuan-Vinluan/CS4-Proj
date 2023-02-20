@@ -38,7 +38,7 @@ public class SubjectController {
 
     public void setLatestPrevSubj(Subject subject) {
         if (prevAccessedSubjs.size() < 6) {
-            
+
             // if not enough subjects have been accessed, add to the ArrayList
             prevAccessedSubjs.add(subject);
         } else {
@@ -49,7 +49,7 @@ public class SubjectController {
             }
 
             // add new subject
-            prevAccessedSubjs.set(prevAccessedSubjs.size(), subject);
+            prevAccessedSubjs.set(prevAccessedSubjs.size() - 1, subject);
         }
     }
 
