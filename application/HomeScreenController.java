@@ -109,7 +109,9 @@ public class HomeScreenController {
                 }
             }
         } else {
-
+            for (int i = 0; i < 5; i += 1) {
+                lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
+            }
         }
     }
 
