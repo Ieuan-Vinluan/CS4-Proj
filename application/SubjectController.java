@@ -96,6 +96,9 @@ public class SubjectController {
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
+
+        // I suggest putting the changing window thing into its own function to make the code more readable
+
         // getting current window
         Node node = (Node) event.getSource();
         Scene currentScene = node.getScene();

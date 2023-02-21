@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -176,6 +177,16 @@
                   </AnchorPane>
                </children>
             </GridPane>
+            <TextArea fx:id="search" layoutX="32.0" layoutY="24.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="342.0">
+               <font>
+                  <Font name="Montserrat Regular" size="19.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="searchBtn" layoutX="373.0" layoutY="24.0" prefHeight="36.0" prefWidth="142.0" style="-fx-alignment: center; -fx-background-color: white; -fx-border-color: black;" text="Search">
+               <font>
+                  <Font name="Montserrat Regular" size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
