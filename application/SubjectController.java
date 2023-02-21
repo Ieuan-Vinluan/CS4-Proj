@@ -7,7 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -55,6 +57,11 @@ public class SubjectController {
     @FXML
     private ImageView sub6image;
 
+    @FXML
+    private TextArea search;
+
+    @FXML
+    private Button searchBtn;
 
     private ArrayList<Subject> prevAccessedSubjs = new ArrayList<>();
 
@@ -120,6 +127,21 @@ public class SubjectController {
     @FXML
     void goToCourse(MouseEvent event) {
         System.out.println("Clicked from " + event.getPickResult().getIntersectedNode().getId()); // debug purposes
+    }
+
+    @FXML
+    void searchSubj(ActionEvent event) {
+        String searchedSubj = search.getText();
+        for (Subject s : Subject.getSubjects()) {
+            if (s.getSubjectName().equalsIgnoreCase(searchedSubj)) {
+                sub1.setText(s.getSubjectName());
+                try {
+                    sub1image.setImage(new Image("images" + s.getImageFilename())); // doesn't work fsr LMAO
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     @FXML

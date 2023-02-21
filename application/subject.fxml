@@ -182,11 +182,11 @@
                   <Font name="Montserrat Regular" size="19.0" />
                </font>
             </TextArea>
-            <Label fx:id="searchBtn" layoutX="373.0" layoutY="24.0" prefHeight="36.0" prefWidth="142.0" style="-fx-alignment: center; -fx-background-color: white; -fx-border-color: black;" text="Search">
+            <Button fx:id="searchBtn" layoutX="405.0" layoutY="24.0" mnemonicParsing="false" onAction="#searchSubj" prefHeight="36.0" prefWidth="117.0" style="-fx-background-color: #ffb703; -fx-background-radius: 50px; -fx-border-color: transparent;" text="Search">
                <font>
-                  <Font name="Montserrat Regular" size="20.0" />
+                  <Font name="Poppins Medium" size="12.0" />
                </font>
-            </Label>
+            </Button>
          </children>
       </AnchorPane>
    </children>
