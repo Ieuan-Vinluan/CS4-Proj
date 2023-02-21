@@ -136,7 +136,7 @@ public class SubjectController {
             if (s.getSubjectName().equalsIgnoreCase(searchedSubj)) {
                 sub1.setText(s.getSubjectName());
                 try {
-                    sub1image.setImage(new Image("images" + s.getImageFilename())); // doesn't work fsr LMAO
+                    sub1image.setImage(new Image("application/images/" + s.getImageFilename())); // doesn't work fsr LMAO
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
