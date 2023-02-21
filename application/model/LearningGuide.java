@@ -6,6 +6,8 @@ public class LearningGuide {
 	private String title;
 	private Subject subject;
 	private String content;
+
+	private static ArrayList<LearningGuide> learningGuides = new ArrayList<>();
 		
 	public String getTitle() {
 		return title;
@@ -35,6 +37,15 @@ public class LearningGuide {
 		this.title = title;
 		this.subject = subject;
 		this.content = content;
+		learningGuides.add(this);
+	}
+
+	public static ArrayList<LearningGuide> getLearningGuides() {
+		return learningGuides;
+	}
+
+	public static void setLearningGuides(ArrayList<LearningGuide> learningGuides) {
+		LearningGuide.learningGuides = learningGuides;
 	}
 
 	public void showContents() {

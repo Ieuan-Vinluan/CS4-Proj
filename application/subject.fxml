@@ -52,10 +52,13 @@
          <items>
             <HBox style="-fx-background-color: #20465F; -fx-padding: 0.5em;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Home" textFill="#ffb703">
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#goToHome" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Home" textFill="#ffb703">
                      <font>
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
                   </Button>
                   <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
                      <font>

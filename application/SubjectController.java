@@ -22,6 +22,10 @@ import java.util.ArrayList;
 public class SubjectController {
 
     @FXML
+    private Button home;
+    @FXML
+    private Button subject;
+    @FXML
     private Label sub1;
 
     @FXML
@@ -65,13 +69,13 @@ public class SubjectController {
 
     private ArrayList<Subject> prevAccessedSubjs = new ArrayList<>();
 
-    // test subjects
-    private Subject cs = new Subject("CS", "computer science.png");
-    private Subject math = new Subject("Math", "computer science.png");
-    private Subject eng = new Subject("Eng", "computer science.png");
-    private Subject res = new Subject("Research", "computer science.png");
-    private Subject fil = new Subject("Filipino", "computer science.png");
-    private Subject ss = new Subject("SS", "computer science.png");
+//    // test subjects
+//    private Subject cs = new Subject("CS", "computer science.png");
+//    private Subject math = new Subject("Math", "computer science.png");
+//    private Subject eng = new Subject("Eng", "computer science.png");
+//    private Subject res = new Subject("Research", "computer science.png");
+//    private Subject fil = new Subject("Filipino", "computer science.png");
+//    private Subject ss = new Subject("SS", "computer science.png");
 
     private ArrayList<Label> labels = new ArrayList<>();
     private ArrayList<ImageView> ivs = new ArrayList<>();
@@ -103,25 +107,9 @@ public class SubjectController {
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
-
-        // I suggest putting the changing window thing into its own function to make the code more readable
-
-        // getting current window
-        Node node = (Node) event.getSource();
-        Scene currentScene = node.getScene();
-        Stage currentStage = (Stage) currentScene.getWindow();
-
-        // loading new window
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/subject.fxml"));
-        Parent root = loader.load();
-        Scene newScene = new Scene(root);
-
-        currentStage.hide();
-        currentStage.setScene(newScene);
-        currentStage.show();
-
-        SubjectController sc = loader.getController();
+        SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
+        sc.initialize();
     }
 
     @FXML
@@ -145,6 +133,13 @@ public class SubjectController {
     }
 
     @FXML
+    void goToHome(ActionEvent actionEvent) throws IOException {
+        HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
+        System.out.println("Went back to home!");
+        hsc.initialize();
+    }
+
+    @FXML
     void initialize() {
         labels.add(sub1);
         labels.add(sub2);
@@ -165,5 +160,22 @@ public class SubjectController {
                 ivs.get(i).setImage(new Image("application/images/" + Subject.getSubjects().get(i).getImageFilename()));
             }
         }
+    }
+
+    private FXMLLoader switchScene(Node node, String path) throws IOException {
+        // getting current window
+        Scene currentScene = node.getScene();
+        Stage currentStage = (Stage) currentScene.getWindow();
+
+        // loading new window
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+        Parent root = loader.load();
+        Scene newScene = new Scene(root);
+
+        currentStage.hide();
+        currentStage.setScene(newScene);
+        currentStage.show();
+
+        return loader;
     }
 }

@@ -50,10 +50,13 @@
          <items>
             <HBox style="-fx-background-color: #20465F; -fx-padding: 0.5em;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Home" textFill="#ffb703">
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#goToHome" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Home" textFill="#ffb703">
                      <font>
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
                   </Button>
                   <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
                      <font>
@@ -160,7 +163,7 @@
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
+                        <Label fx:id="lg1" onMouseClicked="#openLG1" prefHeight="40.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -171,7 +174,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
+                        <Label fx:id="lg2" onMouseClicked="#openLG2" prefHeight="40.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -179,7 +182,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Math 4- Volumes &amp; Surface Areas" textFill="#023047">
+                        <Label fx:id="lg3" onMouseClicked="#openLG3" prefHeight="40.0" prefWidth="326.0" text="Math 4- Volumes &amp; Surface Areas" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -187,7 +190,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Social Science 4 - Bill of Rights" textFill="#023047">
+                        <Label fx:id="lg4" onMouseClicked="#openLG4" prefHeight="40.0" prefWidth="326.0" text="Social Science 4 - Bill of Rights" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -195,7 +198,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="English 4 - College Application Essays" textFill="#023047">
+                        <Label fx:id="lg5" onMouseClicked="#openLG5" prefHeight="40.0" prefWidth="326.0" text="English 4 - College Application Essays" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
