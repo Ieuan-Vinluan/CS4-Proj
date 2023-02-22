@@ -69,14 +69,6 @@ public class SubjectController {
 
     private ArrayList<Subject> prevAccessedSubjs = new ArrayList<>();
 
-//    // test subjects
-//    private Subject cs = new Subject("CS", "computer science.png");
-//    private Subject math = new Subject("Math", "computer science.png");
-//    private Subject eng = new Subject("Eng", "computer science.png");
-//    private Subject res = new Subject("Research", "computer science.png");
-//    private Subject fil = new Subject("Filipino", "computer science.png");
-//    private Subject ss = new Subject("SS", "computer science.png");
-
     private ArrayList<Label> labels = new ArrayList<>();
     private ArrayList<ImageView> ivs = new ArrayList<>();
 
