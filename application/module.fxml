@@ -95,7 +95,7 @@
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lgContent" alignment="TOP_LEFT" layoutX="22.0" layoutY="168.0" prefHeight="423.0" prefWidth="1035.0" style="-fx-alignment: top-left; -fx-line-spacing: 2px;" text="Content" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+            <Label fx:id="lgContent" alignment="TOP_LEFT" layoutX="22.0" layoutY="168.0" prefHeight="423.0" prefWidth="1035.0" style="-fx-alignment: top-left; -fx-line-spacing: 4px;" text="Content" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="21.0" />
                </font>
