@@ -5,6 +5,7 @@ import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -137,11 +138,13 @@ public class HomeScreenController {
                     lgs.get(i).setOpacity(0); // hide
                 } else {
                     lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
+                    lgs.get(i).setCursor(Cursor.OPEN_HAND);
                 }
             }
         } else {
             for (int i = 0; i < 5; i += 1) {
                 lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
+                lgs.get(i).setCursor(Cursor.OPEN_HAND);
             }
         }
     }
