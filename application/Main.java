@@ -16,10 +16,11 @@ public class Main extends Application {
 		try {
 			
 			// test users
-			User u1 = new User("Yuen", "10", "cats");
-			User u2 = new User("Yuna", "9", "choo");
-			User u3 = new User("Yoowee", "10", "yuu");
+			User u1 = new User("Yuen", "10", "pw1");
+			User u2 = new User("Yuna", "9", "pw2");
+			User u3 = new User("Yoowee", "10", "pw3");
 
+			// test subjects
 			Subject cs = new Subject("CS", "computer science.png");
 			Subject math = new Subject("Math", "computer science.png");
 			Subject eng = new Subject("Eng", "computer science.png");

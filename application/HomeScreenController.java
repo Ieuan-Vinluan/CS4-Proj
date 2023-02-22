@@ -138,13 +138,13 @@ public class HomeScreenController {
                     lgs.get(i).setOpacity(0); // hide
                 } else {
                     lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
-                    lgs.get(i).setCursor(Cursor.OPEN_HAND);
+                    lgs.get(i).setCursor(Cursor.HAND);
                 }
             }
         } else {
             for (int i = 0; i < 5; i += 1) {
                 lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
-                lgs.get(i).setCursor(Cursor.OPEN_HAND);
+                lgs.get(i).setCursor(Cursor.HAND);
             }
         }
     }
