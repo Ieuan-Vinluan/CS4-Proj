@@ -70,22 +70,6 @@ public class HomeScreenController {
     private ArrayList<Label> lgs = new ArrayList<>();
     private ArrayList<Label> noteLabels = new ArrayList<>();
 
-    // test lgs
-    private LearningGuide firstLG;
-    private LearningGuide secondLG;
-    private LearningGuide thirdLG;
-    private LearningGuide fourthLG;
-    private LearningGuide fifthLG;
-    private LearningGuide sixthLG;
-
-    // test notes
-    private LearningGuide firstNote;
-    private LearningGuide secondNote;
-    private LearningGuide thirdNote;
-    private LearningGuide fourthNote;
-    private LearningGuide fifthNote;
-    private LearningGuide sixthNote;
-
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
@@ -147,31 +131,6 @@ public class HomeScreenController {
     @FXML
     void initialize() {
         int counter = 0;
-        for (LearningGuide lg : LearningGuide.getLearningGuides()) {
-            switch(counter) {
-                case 0:
-                    firstLG = LearningGuide.getLearningGuides().get(0);
-                    break;
-                case 1:
-                    secondLG = LearningGuide.getLearningGuides().get(1);
-                    break;
-                case 2:
-                    thirdLG = LearningGuide.getLearningGuides().get(2);
-                    break;
-                case 3:
-                    fourthLG = LearningGuide.getLearningGuides().get(3);
-                    break;
-                case 4:
-                    fifthLG = LearningGuide.getLearningGuides().get(4);
-                    break;
-                case 5:
-                    sixthLG = LearningGuide.getLearningGuides().get(5);
-                    break;
-                default:
-                    System.out.println("Error!");
-            }
-            counter += 1;
-        }
         lgs.add(lg1);
         lgs.add(lg2);
         lgs.add(lg3);
