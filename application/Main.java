@@ -1,8 +1,6 @@
 package application;
 	
-import application.model.LearningGuide;
-import application.model.Subject;
-import application.model.User;
+import application.model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -23,10 +21,10 @@ public class Main extends Application {
 			// test subjects
 			Subject cs = new Subject("CS", "computer science.png");
 			Subject math = new Subject("Math", "computer science.png");
-			Subject eng = new Subject("Eng", "computer science.png");
+			Subject chem = new Subject("Chemistry", "computer science.png");
 			Subject dm = new Subject("Discrete Math", "computer science.png");
 			Subject fil = new Subject("Filipino", "computer science.png");
-			Subject ss = new Subject("SS", "computer science.png");
+			Subject ss = new Subject("SocSci", "computer science.png");
 
 			// test lgs
 			LearningGuide firstLG = new LearningGuide(
@@ -57,6 +55,24 @@ public class Main extends Application {
 					"CS 4 - JavaFX",
 					Subject.getSubjects().get(0),
 					"JavaFX is a library that can be utilized to create different GUIs. It utilizes the Model-View-Controller design pattern to create the application. In this case, the \"view\" is the .fxml file that can be created with SceneBuilder, the \"controller\" is the controller class that is created and linked to the fxml file and the model classes, and the \"model\" is whatever classes the user has already created."
+			);
+
+			// test note organizer and notes
+			NoteOrganizer no = new NoteOrganizer("Notes");
+			Note firstNote = new Note(
+					"Important Trig Identity",
+					"tanx = sinx/cosx",
+					math
+			);
+			Note secondNote = new Note(
+					"Electric Field Equation",
+					"E = kq/r^2",
+					math
+			);
+			Note thirdNote = new Note(
+					"Acids and Bases",
+					"Acids give H+, bases accept H+",
+					chem
 			);
 
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));

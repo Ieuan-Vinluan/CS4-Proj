@@ -1,14 +1,18 @@
 package application.model;
 
+import java.util.ArrayList;
+
 public class Note {
 	private String content;
 	private Subject subject;
 	private String title;
+	private static ArrayList<Note> notes = new ArrayList<>();
 	
 	public Note(String title, String content, Subject subject) {
 		this.title = title;
 		this.content = content;
 		this.subject = subject;
+		notes.add(this);
 	}
 	
 	public String getTitle() {
@@ -34,7 +38,15 @@ public class Note {
 	public void setSubject(Subject subject) {
 		this.subject = subject;
 	}
-	
+
+	public static ArrayList<Note> getNotes() {
+		return notes;
+	}
+
+	public static void setNotes(ArrayList<Note> notes) {
+		Note.notes = notes;
+	}
+
 	public void write(String text) {
 		this.content = text;
 	}

@@ -1,6 +1,7 @@
 package application;
 
 import application.model.LearningGuide;
+import application.model.Note;
 import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -40,6 +41,24 @@ public class HomeScreenController {
     private Button home;
 
     @FXML
+    private Label note1;
+
+    @FXML
+    private Label note2;
+
+    @FXML
+    private Label note3;
+
+    @FXML
+    private Label note4;
+
+    @FXML
+    private Label note5;
+
+    @FXML
+    private Label note6;
+
+    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -49,6 +68,7 @@ public class HomeScreenController {
     private Button subject;
 
     private ArrayList<Label> lgs = new ArrayList<>();
+    private ArrayList<Label> noteLabels = new ArrayList<>();
 
     // test lgs
     private LearningGuide firstLG;
@@ -57,6 +77,14 @@ public class HomeScreenController {
     private LearningGuide fourthLG;
     private LearningGuide fifthLG;
     private LearningGuide sixthLG;
+
+    // test notes
+    private LearningGuide firstNote;
+    private LearningGuide secondNote;
+    private LearningGuide thirdNote;
+    private LearningGuide fourthNote;
+    private LearningGuide fifthNote;
+    private LearningGuide sixthNote;
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
@@ -98,6 +126,25 @@ public class HomeScreenController {
     }
 
     @FXML
+    void openNote(MouseEvent event) throws IOException {
+        Label label = (Label) event.getSource();
+        String id = label.getId();
+        if (id.contains("1")) {
+            openSelectedNote(label, 0);
+        } else if (id.contains("2")) {
+            openSelectedNote(label, 1);
+        } else if (id.contains("3")) {
+            openSelectedNote(label, 2);
+        } else if (id.contains("4")) {
+            openSelectedNote(label, 3);
+        } else if (id.contains("5")) {
+            openSelectedNote(label, 4);
+        } else if (id.contains("6")) {
+            openSelectedNote(label, 5);
+        }
+    }
+
+    @FXML
     void initialize() {
         int counter = 0;
         for (LearningGuide lg : LearningGuide.getLearningGuides()) {
@@ -130,11 +177,17 @@ public class HomeScreenController {
         lgs.add(lg3);
         lgs.add(lg4);
         lgs.add(lg5);
+        noteLabels.add(note1);
+        noteLabels.add(note2);
+        noteLabels.add(note3);
+        noteLabels.add(note4);
+        noteLabels.add(note5);
+        noteLabels.add(note6);
 
         if (LearningGuide.getLearningGuides().size() < 5) {
-            int size = LearningGuide.getLearningGuides().size();
+            int lgSize = LearningGuide.getLearningGuides().size();
             for (int i = 0; i < 5; i += 1) {
-                if (i >= size) {
+                if (i >= lgSize) {
                     lgs.get(i).setOpacity(0); // hide
                 } else {
                     lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
@@ -145,6 +198,23 @@ public class HomeScreenController {
             for (int i = 0; i < 5; i += 1) {
                 lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
                 lgs.get(i).setCursor(Cursor.HAND);
+            }
+        }
+
+        if (Note.getNotes().size() < 6) {
+            int noteSize = Note.getNotes().size();
+            for (int i = 0; i < 6; i += 1) {
+                if (i >= noteSize) {
+                    // hide
+                    noteLabels.get(i).setOpacity(0);
+                    noteLabels.get(i).setCursor(Cursor.DEFAULT);
+                } else {
+                    noteLabels.get(i).setText(Note.getNotes().get(i).getTitle());
+                }
+            }
+        } else {
+            for (int i = 0; i < 6; i += 1) {
+                noteLabels.get(i).setText(Note.getNotes().get(i).getTitle());
             }
         }
     }
@@ -172,6 +242,15 @@ public class HomeScreenController {
             mc.setPathText("Home > " + LearningGuide.getLearningGuides().get(index).getSubject().getSubjectName() + " > " + LearningGuide.getLearningGuides().get(index).getTitle());
             mc.setLGTitleText(LearningGuide.getLearningGuides().get(index).getTitle());
             mc.setLgContentText(LearningGuide.getLearningGuides().get(index).getContent());
+        }
+    }
+
+    private void openSelectedNote(Node event, int index) throws IOException {
+        NoteController nc = switchScene(event, "/application/note.fxml").getController();
+        if (Note.getNotes().size() >= index + 1) {
+            nc.setSelectedNote(Note.getNotes().get(index));
+            nc.setNoteTitleText(nc.getSelectedNote().getTitle());
+            nc.setNoteContentText(nc.getSelectedNote().getContent());
         }
     }
 

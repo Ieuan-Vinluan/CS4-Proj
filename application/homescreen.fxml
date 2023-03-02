@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeScreenController">
+<VBox minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeScreenController">
    <children>
       <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
          <children>
@@ -230,7 +230,7 @@
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
+                        <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -240,22 +240,64 @@
                            <padding>
                               <Insets left="6.0" top="8.0" />
                            </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
+                        <Label fx:id="note2" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
                            </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
+                        <Label fx:id="note3" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
                            <padding>
                               <Insets left="6.0" top="8.0" />
                            </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="note4" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
+                           <font>
+                              <Font name="Poppins Regular" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="6.0" top="8.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="note5" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
+                           <font>
+                              <Font name="Poppins Regular" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="6.0" top="8.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="note6" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
+                           <font>
+                              <Font name="Poppins Regular" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="6.0" top="8.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Label>
                      </children>
                   </VBox>
