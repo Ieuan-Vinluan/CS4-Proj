@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class Subject {
 	private String subjectName;
-	private ArrayList<LearningGuide> learningGuides;
-	private ArrayList<Question> questions;
+	private ArrayList<LearningGuide> learningGuides = new ArrayList<>();
+	private ArrayList<Quiz> quizzes = new ArrayList<>();
+	private ArrayList<Note> notes = new ArrayList<>();
 	private String imageFilename;
 	private static ArrayList<Subject> subjects = new ArrayList<>();
 
@@ -38,7 +39,23 @@ public class Subject {
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
-	
+
+	public ArrayList<Quiz> getQuizzes() {
+		return quizzes;
+	}
+
+	public void setQuizzes(ArrayList<Quiz> quizzes) {
+		this.quizzes = quizzes;
+	}
+
+	public ArrayList<Note> getNotes() {
+		return notes;
+	}
+
+	public void setNotes(ArrayList<Note> notes) {
+		this.notes = notes;
+	}
+
 	public ArrayList<LearningGuide> getLearningGuides() {
 		return learningGuides;
 	}

@@ -130,7 +130,6 @@ public class HomeScreenController {
 
     @FXML
     void initialize() {
-        int counter = 0;
         lgs.add(lg1);
         lgs.add(lg2);
         lgs.add(lg3);

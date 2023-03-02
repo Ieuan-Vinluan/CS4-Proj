@@ -13,6 +13,9 @@ public class Note {
 		this.content = content;
 		this.subject = subject;
 		notes.add(this);
+		for (Subject s : Subject.getSubjects()) {
+			if (s.equals(this.subject)) s.getNotes().add(this);
+		}
 	}
 	
 	public String getTitle() {

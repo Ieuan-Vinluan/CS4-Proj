@@ -57,8 +57,7 @@ public class Main extends Application {
 					"JavaFX is a library that can be utilized to create different GUIs. It utilizes the Model-View-Controller design pattern to create the application. In this case, the \"view\" is the .fxml file that can be created with SceneBuilder, the \"controller\" is the controller class that is created and linked to the fxml file and the model classes, and the \"model\" is whatever classes the user has already created."
 			);
 
-			// test note organizer and notes
-			NoteOrganizer no = new NoteOrganizer("Notes");
+			// test notes
 			Note firstNote = new Note(
 					"Important Trig Identity",
 					"tanx = sinx/cosx",
@@ -73,6 +72,16 @@ public class Main extends Application {
 					"Acids and Bases",
 					"Acids give H+, bases accept H+",
 					chem
+			);
+			Note fourthNote = new Note(
+					"Radian and Degree Conversion",
+					"1 degree = (180 / pi) rad",
+					math
+			);
+			Note fifthNote = new Note(
+				"Kyle Dulay Triangle Problem",
+				"HC = 52/3, MC = 26/3, PC = 169/18, BP = 209/18, BQ (from Law of Cosines) = 1045/117, AQ = 476/117. After some trig, AX = 119/54?",
+				math
 			);
 
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));

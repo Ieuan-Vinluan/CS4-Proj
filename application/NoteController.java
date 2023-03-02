@@ -45,8 +45,7 @@ public class NoteController {
 
     @FXML
     void initialize() {
-//        this.setNoteContentText(selectedNote.getContent());
-//        this.setNoteTitleText(selectedNote.getTitle());
+
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {

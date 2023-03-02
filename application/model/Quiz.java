@@ -19,6 +19,11 @@ public class Quiz {
 				questions.add(q);
 			}
 		}
+		for (Subject s : Subject.getSubjects()) {
+			if (s.equals(this.subject)) {
+				s.getQuizzes().add(this);
+			}
+		}
 	}
 
 	public String getQuizID() {

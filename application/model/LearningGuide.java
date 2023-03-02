@@ -38,6 +38,11 @@ public class LearningGuide {
 		this.subject = subject;
 		this.content = content;
 		learningGuides.add(this);
+		for (Subject s : Subject.getSubjects()) {
+			if (s.equals(this.subject)) {
+				s.getLearningGuides().add(this);
+			}
+		}
 	}
 
 	public static ArrayList<LearningGuide> getLearningGuides() {

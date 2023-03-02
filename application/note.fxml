@@ -89,14 +89,14 @@
                <children>
                   <Label fx:id="noteTitle" layoutX="-1.0" layoutY="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="800.0" style="-fx-alignment: center; -fx-background-color: #ffb703;" text="Note Title" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
-                        <Font name="Poppins Bold" size="53.0" />
+                        <Font name="Poppins Bold" size="40" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0">
                <children>
-                  <Label fx:id="noteContent" layoutX="-8.0" layoutY="-8.0" prefHeight="450.4" prefWidth="800.0" style="-fx-alignment: center; -fx-background-color: #20465F;" text="Note Title" textFill="#ffb703" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="noteContent" layoutX="-8.0" layoutY="-8.0" prefHeight="450.4" prefWidth="800.0" style="-fx-alignment: center; -fx-background-color: #20465F;" text="Note Title" textAlignment="CENTER" textFill="#ffb703" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Montserrat Regular" size="30.0" />
                      </font>
