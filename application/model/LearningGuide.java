@@ -6,6 +6,7 @@ public class LearningGuide {
 	private String title;
 	private Subject subject;
 	private String content;
+	private String imageFN;
 
 	private static ArrayList<LearningGuide> learningGuides = new ArrayList<>();
 		
@@ -32,11 +33,32 @@ public class LearningGuide {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
+
+	public String getImageFN() {
+		return imageFN;
+	}
+
+	public void setImageFN(String imageFN) {
+		this.imageFN = imageFN;
+	}
+
 	public LearningGuide(String title, Subject subject, String content) {
 		this.title = title;
 		this.subject = subject;
 		this.content = content;
+		learningGuides.add(this);
+		for (Subject s : Subject.getSubjects()) {
+			if (s.equals(this.subject)) {
+				s.getLearningGuides().add(this);
+			}
+		}
+	}
+
+	public LearningGuide(String title, Subject subject, String content, String imageFN) {
+		this.title = title;
+		this.subject = subject;
+		this.content = content;
+		this.imageFN = imageFN;
 		learningGuides.add(this);
 		for (Subject s : Subject.getSubjects()) {
 			if (s.equals(this.subject)) {

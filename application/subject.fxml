@@ -57,7 +57,7 @@
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
                   <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
@@ -70,7 +70,7 @@
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
                   <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
@@ -109,7 +109,7 @@
                         </Label>
                         <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="334.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
                      </children>
                   </AnchorPane>
@@ -122,7 +122,7 @@
                         </Label>
                         <ImageView fx:id="sub2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
                      </children>
                   </AnchorPane>
@@ -135,7 +135,7 @@
                         </Label>
                         <ImageView fx:id="sub3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
                      </children>
                   </AnchorPane>
@@ -148,7 +148,7 @@
                         </Label>
                         <ImageView fx:id="sub4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
                      </children>
                   </AnchorPane>
@@ -161,7 +161,7 @@
                         </Label>
                         <ImageView fx:id="sub5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
                      </children>
                   </AnchorPane>
@@ -174,7 +174,7 @@
                         </Label>
                         <ImageView fx:id="sub6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
                      </children>
                   </AnchorPane>

@@ -53,7 +53,7 @@
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                         </Button>
                         <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
@@ -66,7 +66,7 @@
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
                             <cursor>
-                                <Cursor fx:constant="OPEN_HAND" />
+                                <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
                         <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">

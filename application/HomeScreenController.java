@@ -67,6 +67,9 @@ public class HomeScreenController {
     @FXML
     private Button subject;
 
+    @FXML
+    private Button modules;
+
     private ArrayList<Label> lgs = new ArrayList<>();
     private ArrayList<Label> noteLabels = new ArrayList<>();
 
@@ -82,6 +85,12 @@ public class HomeScreenController {
         HomeScreenController hsc = switchScene((Node) event.getSource(), "/application/homescreen.fxml").getController();
         System.out.println("Went back to home!");
         hsc.initialize();
+    }
+
+    @FXML
+    void goToModules(ActionEvent event) throws IOException {
+        ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
+        msc.initialize();
     }
 
     @FXML
