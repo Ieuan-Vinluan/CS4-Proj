@@ -114,6 +114,44 @@ public class SubjectController {
         String searchedSubj = search.getText();
         for (Subject s : Subject.getSubjects()) {
             if (s.getSubjectName().equalsIgnoreCase(searchedSubj)) {
+                int index = Subject.getSubjects().indexOf(s);
+                if (index == 0) return; // it's already there
+                Subject temp = Subject.getSubjects().get(0);
+                Subject.getSubjects().set(0, s);
+                Subject.getSubjects().set(index, temp);
+                if (index > 5) return; // no need to switch their places if one does not appear on screen
+                switch(index) {
+                    case 1:
+                        sub1.setText(s.getSubjectName());
+                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                        sub2.setText(temp.getSubjectName());
+                        sub2image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 2:
+                        sub1.setText(s.getSubjectName());
+                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                        sub3.setText(temp.getSubjectName());
+                        sub3image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 3:
+                        sub1.setText(s.getSubjectName());
+                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                        sub4.setText(temp.getSubjectName());
+                        sub4image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 4:
+                        sub1.setText(s.getSubjectName());
+                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                        sub5.setText(temp.getSubjectName());
+                        sub5image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 5:
+                        sub1.setText(s.getSubjectName());
+                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                        sub6.setText(temp.getSubjectName());
+                        sub6image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                }
                 sub1.setText(s.getSubjectName());
                 try {
                     sub1image.setImage(new Image("application/images/" + s.getImageFilename())); // doesn't work fsr LMAO
