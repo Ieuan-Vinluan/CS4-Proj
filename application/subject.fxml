@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SubjectController">
+<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SubjectController">
    <children>
       <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
          <children>
@@ -110,7 +110,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="334.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="334.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
@@ -123,7 +123,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
@@ -136,7 +136,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
@@ -149,7 +149,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
@@ -162,7 +162,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>
@@ -175,7 +175,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="sub6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>

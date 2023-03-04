@@ -110,10 +110,11 @@
                                         <Font name="Poppins Medium" size="26.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod1image" fitHeight="180.0" fitWidth="334.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="mod1image" fitHeight="180.0" fitWidth="334.0" layoutX="-1.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 0.8;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
-                                    </cursor></ImageView>
+                                    </cursor>
+                        </ImageView>
                             </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;" GridPane.columnIndex="1">
@@ -123,7 +124,7 @@
                                         <Font name="Poppins Medium" size="26.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="mod2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 0.8;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -136,7 +137,7 @@
                                         <Font name="Poppins Medium" size="26.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="mod3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 0.8;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -149,7 +150,7 @@
                                         <Font name="Poppins Medium" size="26.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="mod4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 0.8;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -162,7 +163,7 @@
                                         <Font name="Poppins Medium" size="26.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="mod5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 0.8;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -175,7 +176,7 @@
                                         <Font name="Poppins Medium" size="26.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="mod6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 0.8;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>

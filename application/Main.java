@@ -19,18 +19,18 @@ public class Main extends Application {
 			User u3 = new User("Yoowee", "10", "pw3");
 
 			// test subjects
-			Subject cs = new Subject("CS", "computer science.png");
-			Subject math = new Subject("Math", "computer science.png");
-			Subject chem = new Subject("Chemistry", "computer science.png");
-			Subject dm = new Subject("Discrete Math", "computer science.png");
-			Subject fil = new Subject("Filipino", "computer science.png");
-			Subject ss = new Subject("SocSci", "computer science.png");
+			Subject cs = new Subject("CS", "computer science - edited.png");
+			Subject math = new Subject("Math", "math - edited.png");
+			Subject chem = new Subject("Chemistry", "computer science - edited.png");
+			Subject dm = new Subject("Discrete Math", "math - edited.png");
+			Subject phys = new Subject("Physics", "physics - edited.png");
+			Subject ss = new Subject("SocSci", "social science - edited.png");
 
 			// test lgs
 			LearningGuide firstLG = new LearningGuide(
-					"Fil 4 - Ang Katipunan",
+					"Physics 2 - Mirrors",
 					Subject.getSubjects().get(4),
-					"Ang Katipunan ay ang grupong lumaban sa mga Espanyol noong 1896 para makamit ang kalayaan ng Pilipinas mula sa Espanya. Ito ay itinatag nina Deodato Arellano, Andrés Bonifacio, Valentin Diaz, Ladislao Diwa, José Dizon, at Teodoro Plata noong 1892."
+					"Mirrors can be either concave or convex. Concave mirrors, also known as converging mirrors, are the only mirrors that are capable of enlarging images. On the other hand, the images formed by convex mirrors are always smaller than the original object. Both types of mirrors can be applied in many ways."
 			);
 
 			LearningGuide secondLG = new LearningGuide(
