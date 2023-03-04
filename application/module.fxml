@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModuleController">
+<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModuleController">
     <children>
         <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
             <children>
@@ -56,10 +56,13 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                         </Button>
-                        <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
+                        <Button fx:id="modules" mnemonicParsing="false" onAction="#goToModule" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
                             <font>
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </Button>
                         <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject" style="-fx-background-color: transparent;" text="Subjects" textFill="#ffb703">
                             <font>

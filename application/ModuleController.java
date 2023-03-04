@@ -30,6 +30,9 @@ public class ModuleController {
     private Button subject;
 
     @FXML
+    private Button modules;
+
+    @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
@@ -41,6 +44,12 @@ public class ModuleController {
         HomeScreenController hsc = switchScene((Node) event.getSource(), "/application/homescreen.fxml").getController();
         System.out.println("Went back to home!");
         hsc.initialize();
+    }
+
+    @FXML
+    void goToModule(ActionEvent event) throws IOException {
+        ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
+        msc.initialize();
     }
 
     @FXML

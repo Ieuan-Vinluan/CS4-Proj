@@ -22,6 +22,8 @@ import java.util.ArrayList;
 public class SubjectController {
 
     @FXML
+    private Button modules;
+    @FXML
     private Button home;
     @FXML
     private Button subject;
@@ -110,6 +112,12 @@ public class SubjectController {
     }
 
     @FXML
+    void goToModule(ActionEvent event) throws IOException {
+        ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
+        msc.initialize();
+    }
+
+    @FXML
     void searchSubj(ActionEvent event) {
         String searchedSubj = search.getText();
         for (Subject s : Subject.getSubjects()) {
@@ -120,43 +128,29 @@ public class SubjectController {
                 Subject.getSubjects().set(0, s);
                 Subject.getSubjects().set(index, temp);
                 if (index > 5) return; // no need to switch their places if one does not appear on screen
+                sub1.setText(s.getSubjectName());
+                sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
                 switch(index) {
                     case 1:
-                        sub1.setText(s.getSubjectName());
-                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
                         sub2.setText(temp.getSubjectName());
                         sub2image.setImage(new Image("application/images/" + temp.getImageFilename()));
                         break;
                     case 2:
-                        sub1.setText(s.getSubjectName());
-                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
                         sub3.setText(temp.getSubjectName());
                         sub3image.setImage(new Image("application/images/" + temp.getImageFilename()));
                         break;
                     case 3:
-                        sub1.setText(s.getSubjectName());
-                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
                         sub4.setText(temp.getSubjectName());
                         sub4image.setImage(new Image("application/images/" + temp.getImageFilename()));
                         break;
                     case 4:
-                        sub1.setText(s.getSubjectName());
-                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
                         sub5.setText(temp.getSubjectName());
                         sub5image.setImage(new Image("application/images/" + temp.getImageFilename()));
                         break;
                     case 5:
-                        sub1.setText(s.getSubjectName());
-                        sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
                         sub6.setText(temp.getSubjectName());
                         sub6image.setImage(new Image("application/images/" + temp.getImageFilename()));
                         break;
-                }
-                sub1.setText(s.getSubjectName());
-                try {
-                    sub1image.setImage(new Image("application/images/" + s.getImageFilename())); // doesn't work fsr LMAO
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

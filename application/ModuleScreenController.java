@@ -137,9 +137,7 @@ public class ModuleScreenController {
         if (LearningGuide.getLearningGuides().size() >= 6) {
             for (int i = 0; i < 6; i += 1) {
                 msLabels.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
-                if (LearningGuide.getLearningGuides().get(i).getImageFN() != null) {
-                    msImages.get(i).setImage(new Image("application/images/" + LearningGuide.getLearningGuides().get(i).getImageFN()));
-                }
+                msImages.get(i).setImage(new Image("application/images/" + LearningGuide.getLearningGuides().get(i).getSubject().getImageFilename()));
             }
         } else {
             for (int i = 0; i < 6; i += 1) {
@@ -150,9 +148,7 @@ public class ModuleScreenController {
                     msImages.get(i).setOpacity(0);
                 } else {
                     msLabels.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
-                    if (LearningGuide.getLearningGuides().get(i).getImageFN() != null) {
-                        msImages.get(i).setImage(new Image("application/images/" + LearningGuide.getLearningGuides().get(i).getImageFN()));
-                    }
+                    msImages.get(i).setImage(new Image("application/images/" + LearningGuide.getLearningGuides().get(i).getSubject().getImageFilename()));
                 }
             }
         }

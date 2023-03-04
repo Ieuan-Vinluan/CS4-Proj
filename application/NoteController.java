@@ -16,6 +16,8 @@ import java.io.IOException;
 public class NoteController {
 
     @FXML
+    private Button modules;
+    @FXML
     private Button home;
 
     @FXML
@@ -41,6 +43,12 @@ public class NoteController {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
         sc.initialize();
+    }
+
+    @FXML
+    void goToModule(ActionEvent event) throws IOException {
+        ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
+        msc.initialize();
     }
 
     @FXML
