@@ -110,7 +110,7 @@
                               <Font name="Poppins Medium" size="33.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="334.0" layoutX="1.0" layoutY="2.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                        <ImageView fx:id="sub1image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToCourse" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ImageView>

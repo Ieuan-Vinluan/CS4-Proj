@@ -20,9 +20,9 @@ public class Main extends Application {
 
 			// test subjects
 			Subject cs = new Subject("CS", "ComSci 4.png");
-			Subject bio = new Subject("Math", "Biology 2.png");
+			Subject bio = new Subject("Biology", "Biology 2.png");
 			Subject chem = new Subject("Chemistry", "Chemistry 2.png");
-			Subject health = new Subject("Discrete Math", "Health 4.png");
+			Subject health = new Subject("Health", "Health 4.png");
 			Subject eng = new Subject("English", "English 4.png");
 			Subject fil = new Subject("Filipino", "Filipino 4.png");
 
