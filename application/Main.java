@@ -19,54 +19,54 @@ public class Main extends Application {
 			User u3 = new User("Yoowee", "10", "pw3");
 
 			// test subjects
-			Subject cs = new Subject("CS", "computer science - edited.png");
-			Subject math = new Subject("Math", "math - edited.png");
-			Subject chem = new Subject("Chemistry", "computer science - edited.png");
-			Subject dm = new Subject("Discrete Math", "math - edited.png");
-			Subject phys = new Subject("Physics", "physics - edited.png");
-			Subject ss = new Subject("SocSci", "social science - edited.png");
+			Subject cs = new Subject("CS", "ComSci 4.png");
+			Subject bio = new Subject("Math", "Biology 2.png");
+			Subject chem = new Subject("Chemistry", "Chemistry 2.png");
+			Subject health = new Subject("Discrete Math", "Health 4.png");
+			Subject eng = new Subject("English", "English 4.png");
+			Subject fil = new Subject("Filipino", "Filipino 4.png");
 
 			// test lgs
 			LearningGuide firstLG = new LearningGuide(
-					"Physics 2 - Mirrors",
-					Subject.getSubjects().get(4),
-					"Mirrors can be either concave or convex. Concave mirrors, also known as converging mirrors, are the only mirrors that are capable of enlarging images. On the other hand, the images formed by convex mirrors are always smaller than the original object. Both types of mirrors can be applied in many ways."
+					"Eng 4 - Sonnets",
+					eng,
+					"Sonnets usually have 14 lines and an iambic pentameter. English sonnets are composed of 3 quatrains and 1 couplet, with a rhyme scheme of ABAB CDCD EFEF GG, while Petrarchan sonnets are composed of 1 octave and 1 sestet, with a rhyme scheme of ABBA ABBA CDC DCD."
 			);
 
 			LearningGuide secondLG = new LearningGuide(
-					"Math 4 - Degrees and Radians",
-					Subject.getSubjects().get(1),
-					"Consider a circle with radius r. A radian is defined as the measure of the angle that intercepts an arc of the circle with length r. Given this, (2pi * r) * (1 radian / 360) = r. Thus, solving for 1 radian, 1 radian = (180 / pi) degrees. This is the conversion factor that can be used in dimensional analysis.\n\nExample 1: Convert 40 degrees into radians.\n\nSolution: 40 degrees * (pi rad / 180 degrees) = (2pi/9) rad.\n\nThus, 40 degrees is equivalent to (2pi/9) radians."
+					"Chem 2 - Equilibrium Constant",
+					chem,
+					"The equilibrium constant of a reaction is its reaction quotient at equilibrium. Note that only gaseous and aqueous substances determine these values. If a reaction is multiplied by some factor n, then the new equilibrium constant is the previous equilibrium constant raised to the power of n."
 			);
 
 			LearningGuide thirdLG = new LearningGuide(
-					"SocSci 4 - Rights",
-					Subject.getSubjects().get(5),
-					"All humans have rights. These include natural rights, which are innate or inherent; constitutional rights, which are granted by the constitution; and statutory rights, which are rights conferred by the legislative and can be sub-divided into 3: political rights, civil rights, and social and economic rights. The rights of the individual are important for the function of a democratic society."
+					"Biology 2 - Mendelian Inheritance",
+					bio,
+					"Mendelian Inheritance is completely dominant. That is, only one dominant allele is required for the trait to appear in an organism, but two recessive alleles are required for a trait to not appear in an organism."
 			);
 
 			LearningGuide fourthLG = new LearningGuide(
-					"Discrete Math - Basic Formulas",
-					Subject.getSubjects().get(3),
-					"A group of objects, assuming all are distinct from one another, can be arranged in a row in n! ways, where n is the number of objects in the group. If one were to choose r objects from the n objects and arrange them in a row, then there would be n!/(n-r)! ways to arrange them. Meanwhile, the number of ways to simply choose r objects from the n objects is n!/(r!(n-r)!). Notice that an additional factor of 1/r! was added to get rid of the order of the objects because we do not care about the order."
+					"Health 4 - Quackery",
+					health,
+					"Quackery is faking one's expertise in a certain subject to entice people to purchase a certain product. An example is \"doctors\"' selling a supplement that can cure all diseases. It is thus important to be knowledgeable and careful when reading information on the internet."
 			);
 
 			LearningGuide fifthLG = new LearningGuide(
 					"CS 4 - JavaFX",
-					Subject.getSubjects().get(0),
+					cs,
 					"JavaFX is a library that can be utilized to create different GUIs. It utilizes the Model-View-Controller design pattern to create the application. In this case, the \"view\" is the .fxml file that can be created with SceneBuilder, the \"controller\" is the controller class that is created and linked to the fxml file and the model classes, and the \"model\" is whatever classes the user has already created."
 			);
 
 			// test notes
 			Note firstNote = new Note(
-					"Important Trig Identity",
-					"tanx = sinx/cosx",
-					math
+					"Sorting algorithms",
+					"Quicksort, Bubble sort, Merge sort, Insertion sort",
+					cs
 			);
 			Note secondNote = new Note(
-					"Electric Field Equation",
-					"E = kq/r^2",
-					math
+					"Equilibrium Constant",
+					"Product of concentrations of gaseous or aqueous products at equilibrium / Product of concentrations of gaseous or aqueous reactants at equilibrium",
+					chem
 			);
 			Note thirdNote = new Note(
 					"Acids and Bases",
@@ -74,14 +74,14 @@ public class Main extends Application {
 					chem
 			);
 			Note fourthNote = new Note(
-					"Radian and Degree Conversion",
-					"1 degree = (180 / pi) rad",
-					math
+					"Ratios for M. Inheritance",
+					"1 DD : 2 Dd : 1 dd --> 3 have : 1 doesn't have",
+					bio
 			);
 			Note fifthNote = new Note(
 				"Kyle Dulay Triangle Problem",
 				"HC = 52/3, MC = 26/3, PC = 169/18, BP = 209/18, BQ (from Law of Cosines) = 1045/117, AQ = 476/117. After some trig, AX = 119/54?",
-				math
+				null
 			);
 
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
