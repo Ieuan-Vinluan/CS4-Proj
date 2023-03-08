@@ -85,20 +85,17 @@ public class ModuleScreenController {
     void goToHome(ActionEvent event) throws IOException {
         HomeScreenController hsc = switchScene((Node) event.getSource(), "/application/homescreen.fxml").getController();
         System.out.println("Went back to home!");
-        hsc.initialize();
     }
 
     @FXML
     void goToModule(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
-        msc.initialize();
     }
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
-        sc.initialize();
     }
 
     @FXML
@@ -108,7 +105,6 @@ public class ModuleScreenController {
     @FXML
     void goToQuizzes(ActionEvent actionEvent) throws IOException {
         QuizzesController qc = switchScene((Node) actionEvent.getSource(), "/application/quizzes.fxml").getController();
-        qc.initialize();
     }
 
     @FXML

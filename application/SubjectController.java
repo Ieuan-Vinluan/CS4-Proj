@@ -4,6 +4,7 @@ import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -109,7 +110,6 @@ public class SubjectController {
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
-        sc.initialize();
     }
 
     @FXML
@@ -120,7 +120,6 @@ public class SubjectController {
     @FXML
     void goToModule(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
-        msc.initialize();
     }
 
     @FXML
@@ -166,7 +165,6 @@ public class SubjectController {
     void goToHome(ActionEvent actionEvent) throws IOException {
         HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
         System.out.println("Went back to home!");
-        hsc.initialize();
     }
 
     @FXML
@@ -177,7 +175,6 @@ public class SubjectController {
     @FXML
     void goToQuizzes(ActionEvent actionEvent) throws IOException {
         QuizzesController qc = switchScene((Node) actionEvent.getSource(), "/application/quizzes.fxml").getController();
-        qc.initialize();
     }
 
     @FXML
@@ -195,8 +192,13 @@ public class SubjectController {
         ivs.add(sub5image);
         ivs.add(sub6image);
 
-        if (Subject.getSubjects().size() >= 6) {
-            for (int i = 0; i < 6; i += 1) {
+        int size = Subject.getSubjects().size();
+        for (int i = 0; i < 6; i += 1) {
+            if (i > size - 1) {
+                labels.get(i).setOpacity(0);
+                ivs.get(i).setOpacity(0);
+                ivs.get(i).setCursor(Cursor.DEFAULT);
+            } else {
                 labels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
                 ivs.get(i).setImage(new Image("application/images/" + Subject.getSubjects().get(i).getImageFilename()));
             }

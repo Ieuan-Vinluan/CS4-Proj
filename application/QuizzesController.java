@@ -2,16 +2,22 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import application.model.Quiz;
+import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -78,16 +84,18 @@ public class QuizzesController {
     @FXML
     private Button subject;
 
+    private ArrayList<Label> labels = new ArrayList<>();
+
+    private ArrayList<ImageView> ivs = new ArrayList<>();
+
     @FXML
     void goToHome(ActionEvent event) throws IOException {
         HomeScreenController hsc = switchScene((Node) event.getSource(), "/application/homescreen.fxml").getController();
-        hsc.initialize();
     }
 
     @FXML
     void goToModule(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
-        msc.initialize();
     }
 
     @FXML
@@ -100,7 +108,6 @@ public class QuizzesController {
     @FXML
     void goToQuizzes(ActionEvent event) throws IOException {
         QuizzesController qc = switchScene((Node) event.getSource(), "/application/quizzes.fxml").getController();
-        qc.initialize();
     }
 
     @FXML
@@ -111,7 +118,6 @@ public class QuizzesController {
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
-        sc.initialize();
     }
 
     @FXML
@@ -121,7 +127,30 @@ public class QuizzesController {
 
     @FXML
     void initialize() {
-        // todo
+        labels.add(quiz1);
+        labels.add(quiz2);
+        labels.add(quiz3);
+        labels.add(quiz4);
+        labels.add(quiz5);
+        labels.add(quiz6);
+        ivs.add(quiz1image);
+        ivs.add(quiz2image);
+        ivs.add(quiz3image);
+        ivs.add(quiz4image);
+        ivs.add(quiz5image);
+        ivs.add(quiz6image);
+
+        int size = Quiz.getQuizzes().size();
+        for (int i = 0; i < 6; i += 1) {
+            if (i > size - 1) {
+                labels.get(i).setOpacity(0);
+                ivs.get(i).setOpacity(0);
+                ivs.get(i).setCursor(Cursor.DEFAULT);
+            } else {
+                labels.get(i).setText(Quiz.getQuizzes().get(i).getQuizID());
+                ivs.get(i).setImage(new Image("application/images/" + Quiz.getQuizzes().get(i).getSubject().getImageFilename()));
+            }
+        }
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {
