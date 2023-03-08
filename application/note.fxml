@@ -18,7 +18,7 @@
             <children>
                 <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0">
                     <image>
-                        <Image url="@images/computer science.png" />
+                        <Image url="@images/original images/computer science.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="56.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="435.0" text="TEARS - Your No. 1 Study Help" textAlignment="CENTER" textFill="#ffb703" AnchorPane.leftAnchor="60.0">
@@ -72,15 +72,21 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
+                        <Button fx:id="quizzes" mnemonicParsing="false" onAction="#goToQuizzes" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
                             <font>
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist" textFill="#ffb703">
+                        <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylists" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist" textFill="#ffb703">
                             <font>
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </Button>
                     </children>
                 </HBox>

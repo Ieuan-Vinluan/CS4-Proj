@@ -21,6 +21,12 @@ public class NoteController {
     private Button home;
 
     @FXML
+    private Button playlists;
+
+    @FXML
+    private Button quizzes;
+
+    @FXML
     private Label noteContent;
 
     @FXML
@@ -49,6 +55,16 @@ public class NoteController {
     void goToModule(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
         msc.initialize();
+    }
+
+    @FXML
+    void goToPlaylists(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    void goToQuizzes(ActionEvent actionEvent) throws IOException {
+        QuizzesController qc = switchScene((Node) actionEvent.getSource(), "/application/quizzes.fxml").getController();
+        qc.initialize();
     }
 
     @FXML

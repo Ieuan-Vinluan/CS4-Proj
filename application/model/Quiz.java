@@ -8,17 +8,14 @@ public class Quiz {
 	private ArrayList<Question> questions;
 	private int currentScore = 0;
 	private int highestPossibleScore = 0;
+	private static ArrayList<Quiz> quizzes = new ArrayList<>();
 	
 	public Quiz(String quizID, Subject subject, int highestPossibleScore) {
 		this.quizID = quizID;
 		this.subject = subject;
 		this.highestPossibleScore = highestPossibleScore;
 		this.questions = new ArrayList<Question>();
-		for (Question q : Question.questions) {
-			if (q.getQuiz().equals(this)) {
-				questions.add(q);
-			}
-		}
+		quizzes.add(this);
 		for (Subject s : Subject.getSubjects()) {
 			if (s.equals(this.subject)) {
 				s.getQuizzes().add(this);
@@ -69,7 +66,15 @@ public class Quiz {
 	public void setHighestPossibleScore(int highestPossibleScore) {
 		this.highestPossibleScore = highestPossibleScore;
 	}
-	
+
+	public static ArrayList<Quiz> getQuizzes() {
+		return quizzes;
+	}
+
+	public static void setQuizzes(ArrayList<Quiz> quizzes) {
+		Quiz.quizzes = quizzes;
+	}
+
 	public void startQuiz() {
 		for (Question q : questions) {
 			// show window that contains question

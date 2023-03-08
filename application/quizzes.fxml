@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModuleScreenController">
+<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.QuizzesController">
     <children>
         <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
             <children>
@@ -64,9 +64,9 @@
                             <font>
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
                         </Button>
                         <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject" style="-fx-background-color: transparent;" text="Subjects" textFill="#ffb703">
                             <font>
@@ -84,7 +84,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                         </Button>
-                        <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylists" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist" textFill="#ffb703">
+                        <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylist" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist" textFill="#ffb703">
                             <font>
                                 <Font name="Montserrat Bold" size="17.0" />
                             </font>
@@ -111,26 +111,25 @@
                     <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;">
                             <children>
-                                <Label fx:id="mod1" layoutX="10.0" layoutY="193.0" prefHeight="32.0" prefWidth="311.0" text="Module Name" textFill="#023047">
+                                <Label fx:id="quiz1" layoutX="10.0" layoutY="185.0" prefHeight="32.0" prefWidth="311.0" text="Quiz Name" textFill="#023047">
                                     <font>
-                                        <Font name="Poppins Medium" size="26.0" />
+                                        <Font name="Poppins Medium" size="33.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod1image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                                <ImageView fx:id="quiz1image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToQuiz" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
-                                    </cursor>
-                        </ImageView>
+                                    </cursor></ImageView>
                             </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;" GridPane.columnIndex="1">
                             <children>
-                                <Label fx:id="mod2" layoutX="10.0" layoutY="193.0" prefHeight="32.0" prefWidth="311.0" text="Module Name" textFill="#023047">
+                                <Label fx:id="quiz2" layoutX="10.0" layoutY="185.0" prefHeight="32.0" prefWidth="311.0" text="Quiz Name" textFill="#023047">
                                     <font>
-                                        <Font name="Poppins Medium" size="26.0" />
+                                        <Font name="Poppins Medium" size="33.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                                <ImageView fx:id="quiz2image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToQuiz" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -138,12 +137,12 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;" GridPane.columnIndex="2">
                             <children>
-                                <Label fx:id="mod3" layoutX="10.0" layoutY="193.0" prefHeight="32.0" prefWidth="311.0" text="Module Name" textFill="#023047">
+                                <Label fx:id="quiz3" layoutX="10.0" layoutY="185.0" prefHeight="32.0" prefWidth="311.0" text="Quiz Name" textFill="#023047">
                                     <font>
-                                        <Font name="Poppins Medium" size="26.0" />
+                                        <Font name="Poppins Medium" size="33.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                                <ImageView fx:id="quiz3image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToQuiz" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -151,12 +150,12 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;" GridPane.rowIndex="1">
                             <children>
-                                <Label fx:id="mod4" layoutX="10.0" layoutY="193.0" prefHeight="32.0" prefWidth="311.0" text="Module Name" textFill="#023047">
+                                <Label fx:id="quiz4" layoutX="10.0" layoutY="185.0" prefHeight="32.0" prefWidth="311.0" text="Quiz Name" textFill="#023047">
                                     <font>
-                                        <Font name="Poppins Medium" size="26.0" />
+                                        <Font name="Poppins Medium" size="33.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                                <ImageView fx:id="quiz4image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToQuiz" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -164,12 +163,12 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                             <children>
-                                <Label fx:id="mod5" layoutX="10.0" layoutY="193.0" prefHeight="32.0" prefWidth="311.0" text="Module Name" textFill="#023047">
+                                <Label fx:id="quiz5" layoutX="10.0" layoutY="185.0" prefHeight="32.0" prefWidth="311.0" text="Quiz Name" textFill="#023047">
                                     <font>
-                                        <Font name="Poppins Medium" size="26.0" />
+                                        <Font name="Poppins Medium" size="33.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                                <ImageView fx:id="quiz5image" fitHeight="180.0" fitWidth="334.0" onMouseClicked="#goToQuiz" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -177,12 +176,12 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFB703;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <children>
-                                <Label fx:id="mod6" layoutX="10.0" layoutY="193.0" prefHeight="32.0" prefWidth="311.0" text="Module Name" textFill="#023047">
+                                <Label fx:id="quiz6" layoutX="10.0" layoutY="185.0" prefHeight="32.0" prefWidth="311.0" text="Quiz Name" textFill="#023047">
                                     <font>
-                                        <Font name="Poppins Medium" size="26.0" />
+                                        <Font name="Poppins Medium" size="33.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="mod6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToModule" onMousePressed="#openModule" pickOnBounds="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
+                                <ImageView fx:id="quiz6image" fitHeight="180.0" fitWidth="336.0" onMouseClicked="#goToQuiz" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1; -fx-scale-y: 1;">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></ImageView>
@@ -195,7 +194,7 @@
                         <Font name="Montserrat Regular" size="19.0" />
                     </font>
                 </TextArea>
-                <Button fx:id="searchBtn" layoutX="405.0" layoutY="24.0" mnemonicParsing="false" onAction="#searchSubj" prefHeight="36.0" prefWidth="117.0" style="-fx-background-color: #ffb703; -fx-background-radius: 50px; -fx-border-color: transparent;" text="Search">
+                <Button fx:id="searchBtn" layoutX="405.0" layoutY="24.0" mnemonicParsing="false" onAction="#searchQuiz" prefHeight="36.0" prefWidth="117.0" style="-fx-background-color: #ffb703; -fx-background-radius: 50px; -fx-border-color: transparent;" text="Search">
                     <font>
                         <Font name="Poppins Medium" size="12.0" />
                     </font>

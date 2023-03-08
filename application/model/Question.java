@@ -13,6 +13,11 @@ public class Question {
 		this.question = question;
 		this.answer = answer;
 		questions.add(this);
+		for (Quiz q : Quiz.getQuizzes()) {
+			if (q.equals(this.quiz)) {
+				q.addQuestion(this);
+			}
+		}
 	}
 	
 	public Quiz getQuiz() {

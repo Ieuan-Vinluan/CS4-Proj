@@ -84,6 +84,15 @@ public class Main extends Application {
 				null
 			);
 
+			Quiz firstQuiz = new Quiz("Q3-FA1", chem, 15);
+			Quiz secondQuiz = new Quiz("Q3-AA1", health, 25);
+			Quiz thirdQuiz = new Quiz("Q3-FA1", bio, 15);
+
+			Question chemFA1_one = new Question(firstQuiz, "T/F: Ice is less dense than water.", "True");
+			Question chemFA1_two = new Question(firstQuiz, "Symbol for the reaction quotient", "Q");
+			Question healthAA1_one = new Question(secondQuiz, "Deception to sell products?", "Quackery");
+			Question bioFA1_one = new Question(thirdQuiz, "____ synthesis", "Dehydration");
+
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);

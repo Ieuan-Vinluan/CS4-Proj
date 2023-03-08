@@ -33,6 +33,12 @@ public class ModuleController {
     private Button modules;
 
     @FXML
+    private Button quizzes;
+
+    @FXML
+    private Button playlists;
+
+    @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
@@ -50,6 +56,17 @@ public class ModuleController {
     void goToModule(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
         msc.initialize();
+    }
+
+    @FXML
+    void goToPlaylists(ActionEvent actionEvent) throws IOException {
+
+    }
+
+    @FXML
+    void goToQuizzes(ActionEvent actionEvent) throws IOException {
+        QuizzesController qc = switchScene((Node) actionEvent.getSource(), "/application/quizzes.fxml").getController();
+        qc.initialize();
     }
 
     @FXML

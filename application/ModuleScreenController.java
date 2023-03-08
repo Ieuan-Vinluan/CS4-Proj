@@ -72,6 +72,12 @@ public class ModuleScreenController {
     @FXML
     private Button subject;
 
+    @FXML
+    private Button playlists;
+
+    @FXML
+    private Button quizzes;
+
     private ArrayList<Label> msLabels = new ArrayList<>();
     private  ArrayList<ImageView> msImages = new ArrayList<>();
 
@@ -93,6 +99,16 @@ public class ModuleScreenController {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
         System.out.println("Successfully opened Subjects"); // debug purposes
         sc.initialize();
+    }
+
+    @FXML
+    void goToPlaylists(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    void goToQuizzes(ActionEvent actionEvent) throws IOException {
+        QuizzesController qc = switchScene((Node) actionEvent.getSource(), "/application/quizzes.fxml").getController();
+        qc.initialize();
     }
 
     @FXML

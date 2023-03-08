@@ -27,6 +27,12 @@ public class SubjectController {
     private Button home;
     @FXML
     private Button subject;
+
+    @FXML
+    private Button quizzes;
+    @FXML
+    private Button playlists;
+
     @FXML
     private Label sub1;
 
@@ -164,6 +170,17 @@ public class SubjectController {
     }
 
     @FXML
+    void goToPlaylists(ActionEvent actionEvent) throws IOException {
+
+    }
+
+    @FXML
+    void goToQuizzes(ActionEvent actionEvent) throws IOException {
+        QuizzesController qc = switchScene((Node) actionEvent.getSource(), "/application/quizzes.fxml").getController();
+        qc.initialize();
+    }
+
+    @FXML
     void initialize() {
         labels.add(sub1);
         labels.add(sub2);
@@ -202,4 +219,5 @@ public class SubjectController {
 
         return loader;
     }
+
 }

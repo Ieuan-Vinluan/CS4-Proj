@@ -41,6 +41,9 @@ public class HomeScreenController {
     private Button home;
 
     @FXML
+    private Button playlists;
+
+    @FXML
     private Label note1;
 
     @FXML
@@ -70,6 +73,9 @@ public class HomeScreenController {
     @FXML
     private Button modules;
 
+    @FXML
+    private Button quizzes;
+
     private ArrayList<Label> lgs = new ArrayList<>();
     private ArrayList<Label> noteLabels = new ArrayList<>();
 
@@ -83,7 +89,6 @@ public class HomeScreenController {
     @FXML
     void goToHome(ActionEvent event) throws IOException {
         HomeScreenController hsc = switchScene((Node) event.getSource(), "/application/homescreen.fxml").getController();
-        System.out.println("Went back to home!");
         hsc.initialize();
     }
 
@@ -91,6 +96,17 @@ public class HomeScreenController {
     void goToModules(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
         msc.initialize();
+    }
+
+    @FXML
+    void goToPlaylists(ActionEvent actionEvent) {
+        // todo
+    }
+
+    @FXML
+    void goToQuizzes(ActionEvent event) throws IOException {
+        QuizzesController qc = switchScene((Node) event.getSource(), "/application/quizzes.fxml").getController();
+        qc.initialize();
     }
 
     @FXML
@@ -220,5 +236,4 @@ public class HomeScreenController {
             nc.setNoteContentText(nc.getSelectedNote().getContent());
         }
     }
-
 }
