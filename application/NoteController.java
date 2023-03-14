@@ -33,6 +33,9 @@ public class NoteController {
     private Label noteTitle;
 
     @FXML
+    private Label username;
+
+    @FXML
     private Button subject;
 
     private Note selectedNote;
@@ -65,7 +68,7 @@ public class NoteController {
 
     @FXML
     void initialize() {
-
+        LoginController.setProfileText(username);
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {

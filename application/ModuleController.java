@@ -27,6 +27,9 @@ public class ModuleController {
     private Label path;
 
     @FXML
+    private Label username;
+
+    @FXML
     private Button subject;
 
     @FXML
@@ -67,7 +70,7 @@ public class ModuleController {
 
     @FXML
     void initialize() {
-
+        LoginController.setProfileText(username);
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {

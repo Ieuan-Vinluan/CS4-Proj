@@ -30,7 +30,7 @@
                         <Font name="Times New Roman Bold" size="31.0" />
                     </font>
                 </Label>
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1012.0" layoutY="9.0" prefHeight="42.0" prefWidth="64.0" text="Profile" textFill="#ffb307" AnchorPane.rightAnchor="4.0">
+                <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="1012.0" layoutY="9.0" prefHeight="42.0" prefWidth="64.0" text="Profile" textFill="#ffb307" AnchorPane.rightAnchor="4.0">
                     <font>
                         <Font size="18.0" />
                     </font>

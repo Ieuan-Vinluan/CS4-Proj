@@ -68,6 +68,9 @@ public class SubjectController {
     private Label sub6;
 
     @FXML
+    private Label username;
+
+    @FXML
     private ImageView sub6image;
 
     @FXML
@@ -179,6 +182,7 @@ public class SubjectController {
 
     @FXML
     void initialize() {
+        LoginController.setProfileText(username);
         labels.add(sub1);
         labels.add(sub2);
         labels.add(sub3);

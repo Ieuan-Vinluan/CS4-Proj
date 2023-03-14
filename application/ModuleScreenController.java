@@ -61,6 +61,9 @@ public class ModuleScreenController {
     private Label mod6;
 
     @FXML
+    private Label username;
+
+    @FXML
     private ImageView mod6image;
 
     @FXML
@@ -133,6 +136,7 @@ public class ModuleScreenController {
 
     @FXML
     void initialize() {
+        LoginController.setProfileText(username);
         msLabels.add(mod1);
         msLabels.add(mod2);
         msLabels.add(mod3);

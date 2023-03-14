@@ -1,12 +1,6 @@
 package application;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
 import application.model.Quiz;
-import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +15,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class QuizzesController {
 
@@ -68,6 +67,9 @@ public class QuizzesController {
 
     @FXML
     private Label quiz6;
+
+    @FXML
+    private Label username;
 
     @FXML
     private ImageView quiz6image;
@@ -127,6 +129,7 @@ public class QuizzesController {
 
     @FXML
     void initialize() {
+        LoginController.setProfileText(username);
         labels.add(quiz1);
         labels.add(quiz2);
         labels.add(quiz3);

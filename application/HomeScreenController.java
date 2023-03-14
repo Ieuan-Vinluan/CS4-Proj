@@ -2,6 +2,7 @@ package application;
 
 import application.model.LearningGuide;
 import application.model.Note;
+import application.model.Quiz;
 import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,6 +45,21 @@ public class HomeScreenController {
     private Button playlists;
 
     @FXML
+    private Label quiz1;
+
+    @FXML
+    private Label quiz2;
+
+    @FXML
+    private Label quiz3;
+
+    @FXML
+    private Label quiz4;
+
+    @FXML
+    private Label quiz5;
+
+    @FXML
     private Label note1;
 
     @FXML
@@ -62,6 +78,9 @@ public class HomeScreenController {
     private Label note6;
 
     @FXML
+    private Label username;
+
+    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -78,6 +97,7 @@ public class HomeScreenController {
 
     private ArrayList<Label> lgs = new ArrayList<>();
     private ArrayList<Label> noteLabels = new ArrayList<>();
+    private ArrayList<Label> quizLabels = new ArrayList<>();
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
@@ -131,6 +151,23 @@ public class HomeScreenController {
     }
 
     @FXML
+    void goToQuiz(MouseEvent event) throws IOException {
+        Label clicked = (Label) event.getSource();
+        String id = clicked.getId();
+        if (id.contains("1")) {
+            openQuiz(clicked, 0);
+        } else if (id.contains("2")) {
+            openQuiz(clicked, 1);
+        } else if (id.contains("3")) {
+            openQuiz(clicked, 2);
+        } else if (id.contains("4")) {
+            openQuiz(clicked, 3);
+        } else if (id.contains("5")) {
+            openQuiz(clicked, 4);
+        }
+    }
+
+    @FXML
     void openNote(MouseEvent event) throws IOException {
         Label label = (Label) event.getSource();
         String id = label.getId();
@@ -151,6 +188,7 @@ public class HomeScreenController {
 
     @FXML
     void initialize() {
+        LoginController.setProfileText(username);
         lgs.add(lg1);
         lgs.add(lg2);
         lgs.add(lg3);
@@ -162,6 +200,11 @@ public class HomeScreenController {
         noteLabels.add(note4);
         noteLabels.add(note5);
         noteLabels.add(note6);
+        quizLabels.add(quiz1);
+        quizLabels.add(quiz2);
+        quizLabels.add(quiz3);
+        quizLabels.add(quiz4);
+        quizLabels.add(quiz5);
 
         if (LearningGuide.getLearningGuides().size() < 5) {
             int lgSize = LearningGuide.getLearningGuides().size();
@@ -196,6 +239,22 @@ public class HomeScreenController {
                 noteLabels.get(i).setText(Note.getNotes().get(i).getTitle());
             }
         }
+
+        if (Quiz.getQuizzes().size() < 5) {
+            int quizSize = Quiz.getQuizzes().size();
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= quizSize) {
+                    quizLabels.get(i).setOpacity(0);
+                    quizLabels.get(i).setCursor(Cursor.DEFAULT);
+                } else {
+                    quizLabels.get(i).setText(Quiz.getQuizzes().get(i).getQuizID());
+                }
+            }
+        } else {
+            for (int i = 0; i < 5; i += 1) {
+                quizLabels.get(i).setText(Quiz.getQuizzes().get(i).getQuizID());
+            }
+        }
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {
@@ -213,6 +272,25 @@ public class HomeScreenController {
         currentStage.show();
 
         return loader;
+    }
+
+    private void openQuiz(Node event, int index) throws IOException {
+        QuizController qc = switchScene(event, "/application/quiz.fxml").getController();
+        if (Quiz.getQuizzes().size() >= index + 1) {
+            qc.setQuestions(Quiz.getQuizzes().get(index).getQuestions());
+            try {
+                for (int i = 0; i < 2; i += 1) {
+                    try {
+                        qc.setQuestionText(i, qc.getQuestions().get(i).getQuestion());
+                    } catch (IndexOutOfBoundsException e) {
+                        qc.getAnchorpanes().get(i).setOpacity(0);
+                    }
+                }
+            } catch (IndexOutOfBoundsException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     private void openLearningGuide(Node event, int index) throws IOException {

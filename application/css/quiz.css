@@ -1,0 +1,8 @@
+.text-area .content {
+    -fx-background-color:  #20465F;
+}
+
+.text-area {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #13173c;
+}
