@@ -92,12 +92,24 @@ public class QuizController {
 
     @FXML
     void goBack(ActionEvent event) {
+        index -= 1;
+        if (index == 0) {
+            backBtn.setDisable(true);
+        }
+        nextBtn.setDisable(false);
+        updateQuestions();
 
     }
 
     @FXML
     void goNext(ActionEvent event) {
-
+        index += 1;
+        System.out.println(index);
+        if (index == (questions.size() - 1) / 2) {
+            nextBtn.setDisable(true);
+        }
+        backBtn.setDisable(false);
+        updateQuestions();
     }
 
     @FXML
@@ -129,6 +141,7 @@ public class QuizController {
     void initialize() {
         anchorpanes.add(box1);
         anchorpanes.add(box2);
+        backBtn.setDisable(true);
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {
@@ -149,20 +162,19 @@ public class QuizController {
     }
 
     private void updateQuestions() {
-        if (questions.size() < 2 * index + 1) return;
-        question1.setText(questions.get(2 * index).getQuestion());
-        question1text.setText(answers.get(2 * index));
-        question2.setText(questions.get(2 * index + 1).getQuestion());
-        question2text.setText(answers.get(2 * index + 1));
-
-    }
-
-    private void checkIndex() {
-        if (index == 0) backBtn.setDisable(true);
-        else if (index == (int) questions.size() / 2) nextBtn.setDisable(true);
-        else {
-            backBtn.setDisable(false);
-            nextBtn.setDisable(false);
+        try {
+            box1.setVisible(true);
+            question1.setText(questions.get(2 * index).getQuestion());
+            question1text.setText(answers.get(2 * index));
+        } catch (Exception e) {
+            box1.setVisible(false);
+        }
+        try {
+            box2.setVisible(true);
+            question2.setText(questions.get(2 * index + 1).getQuestion());
+            question2text.setText(answers.get(2 * index + 1));
+        } catch (Exception e) {
+            box2.setVisible(false);
         }
     }
 

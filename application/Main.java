@@ -92,6 +92,7 @@ public class Main extends Application {
 			// test notes
 			Question chemFA1_one = new Question(firstQuiz, "T/F: Ice is less dense than water.", "True");
 			Question chemFA1_two = new Question(firstQuiz, "Symbol for the reaction quotient", "Q");
+			Question chemFA1_three = new Question(firstQuiz, "Symbol for the equilibrium constant", "K");
 			Question healthAA1_one = new Question(secondQuiz, "Deception to sell products?", "Quackery");
 			Question bioFA1_one = new Question(thirdQuiz, "____ synthesis", "Dehydration");
 
