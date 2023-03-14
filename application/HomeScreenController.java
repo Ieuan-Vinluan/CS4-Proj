@@ -194,12 +194,14 @@ public class HomeScreenController {
         lgs.add(lg3);
         lgs.add(lg4);
         lgs.add(lg5);
+
         noteLabels.add(note1);
         noteLabels.add(note2);
         noteLabels.add(note3);
         noteLabels.add(note4);
         noteLabels.add(note5);
         noteLabels.add(note6);
+
         quizLabels.add(quiz1);
         quizLabels.add(quiz2);
         quizLabels.add(quiz3);
@@ -276,20 +278,25 @@ public class HomeScreenController {
 
     private void openQuiz(Node event, int index) throws IOException {
         QuizController qc = switchScene(event, "/application/quiz.fxml").getController();
+        Quiz selectedQuiz = Quiz.getQuizzes().get(index);
         if (Quiz.getQuizzes().size() >= index + 1) {
-            qc.setQuestions(Quiz.getQuizzes().get(index).getQuestions());
+            qc.setQuestions(selectedQuiz.getQuestions());
+            for (int i = 0; i < selectedQuiz.getQuestions().size(); i += 1) {
+                qc.getAnswers().add("");
+            }
             try {
                 for (int i = 0; i < 2; i += 1) {
                     try {
                         qc.setQuestionText(i, qc.getQuestions().get(i).getQuestion());
                     } catch (IndexOutOfBoundsException e) {
-                        qc.getAnchorpanes().get(i).setOpacity(0);
+                        qc.getAnchorpanes().get(i).setVisible(false);
                     }
                 }
             } catch (IndexOutOfBoundsException e) {
                 e.printStackTrace();
             }
-
+            qc.getQuizSubject().setText("Subject: " + selectedQuiz.getSubject().getSubjectName());
+            qc.getQuizID().setText("ID: " + selectedQuiz.getQuizID());
         }
     }
 

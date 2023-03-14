@@ -79,11 +79,15 @@ public class QuizController {
 
     private ArrayList<Question> questions = new ArrayList<>();
 
+    private ArrayList<String> answers = new ArrayList<>();
+
     private ArrayList<AnchorPane> anchorpanes = new ArrayList<>();
+
+    private int index = 0;
 
     @FXML
     void finish(ActionEvent event) {
-
+        // when they submit their answers
     }
 
     @FXML
@@ -144,6 +148,24 @@ public class QuizController {
         return loader;
     }
 
+    private void updateQuestions() {
+        if (questions.size() < 2 * index + 1) return;
+        question1.setText(questions.get(2 * index).getQuestion());
+        question1text.setText(answers.get(2 * index));
+        question2.setText(questions.get(2 * index + 1).getQuestion());
+        question2text.setText(answers.get(2 * index + 1));
+
+    }
+
+    private void checkIndex() {
+        if (index == 0) backBtn.setDisable(true);
+        else if (index == (int) questions.size() / 2) nextBtn.setDisable(true);
+        else {
+            backBtn.setDisable(false);
+            nextBtn.setDisable(false);
+        }
+    }
+
     public ArrayList<Question> getQuestions() {
         return questions;
     }
@@ -168,5 +190,17 @@ public class QuizController {
 
     public TextArea getQuestion2text() {
         return question2text;
+    }
+
+    public Label getQuizSubject() {
+        return quizSubject;
+    }
+
+    public Label getQuizID() {
+        return quizID;
+    }
+
+    public ArrayList<String> getAnswers() {
+        return answers;
     }
 }
