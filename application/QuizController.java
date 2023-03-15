@@ -92,27 +92,42 @@ public class QuizController {
 
     @FXML
     void goBack(ActionEvent event) {
+        // store answer of first TextArea
         answers.set(2 * index, question1text.getText());
+
+        // if second textArea exists, store answer of second textArea
         if (answers.size() >= 2 * index + 1 && answers.size() % 2 == 0) answers.set(2 * index + 1, question2text.getText());
+
+        // go back
         index -= 1;
+
+        // update buttons
         if (index == 0) {
             backBtn.setDisable(true);
         }
         nextBtn.setDisable(false);
+
         updateQuestions();
         updateAnswers();
     }
 
     @FXML
     void goNext(ActionEvent event) {
+        // store answer of first TextArea
         answers.set(2 * index, question1text.getText());
+
+        // store answer of second textArea
         if (answers.size() >= 2 * index + 1) answers.set(2 * index + 1, question2text.getText());
+
+        // go to the next two questions
         index += 1;
-        System.out.println(index);
+
+        // update buttons
         if (index == (questions.size() - 1) / 2) {
             nextBtn.setDisable(true);
         }
         backBtn.setDisable(false);
+
         updateQuestions();
         updateAnswers();
     }
@@ -144,9 +159,11 @@ public class QuizController {
 
     @FXML
     void initialize() {
+        // initialization
         anchorpanes.add(box1);
         anchorpanes.add(box2);
         backBtn.setDisable(true);
+        if (questions.size() == 1 || questions.size() == 2) nextBtn.setDisable(true);
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {
@@ -168,32 +185,29 @@ public class QuizController {
 
     private void updateQuestions() {
         try {
+            // updating box1
             box1.setVisible(true);
             question1.setText(questions.get(2 * index).getQuestion());
             question1text.setText(answers.get(2 * index));
-        } catch (Exception e) {
+        } catch (IndexOutOfBoundsException e) {
+            // if no question exists at the index (2 * index), hide box1
             box1.setVisible(false);
         }
         try {
+            // updating box2
             box2.setVisible(true);
             question2.setText(questions.get(2 * index + 1).getQuestion());
             question2text.setText(answers.get(2 * index + 1));
-        } catch (Exception e) {
+        } catch (IndexOutOfBoundsException e) {
+            // if no question exists at the index (2 * index + 1), hide box2
             box2.setVisible(false);
         }
     }
 
     private void updateAnswers() {
+        // update contents of TextAreas
         question1text.setText(answers.get(2 * index));
         if (answers.size() % 2 == 0) question2text.setText(answers.get(2 * index + 1));
-    }
-
-    public ArrayList<Question> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(ArrayList<Question> questions) {
-        this.questions = questions;
     }
 
     public void setQuestionText(int index, String text) {
@@ -204,6 +218,13 @@ public class QuizController {
         } else {
             System.out.println("Error!");
         }
+    }
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(ArrayList<Question> questions) {
+        this.questions = questions;
     }
 
     public ArrayList<AnchorPane> getAnchorpanes() {
