@@ -92,17 +92,21 @@ public class QuizController {
 
     @FXML
     void goBack(ActionEvent event) {
+        answers.set(2 * index, question1text.getText());
+        if (answers.size() >= 2 * index + 1 && answers.size() % 2 == 0) answers.set(2 * index + 1, question2text.getText());
         index -= 1;
         if (index == 0) {
             backBtn.setDisable(true);
         }
         nextBtn.setDisable(false);
         updateQuestions();
-
+        updateAnswers();
     }
 
     @FXML
     void goNext(ActionEvent event) {
+        answers.set(2 * index, question1text.getText());
+        if (answers.size() >= 2 * index + 1) answers.set(2 * index + 1, question2text.getText());
         index += 1;
         System.out.println(index);
         if (index == (questions.size() - 1) / 2) {
@@ -110,6 +114,7 @@ public class QuizController {
         }
         backBtn.setDisable(false);
         updateQuestions();
+        updateAnswers();
     }
 
     @FXML
@@ -176,6 +181,11 @@ public class QuizController {
         } catch (Exception e) {
             box2.setVisible(false);
         }
+    }
+
+    private void updateAnswers() {
+        question1text.setText(answers.get(2 * index));
+        if (answers.size() % 2 == 0) question2text.setText(answers.get(2 * index + 1));
     }
 
     public ArrayList<Question> getQuestions() {
