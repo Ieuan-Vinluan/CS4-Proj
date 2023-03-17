@@ -8,6 +8,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -128,8 +129,10 @@ public class SubjectController {
     @FXML
     void searchSubj(ActionEvent event) {
         String searchedSubj = search.getText();
+        boolean found = false;
         for (Subject s : Subject.getSubjects()) {
             if (s.getSubjectName().equalsIgnoreCase(searchedSubj)) {
+                found = true;
                 int index = Subject.getSubjects().indexOf(s);
                 if (index == 0) return; // it's already there
                 Subject temp = Subject.getSubjects().get(0);
@@ -161,6 +164,12 @@ public class SubjectController {
                         break;
                 }
             }
+        }
+        if (!found) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Doesn't exist :<");
+            alert.setContentText("The inputted subject does not exist :\"((");
+            alert.showAndWait();
         }
     }
 

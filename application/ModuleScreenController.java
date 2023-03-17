@@ -1,6 +1,7 @@
 package application;
 
 import application.model.LearningGuide;
+import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -131,7 +133,49 @@ public class ModuleScreenController {
 
     @FXML
     void searchSubj(ActionEvent event) {
-
+        String searched = search.getText();
+        boolean found = false;
+        for (LearningGuide lg : LearningGuide.getLearningGuides()) {
+            if (lg.getTitle().equalsIgnoreCase(searched)) {
+                found = true;
+                int index = LearningGuide.getLearningGuides().indexOf(lg);
+                if (index == 0) return; // it's already there
+                LearningGuide temp = LearningGuide.getLearningGuides().get(0);
+                LearningGuide.getLearningGuides().set(0, lg);
+                LearningGuide.getLearningGuides().set(index, temp);
+                if (index > 5) return; // no need to switch their places if one does not appear on screen
+                mod1.setText(lg.getTitle());
+                mod1image.setImage(new Image("application/images/" + lg.getSubject().getImageFilename()));
+                switch(index) {
+                    case 1:
+                        mod2.setText(temp.getTitle());
+                        mod2image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
+                        break;
+                    case 2:
+                        mod3.setText(temp.getTitle());
+                        mod3image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
+                        break;
+                    case 3:
+                        mod4.setText(temp.getTitle());
+                        mod4image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
+                        break;
+                    case 4:
+                        mod5.setText(temp.getTitle());
+                        mod5image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
+                        break;
+                    case 5:
+                        mod6.setText(temp.getTitle());
+                        mod6image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
+                        break;
+                }
+            }
+        }
+        if (!found) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Doesn't exist :<");
+            alert.setContentText("The inputted LG does not exist :\"((");
+            alert.showAndWait();
+        }
     }
 
     @FXML
@@ -158,10 +202,8 @@ public class ModuleScreenController {
         } else {
             for (int i = 0; i < 6; i += 1) {
                 if (i > LearningGuide.getLearningGuides().size() - 1) {
-                    msLabels.get(i).setCursor(Cursor.DEFAULT);
-                    msLabels.get(i).setOpacity(0);
-                    msImages.get(i).setCursor(Cursor.DEFAULT);
-                    msImages.get(i).setOpacity(0);
+                    msLabels.get(i).setVisible(false);
+                    msImages.get(i).setVisible(false);
                 } else {
                     msLabels.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
                     msImages.get(i).setImage(new Image("application/images/" + LearningGuide.getLearningGuides().get(i).getSubject().getImageFilename()));

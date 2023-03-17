@@ -87,7 +87,13 @@ public class QuizController {
 
     @FXML
     void finish(ActionEvent event) {
-        // when they submit their answers
+        int correctAnswers = 0;
+        for (int i = 0; i < answers.size(); i += 1) {
+            if (questions.get(i).getAnswer().equalsIgnoreCase(answers.get(i))) {
+                correctAnswers += 1;
+            }
+        }
+        System.out.println(correctAnswers);
     }
 
     @FXML
