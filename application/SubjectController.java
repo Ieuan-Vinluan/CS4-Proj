@@ -117,8 +117,9 @@ public class SubjectController {
     }
 
     @FXML
-    void goToCourse(MouseEvent event) {
+    void goToCourse(MouseEvent event) throws IOException {
         System.out.println("Clicked from " + event.getPickResult().getIntersectedNode().getId()); // debug purposes
+        SubjectScreenController ssc = switchScene((Node) event.getSource(), "/application/subjectscreen.fxml").getController();
     }
 
     @FXML
@@ -212,8 +213,12 @@ public class SubjectController {
                 ivs.get(i).setOpacity(0);
                 ivs.get(i).setCursor(Cursor.DEFAULT);
             } else {
-                labels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
-                ivs.get(i).setImage(new Image("application/images/" + Subject.getSubjects().get(i).getImageFilename()));
+                try {
+                    labels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
+                    ivs.get(i).setImage(new Image("application/images/" + Subject.getSubjects().get(i).getImageFilename()));
+                } catch (NullPointerException e) {
+                    System.out.println("NPE at index: " + i);
+                }
             }
         }
     }

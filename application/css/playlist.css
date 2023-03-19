@@ -1,0 +1,12 @@
+.play-btn {
+    -fx-opacity: 0 !important;
+    -fx-background-image: url("../images/play.png") !important;
+    -fx-background-repeat: no-repeat !important;
+    -fx-background-size: 80% !important;
+    -fx-background-color: transparent !important;
+    -fx-background-position: center !important; 
+}
+
+.play-btn:hover {
+    -fx-opacity: 1 !important;
+}

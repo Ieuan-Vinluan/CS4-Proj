@@ -6,9 +6,35 @@ import java.util.Collections;
 public class Playlist {
 	private String name;
 	private ArrayList<Song> songs = new ArrayList<>();
+	private static ArrayList<Playlist> playlists = new ArrayList<>();
 	
 	public Playlist(String name) {
 		this.name = name;
+		playlists.add(this);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public static ArrayList<Playlist> getPlaylists() {
+		return playlists;
+	}
+
+	public static void setPlaylists(ArrayList<Playlist> playlists) {
+		Playlist.playlists = playlists;
+	}
+
+	public ArrayList<Song> getSongs() {
+		return songs;
+	}
+
+	public void setSongs(ArrayList<Song> songs) {
+		this.songs = songs;
 	}
 
 	public void addSong(Song song) {
@@ -16,7 +42,7 @@ public class Playlist {
 	}
 	
 	public void removeSong(Song song) {
-		if (songs.contains(song)) songs.remove(song);
+		songs.remove(song);
 	}
 	
 	public void shuffle() {

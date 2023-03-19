@@ -1,5 +1,7 @@
 package application;
 
+import application.model.LearningGuide;
+import application.model.Quiz;
 import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,7 +23,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class SubjectController {
+public class SubjectScreenController {
+
+    @FXML
+    private Label username;
 
     @FXML
     private Button modules;
@@ -99,7 +104,7 @@ public class SubjectController {
     private ArrayList<ImageView> ivs = new ArrayList<>();
     
     private ArrayList<LearningGuide> lgs = new ArrayList<>();
-    private ArrayList<Quiz> quizzes = new ArrayList<>();
+    private ArrayList<Quiz> subjectQuizzes = new ArrayList<>();
 
     @FXML
     void goToHome(ActionEvent actionEvent) throws IOException {
@@ -136,30 +141,6 @@ public class SubjectController {
     @FXML
     void initialize() {
         LoginController.setProfileText(username);
-        labels.add(sub1);
-        labels.add(sub2);
-        labels.add(sub3);
-        labels.add(sub4);
-        labels.add(sub5);
-        labels.add(sub6);
-        ivs.add(sub1image);
-        ivs.add(sub2image);
-        ivs.add(sub3image);
-        ivs.add(sub4image);
-        ivs.add(sub5image);
-        ivs.add(sub6image);
-
-        int size = Subject.getSubjects().size();
-        for (int i = 0; i < 6; i += 1) {
-            if (i > size - 1) {
-                labels.get(i).setOpacity(0);
-                ivs.get(i).setOpacity(0);
-                ivs.get(i).setCursor(Cursor.DEFAULT);
-            } else {
-                labels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
-                ivs.get(i).setImage(new Image("application/images/" + Subject.getSubjects().get(i).getImageFilename()));
-            }
-        }
     }
     
     @FXML
@@ -194,17 +175,17 @@ public class SubjectController {
     void openModule(MouseEvent event) throws IOException {
         ImageView iv = (ImageView) event.getSource();
         String id = iv.getId();
-        if (id.contains("1")) {
-            openSelectedModule(iv, 0);
-        } else if (id.contains("2")) {
-            openSelectedModule(iv, 1);
-        } else if (id.contains("3")) {
-            openSelectedModule(iv, 2);
-        } else if (id.contains("4")) {
-            openSelectedModule(iv, 3);
-        } else if (id.contains("5")) {
-            openSelectedModule(iv, 4);
-        }
+//        if (id.contains("1")) {
+//            openSelectedModule(iv, 0);
+//        } else if (id.contains("2")) {
+//            openSelectedModule(iv, 1);
+//        } else if (id.contains("3")) {
+//            openSelectedModule(iv, 2);
+//        } else if (id.contains("4")) {
+//            openSelectedModule(iv, 3);
+//        } else if (id.contains("5")) {
+//            openSelectedModule(iv, 4);
+//        }
     }
     
     @FXML

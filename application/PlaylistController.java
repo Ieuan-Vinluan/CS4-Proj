@@ -1,13 +1,23 @@
 package application;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import application.model.Song;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Circle;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class PlaylistController {
 
@@ -87,25 +97,25 @@ public class PlaylistController {
     private Button modules;
 
     @FXML
-    private Circle playBtn1;
+    private Button playBtn1;
 
     @FXML
-    private Circle playBtn2;
+    private Button playBtn2;
 
     @FXML
-    private Circle playBtn3;
+    private Button playBtn3;
 
     @FXML
-    private Circle playBtn4;
+    private Button playBtn4;
 
     @FXML
-    private Circle playBtn5;
+    private Button playBtn5;
 
     @FXML
-    private Circle playBtn6;
+    private Button playBtn6;
 
     @FXML
-    private Circle playBtn7;
+    private Button playBtn7;
 
     @FXML
     private Button playlists;
@@ -140,39 +150,66 @@ public class PlaylistController {
     @FXML
     private Label username;
 
-    @FXML
-    void goToHome(ActionEvent event) {
+    private ArrayList<Song> songs = Song.getSongs();
 
+    private ArrayList<Media> mediaArrayList = new ArrayList<>();
+
+    private MediaPlayer mp;
+
+    @FXML
+    void goToHome(ActionEvent event) throws IOException {
+        switchScene((Node) event.getSource(), "/application/homescreen.fxml");
     }
 
     @FXML
-    void goToModule(ActionEvent event) {
-
+    void goToModule(ActionEvent event) throws IOException {
+        switchScene((Node) event.getSource(), "/application/modulescreen.fxml");
     }
 
     @FXML
-    void goToPlaylist(ActionEvent event) {
-
+    void goToPlaylist(ActionEvent event) throws IOException {
+        switchScene((Node) event.getSource(), "/application/playlist.fxml");
     }
 
     @FXML
-    void goToQuizzes(ActionEvent event) {
-
+    void goToQuizzes(ActionEvent event) throws IOException {
+        switchScene((Node) event.getSource(), "/application/quizzes.fxml");
     }
 
     @FXML
-    void goToSubject(ActionEvent event) {
-
+    void goToSubject(ActionEvent event) throws IOException {
+        switchScene((Node) event.getSource(), "/application/subject.fxml");
     }
 
     @FXML
-    void playSong(MouseEvent event) {
-
+    void playSong(ActionEvent event) {
+        mp = new MediaPlayer(mediaArrayList.get(0));
+        mp.play();
     }
 
     @FXML
     void initialize() {
+        for (Song s : this.songs) {
+            mediaArrayList.add(new Media(new File("application/music/" + s.getFilePath()).toURI().toString()));
+        }
+        System.out.println(mediaArrayList);
+    }
 
+    private FXMLLoader switchScene(Node node, String path) throws IOException {
+        // getting current window
+        Scene currentScene = node.getScene();
+        Stage currentStage = (Stage) currentScene.getWindow();
+
+        // loading new window
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+        Parent root = loader.load();
+        Scene newScene = new Scene(root);
+
+        currentStage.hide();
+        currentStage.setScene(newScene);
+        currentStage.show();
+
+        return loader;
     }
 
 }

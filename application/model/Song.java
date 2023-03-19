@@ -1,17 +1,28 @@
 package application.model;
 
+import java.util.ArrayList;
+
 public class Song {
 	private String title;
 	private Playlist playlist;
 	private String filePath;
+	private String artist;
 	private boolean isPlaying = false;
+	private static ArrayList<Song> songs = new ArrayList<>();
 	
 	
 	
-	public Song(String title, Playlist playlist, String filePath) {
+	public Song(String title, String artist, Playlist playlist, String filePath) {
 		this.title = title;
 		this.playlist = playlist;
 		this.filePath = filePath;
+		this.artist = artist;
+		songs.add(this);
+		for (Playlist p : Playlist.getPlaylists()) {
+			if (p.equals(this.playlist)) {
+				p.addSong(this);
+			}
+		}
 	}
 
 	public String getTitle() {
@@ -29,7 +40,15 @@ public class Song {
 	public void setPlaylist(Playlist playlist) {
 		this.playlist = playlist;
 	}
-	
+
+	public String getArtist() {
+		return artist;
+	}
+
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+
 	public String getFilePath() {
 		return filePath;
 	}
@@ -44,6 +63,14 @@ public class Song {
 
 	public void setPlaying(boolean isPlaying) {
 		this.isPlaying = isPlaying;
+	}
+
+	public static ArrayList<Song> getSongs() {
+		return songs;
+	}
+
+	public static void setSongs(ArrayList<Song> songs) {
+		Song.songs = songs;
 	}
 
 	public void toggleSong() {

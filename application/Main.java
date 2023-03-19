@@ -96,6 +96,13 @@ public class Main extends Application {
 			Question healthAA1_one = new Question(secondQuiz, "Deception to sell products?", "Quackery");
 			Question bioFA1_one = new Question(thirdQuiz, "____ synthesis", "Dehydration");
 
+			// test playlists
+			Playlist firstPlaylist = new Playlist("Favorite Songs!");
+			Playlist secondPlaylist = new Playlist("Flopped");
+
+			// test songs
+			Song firstSong = new Song("Foreverland", "LilyPichu", firstPlaylist, "foreverland-lilypichu.mp3");
+
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);

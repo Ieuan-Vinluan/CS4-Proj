@@ -13,10 +13,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlaylistController">
+<VBox minHeight="720.0" minWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlaylistController">
     <children>
         <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
             <children>
@@ -98,12 +97,13 @@
         </SplitPane>
         <AnchorPane prefHeight="610.0" prefWidth="1080.0">
          <children>
-            <GridPane layoutX="192.0" layoutY="125.0" prefHeight="342.0" prefWidth="714.0">
+            <GridPane layoutX="182.0" layoutY="87.0" prefHeight="366.0" prefWidth="714.0">
               <columnConstraints>
                   <ColumnConstraints />
                   <ColumnConstraints />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" percentWidth="5.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -118,175 +118,192 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label fx:id="duration7" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                  <Label fx:id="duration7" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="7">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist1" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <Label fx:id="artist1" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added1" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                  <Label fx:id="added1" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="duration1" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                  <Label fx:id="duration1" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="1">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="duration2" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                  <Label fx:id="duration2" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added2" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <Label fx:id="added2" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="2">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist2" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <Label fx:id="artist2" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time2" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label fx:id="time2" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time3" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <Label fx:id="time3" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist3" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <Label fx:id="artist3" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added3" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                  <Label fx:id="added3" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="3">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="duration3" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                  <Label fx:id="duration3" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="duration4" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                  <Label fx:id="duration4" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="4">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added4" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                  <Label fx:id="added4" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="4">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist4" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <Label fx:id="artist4" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time4" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Label fx:id="time4" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time5" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <Label fx:id="time5" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist5" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                  <Label fx:id="artist5" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added5" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                  <Label fx:id="added5" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="5">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="duration5" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                  <Label fx:id="duration5" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="5">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="duration6" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                  <Label fx:id="duration6" text="Text" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="6">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added6" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                  <Label fx:id="added6" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="6">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist6" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                  <Label fx:id="artist6" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="6">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time6" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                  <Label fx:id="time6" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time7" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                  <Label fx:id="time7" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="7">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="artist7" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                  <Label fx:id="artist7" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="7">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="added7" text="Text" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                  <Label fx:id="added7" text="Text" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="7">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time1" text="Text" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="time1" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fx:id="playBtn2" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Circle fx:id="playBtn1" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Circle fx:id="playBtn3" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Circle fx:id="playBtn4" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Circle fx:id="playBtn5" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <Circle fx:id="playBtn6" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <Circle fx:id="playBtn7" fill="DODGERBLUE" onMouseClicked="#playSong" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <Label alignment="CENTER" prefWidth="178.5" text="Time" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                  <Label alignment="CENTER" prefWidth="178.5" text="Title" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
                      <font>
                         <Font name="Poppins Regular" size="31.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefWidth="178.5" text="Artist" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+                  <Label alignment="CENTER" prefWidth="178.5" text="Artist" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
                      <font>
                         <Font name="Poppins Regular" size="31.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefWidth="178.5" text="Added" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
+                  <Label alignment="CENTER" prefWidth="178.5" text="Added" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5">
                      <font>
                         <Font name="Poppins Regular" size="31.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefWidth="178.5" text="Duration" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5">
+                  <Label alignment="CENTER" prefWidth="178.5" text="Duration" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="6">
                      <font>
                         <Font name="Poppins Regular" size="31.0" />
                      </font>
                   </Label>
+                  <Button fx:id="playBtn1" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="playBtn2" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="playBtn3" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="playBtn4" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="playBtn5" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button fx:id="playBtn6" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Button fx:id="playBtn7" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                </children>
             </GridPane>
+            <AnchorPane layoutX="-1.0" layoutY="504.0" prefHeight="111.0" prefWidth="1080.0">
+               <children>
+                  <Label layoutX="78.0" layoutY="47.0" text="song title" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins ExtraBold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="43.0" text="artist" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Light" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="549.0" layoutY="43.0" mnemonicParsing="false" text="Button" />
+                  <Button layoutX="722.0" layoutY="56.0" mnemonicParsing="false" text="Button" />
+                  <Button layoutX="875.0" layoutY="31.0" mnemonicParsing="false" text="Button" />
+               </children>
+            </AnchorPane>
          </children>
         </AnchorPane>
     </children>
