@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SubjectController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0">
+               <image>
+                  <Image url="@images/original images/computer science.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="435.0" text="TEARS - Your No. 1 Study Help" textAlignment="CENTER" textFill="#ffb703" AnchorPane.leftAnchor="60.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="1012.0" layoutY="9.0" prefHeight="42.0" prefWidth="64.0" text="Profile" textFill="#ffb307" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="36.0" layoutX="978.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="66.0">
+               <image>
+                  <Image url="@images/profilepic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <SplitPane style="-fx-background-color: #023047;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="2.0" top="2.0" />
+         </padding>
+         <items>
+            <HBox style="-fx-background-color: #20465F; -fx-padding: 0.5em;">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#goToHome" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Home" textFill="#ffb703">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="modules" mnemonicParsing="false" onAction="#goToModule" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject" style="-fx-background-color: transparent;" text="Subjects" textFill="#ffb703">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="quizzes" mnemonicParsing="false" onAction="#goToQuizzes" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylists" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist" textFill="#ffb703">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </items>
+      </SplitPane>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="625.6" prefWidth="1080.0" style="-fx-background-color: #203047;">
+         <content>
+            <AnchorPane prefHeight="626.0" prefWidth="1080.0" style="-fx-background-color: #203047;">
+               <children>
+                  <Label layoutX="26.0" layoutY="14.0" text="Subject" textFill="#ffb703">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="70.0" layoutY="80.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/original%20images/math.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 1" textFill="#ffb703">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original%20images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 1" textFill="#ffb703">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="525.0" layoutY="80.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/original%20images/math.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 2" textFill="#ffb703">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original%20images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 2" textFill="#ffb703">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="105.0" layoutY="290.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/original%20images/math.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 3" textFill="#ffb703">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original%20images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 3" textFill="#ffb703">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="560.0" layoutY="290.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/original%20images/math.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 4" textFill="#ffb703">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original%20images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 4" textFill="#ffb703">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="140.0" layoutY="500.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/original%20images/math.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 5" textFill="#ffb703">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original%20images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 5" textFill="#ffb703">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
