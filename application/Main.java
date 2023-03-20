@@ -102,7 +102,14 @@ public class Main extends Application {
 
 			// test songs
 			Song firstSong = new Song("Foreverland", "LilyPichu", "20 March 2023", firstPlaylist, "foreverland-lilypichu.mp3");
-
+			/*
+			----------------------- Credit -----------------------
+			Song: foreverland
+			Artist: lilypichu
+			Link: https://www.youtube.com/watch?v=A2zepLiuEJU
+			------------------------------------------------------
+			 */
+			
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
