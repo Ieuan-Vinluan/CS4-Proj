@@ -7,16 +7,18 @@ public class Song {
 	private Playlist playlist;
 	private String filePath;
 	private String artist;
+	private String added;
 	private boolean isPlaying = false;
 	private static ArrayList<Song> songs = new ArrayList<>();
 	
 	
 	
-	public Song(String title, String artist, Playlist playlist, String filePath) {
+	public Song(String title, String artist, String added, Playlist playlist, String filePath) {
 		this.title = title;
 		this.playlist = playlist;
 		this.filePath = filePath;
 		this.artist = artist;
+		this.added = added;
 		songs.add(this);
 		for (Playlist p : Playlist.getPlaylists()) {
 			if (p.equals(this.playlist)) {
@@ -56,7 +58,15 @@ public class Song {
 	public void setFilePath(String filePath) {
 		this.filePath = filePath;
 	}
-	
+
+	public String getAdded() {
+		return added;
+	}
+
+	public void setAdded(String added) {
+		this.added = added;
+	}
+
 	public boolean getPlaying() {
 		return isPlaying;
 	}

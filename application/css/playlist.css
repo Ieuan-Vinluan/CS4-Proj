@@ -1,12 +1,15 @@
 .play-btn {
-    -fx-opacity: 0 !important;
-    -fx-background-image: url("../images/play.png") !important;
     -fx-background-repeat: no-repeat !important;
-    -fx-background-size: 80% !important;
+    -fx-background-size: 100% !important;
     -fx-background-color: transparent !important;
-    -fx-background-position: center !important; 
+    -fx-background-position: center !important;
+    -fx-pref-width: 32.8px !important;
+    -fx-pref-height: 33.6px !important;
+    -fx-alignment: center !important;
 }
 
 .play-btn:hover {
-    -fx-opacity: 1 !important;
+    -fx-background-image: url("../images/play.png") !important;
+    -fx-pref-width: 32.8px !important;
+    -fx-pref-height: 33.6px !important;
 }

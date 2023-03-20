@@ -101,7 +101,7 @@ public class Main extends Application {
 			Playlist secondPlaylist = new Playlist("Flopped");
 
 			// test songs
-			Song firstSong = new Song("Foreverland", "LilyPichu", firstPlaylist, "foreverland-lilypichu.mp3");
+			Song firstSong = new Song("Foreverland", "LilyPichu", "20 March 2023", firstPlaylist, "foreverland-lilypichu.mp3");
 
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
 			Scene scene = new Scene(root);

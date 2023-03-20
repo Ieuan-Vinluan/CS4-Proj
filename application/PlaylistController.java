@@ -9,9 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -127,34 +129,58 @@ public class PlaylistController {
     private Button subject;
 
     @FXML
-    private Label time1;
+    private Label title1;
 
     @FXML
-    private Label time2;
+    private Label title2;
 
     @FXML
-    private Label time3;
+    private Label title3;
 
     @FXML
-    private Label time4;
+    private Label title4;
 
     @FXML
-    private Label time5;
+    private Label title5;
 
     @FXML
-    private Label time6;
+    private Label title6;
 
     @FXML
-    private Label time7;
+    private Label title7;
 
     @FXML
     private Label username;
 
+    @FXML
+    private Label playingSong;
+
+    @FXML
+    private Button playBtn;
+
+    @FXML
+    private Button pauseBtn;
+
+    @FXML
+    private Button restartBtn;
+
     private ArrayList<Song> songs = Song.getSongs();
 
-    private ArrayList<Media> mediaArrayList = new ArrayList<>();
+    private ArrayList<Label> artists = new ArrayList<>();
+
+    private ArrayList<Label> songTitles = new ArrayList<>();
+
+    private ArrayList<Label> dateAdded = new ArrayList<>();
+
+    private ArrayList<Label> durations = new ArrayList<>();
+
+    private ArrayList<Button> playBtns = new ArrayList<>();
 
     private MediaPlayer mp;
+
+    private Song currentSong;
+
+    private Duration currentTime;
 
     @FXML
     void goToHome(ActionEvent event) throws IOException {
@@ -183,16 +209,126 @@ public class PlaylistController {
 
     @FXML
     void playSong(ActionEvent event) {
-        mp = new MediaPlayer(mediaArrayList.get(0));
+        Button clicked = (Button) event.getSource();
+        String idOfClicked = clicked.getId();
+
+        if (idOfClicked.equals("playBtn")) {
+            mp.seek(currentTime);
+            mp.play();
+            return;
+        }
+
+        try {
+            if (idOfClicked.contains("1")) currentSong = songs.get(0);
+            else if (idOfClicked.contains("2")) currentSong = songs.get(1);
+            else if (idOfClicked.contains("3")) currentSong = songs.get(2);
+            else if (idOfClicked.contains("4")) currentSong = songs.get(3);
+            else if (idOfClicked.contains("5")) currentSong = songs.get(4);
+            else if (idOfClicked.contains("6")) currentSong = songs.get(5);
+            else if (idOfClicked.contains("7")) currentSong = songs.get(6);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Index is too big!");
+            return;
+        }
+        mp.stop();
+        mp = new MediaPlayer(new Media(new File("application/music/" + currentSong.getFilePath()).toURI().toString()));
+        currentSong.setPlaying(true);
+        playingSong.setText(currentSong.getTitle());
+        mp.play();
+    }
+
+    @FXML
+    void playBtnEnter(MouseEvent event) {
+        playBtn1.setText("");
+        playBtn2.setText("");
+        playBtn3.setText("");
+        playBtn4.setText("");
+        playBtn5.setText("");
+        playBtn6.setText("");
+        playBtn7.setText("");
+    }
+
+    @FXML
+    void playBtnExit(MouseEvent event) {
+        playBtn1.setText("1");
+        playBtn2.setText("2");
+        playBtn3.setText("3");
+        playBtn4.setText("4");
+        playBtn5.setText("5");
+        playBtn6.setText("6");
+        playBtn7.setText("7");
+    }
+
+    @FXML
+    void pauseSong(ActionEvent event) {
+        currentTime = mp.getCurrentTime();
+        currentSong.setPlaying(false);
+        mp.pause();
+    }
+
+    @FXML
+    void restartSong(ActionEvent event) {
+        mp.seek(Duration.valueOf("0s"));
+        currentSong.setPlaying(true);
         mp.play();
     }
 
     @FXML
     void initialize() {
-        for (Song s : this.songs) {
-            mediaArrayList.add(new Media(new File("application/music/" + s.getFilePath()).toURI().toString()));
+        LoginController.setProfileText(username);
+        playingSong.setText("");
+
+        artists.add(artist1);
+        artists.add(artist2);
+        artists.add(artist3);
+        artists.add(artist4);
+        artists.add(artist5);
+        artists.add(artist6);
+        artists.add(artist7);
+
+        dateAdded.add(added1);
+        dateAdded.add(added2);
+        dateAdded.add(added3);
+        dateAdded.add(added4);
+        dateAdded.add(added5);
+        dateAdded.add(added6);
+        dateAdded.add(added7);
+
+        songTitles.add(title1);
+        songTitles.add(title2);
+        songTitles.add(title3);
+        songTitles.add(title4);
+        songTitles.add(title5);
+        songTitles.add(title6);
+        songTitles.add(title7);
+
+        durations.add(duration1);
+        durations.add(duration2);
+        durations.add(duration3);
+        durations.add(duration4);
+        durations.add(duration5);
+        durations.add(duration6);
+        durations.add(duration7);
+
+        playBtns.add(playBtn1);
+        playBtns.add(playBtn2);
+        playBtns.add(playBtn3);
+        playBtns.add(playBtn4);
+        playBtns.add(playBtn5);
+        playBtns.add(playBtn6);
+        playBtns.add(playBtn7);
+
+        for (int i = 0; i < 7; i += 1) {
+            if (i <= songs.size() - 1) {
+                setDetails(songs.get(i), i);
+            } else {
+                playBtns.get(i).setVisible(false);
+                songTitles.get(i).setVisible(false);
+                artists.get(i).setVisible(false);
+                durations.get(i).setVisible(false);
+                dateAdded.get(i).setVisible(false);
+            }
         }
-        System.out.println(mediaArrayList);
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {
@@ -210,6 +346,17 @@ public class PlaylistController {
         currentStage.show();
 
         return loader;
+    }
+
+    private void setDetails(Song song, int index) {
+        Media media = new Media(new File("application/music/" + song.getFilePath()).toURI().toString());
+        mp = new MediaPlayer(media);
+        mp.setOnReady(() -> {
+            songTitles.get(index).setText(song.getTitle());
+            artists.get(index).setText(song.getArtist());
+            dateAdded.get(index).setText(song.getAdded());
+            durations.get(index).setText(String.format("%dm %ds", (int) Math.floor(media.getDuration().toSeconds() / 60), Math.round(media.getDuration().toSeconds() % 60)));
+        });
     }
 
 }

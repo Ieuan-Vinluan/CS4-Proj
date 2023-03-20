@@ -97,12 +97,12 @@
         </SplitPane>
         <AnchorPane prefHeight="610.0" prefWidth="1080.0">
          <children>
-            <GridPane layoutX="182.0" layoutY="87.0" prefHeight="366.0" prefWidth="714.0">
+            <GridPane layoutY="90.0" prefHeight="366.0" prefWidth="1080.0">
               <columnConstraints>
                   <ColumnConstraints />
-                  <ColumnConstraints />
-                <ColumnConstraints halignment="RIGHT" percentWidth="5.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints halignment="RIGHT" maxWidth="36.0" minWidth="36.0" percentWidth="5.0" prefWidth="36.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -153,12 +153,12 @@
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time2" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <Label fx:id="title2" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time3" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <Label fx:id="title3" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
@@ -193,12 +193,12 @@
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time4" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <Label fx:id="title4" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time5" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                  <Label fx:id="title5" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
@@ -233,12 +233,12 @@
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time6" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                  <Label fx:id="title6" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time7" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                  <Label fx:id="title7" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="7">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
@@ -253,7 +253,7 @@
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="time1" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <Label fx:id="title1" text="Text" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
                         <Font name="Montserrat Regular" size="20.0" />
                      </font>
@@ -278,30 +278,76 @@
                         <Font name="Poppins Regular" size="31.0" />
                      </font>
                   </Label>
-                  <Button fx:id="playBtn1" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="playBtn2" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="playBtn3" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Button fx:id="playBtn4" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <Button fx:id="playBtn5" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                  <Button fx:id="playBtn6" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                  <Button fx:id="playBtn7" mnemonicParsing="false" onAction="#playSong" styleClass="play-btn" stylesheets="@css/playlist.css" text="    " textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button fx:id="playBtn1" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" prefWidth="241.0" styleClass="play-btn" stylesheets="@css/playlist.css" text="1" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="playBtn2" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" styleClass="play-btn" stylesheets="@css/playlist.css" text="2" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="playBtn3" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" styleClass="play-btn" stylesheets="@css/playlist.css" text="3" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="playBtn4" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" styleClass="play-btn" stylesheets="@css/playlist.css" text="4" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="playBtn5" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" styleClass="play-btn" stylesheets="@css/playlist.css" text="5" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="playBtn6" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" styleClass="play-btn" stylesheets="@css/playlist.css" text="6" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="playBtn7" mnemonicParsing="false" onAction="#playSong" onMouseEntered="#playBtnEnter" onMouseExited="#playBtnExit" styleClass="play-btn" stylesheets="@css/playlist.css" text="7" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
             </GridPane>
-            <AnchorPane layoutX="-1.0" layoutY="504.0" prefHeight="111.0" prefWidth="1080.0">
+            <AnchorPane layoutX="-1.0" layoutY="504.0" prefHeight="111.0" prefWidth="1080.0" style="-fx-background-color: #20465F;">
                <children>
-                  <Label layoutX="78.0" layoutY="47.0" text="song title" textFill="WHITE">
+                  <Label fx:id="playingSong" layoutX="37.0" layoutY="31.0" prefHeight="43.0" prefWidth="416.0" text="song title" textFill="WHITE">
                      <font>
                         <Font name="Poppins ExtraBold" size="30.0" />
                      </font>
                   </Label>
-                  <Label layoutX="310.0" layoutY="43.0" text="artist" textFill="WHITE">
+                  <Button fx:id="playBtn" layoutX="615.0" layoutY="28.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#playSong" prefWidth="120.0" style="-fx-border-color: white; -fx-background-color: transparent;" text="Play" textFill="#ffb703">
                      <font>
-                        <Font name="Poppins Light" size="30.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="549.0" layoutY="43.0" mnemonicParsing="false" text="Button" />
-                  <Button layoutX="722.0" layoutY="56.0" mnemonicParsing="false" text="Button" />
-                  <Button layoutX="875.0" layoutY="31.0" mnemonicParsing="false" text="Button" />
+                        <Font name="Poppins Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="pauseBtn" layoutX="765.0" layoutY="28.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#pauseSong" prefWidth="120.0" style="-fx-border-color: white; -fx-background-color: transparent;" text="Pause" textFill="#ffb703">
+                     <font>
+                        <Font name="Poppins Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="restartBtn" layoutX="915.0" layoutY="28.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#restartSong" prefWidth="120.0" style="-fx-border-color: white; -fx-background-color: transparent;" text="Restart" textFill="#ffb703">
+                     <font>
+                        <Font name="Poppins Regular" size="24.0" />
+                     </font></Button>
                </children>
             </AnchorPane>
          </children>
