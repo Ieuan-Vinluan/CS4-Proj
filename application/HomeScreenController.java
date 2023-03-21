@@ -1,9 +1,6 @@
 package application;
 
-import application.model.LearningGuide;
-import application.model.Note;
-import application.model.Quiz;
-import application.model.Subject;
+import application.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,6 +36,21 @@ public class HomeScreenController {
     private Label lg5;
 
     @FXML
+    private Label subject1;
+
+    @FXML
+    private Label subject2;
+
+    @FXML
+    private Label subject3;
+
+    @FXML
+    private Label subject4;
+
+    @FXML
+    private Label subject5;
+
+    @FXML
     private Button home;
 
     @FXML
@@ -58,6 +70,21 @@ public class HomeScreenController {
 
     @FXML
     private Label quiz5;
+
+    @FXML
+    private Label deadline1;
+
+    @FXML
+    private Label deadline2;
+
+    @FXML
+    private Label deadline3;
+
+    @FXML
+    private Label deadline4;
+
+    @FXML
+    private Label deadline5;
 
     @FXML
     private Label note1;
@@ -98,6 +125,10 @@ public class HomeScreenController {
     private ArrayList<Label> lgs = new ArrayList<>();
     private ArrayList<Label> noteLabels = new ArrayList<>();
     private ArrayList<Label> quizLabels = new ArrayList<>();
+
+    private ArrayList<Label> subjectLabels = new ArrayList<>();
+
+    private ArrayList<Label> deadlineLabels = new ArrayList<>();
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
@@ -187,6 +218,12 @@ public class HomeScreenController {
     }
 
     @FXML
+    void openSubject(MouseEvent event) throws IOException {
+        SubjectScreenController sc = switchScene((Node) event.getSource(), "/application/subjectscreen.fxml").getController();
+
+    }
+
+    @FXML
     void initialize() {
         LoginController.setProfileText(username);
         lgs.add(lg1);
@@ -208,11 +245,23 @@ public class HomeScreenController {
         quizLabels.add(quiz4);
         quizLabels.add(quiz5);
 
+        subjectLabels.add(subject1);
+        subjectLabels.add(subject2);
+        subjectLabels.add(subject3);
+        subjectLabels.add(subject4);
+        subjectLabels.add(subject5);
+
+        deadlineLabels.add(deadline1);
+        deadlineLabels.add(deadline2);
+        deadlineLabels.add(deadline3);
+        deadlineLabels.add(deadline4);
+        deadlineLabels.add(deadline5);
+
         if (LearningGuide.getLearningGuides().size() < 5) {
             int lgSize = LearningGuide.getLearningGuides().size();
             for (int i = 0; i < 5; i += 1) {
                 if (i >= lgSize) {
-                    lgs.get(i).setOpacity(0); // hide
+                    lgs.get(i).setVisible(false);
                 } else {
                     lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
                     lgs.get(i).setCursor(Cursor.HAND);
@@ -230,8 +279,7 @@ public class HomeScreenController {
             for (int i = 0; i < 6; i += 1) {
                 if (i >= noteSize) {
                     // hide
-                    noteLabels.get(i).setOpacity(0);
-                    noteLabels.get(i).setCursor(Cursor.DEFAULT);
+                    noteLabels.get(i).setVisible(false);
                 } else {
                     noteLabels.get(i).setText(Note.getNotes().get(i).getTitle());
                 }
@@ -246,8 +294,7 @@ public class HomeScreenController {
             int quizSize = Quiz.getQuizzes().size();
             for (int i = 0; i < 5; i += 1) {
                 if (i >= quizSize) {
-                    quizLabels.get(i).setOpacity(0);
-                    quizLabels.get(i).setCursor(Cursor.DEFAULT);
+                    quizLabels.get(i).setVisible(false);
                 } else {
                     quizLabels.get(i).setText(Quiz.getQuizzes().get(i).getQuizID());
                 }
@@ -255,6 +302,39 @@ public class HomeScreenController {
         } else {
             for (int i = 0; i < 5; i += 1) {
                 quizLabels.get(i).setText(Quiz.getQuizzes().get(i).getQuizID());
+            }
+        }
+
+        if (Subject.getSubjects().size() < 6) {
+            int subjectSize = Subject.getSubjects().size();
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= subjectSize) {
+                    subjectLabels.get(i).setVisible(false);
+                } else {
+                    subjectLabels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
+                }
+            }
+        } else {
+            for (int i = 0; i < 5; i += 1) {
+                subjectLabels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
+            }
+        }
+
+        if (Deadline.getDeadlines().size() < 6) {
+            // to show most urgent deadlines
+            DeadlineList.sortDeadlineList(Deadline.getDeadlines(), 0, Deadline.getDeadlines().size() - 1, Deadline.getDeadlines().get(Deadline.getDeadlines().size() - 1));
+
+            int deadlinesSize = Deadline.getDeadlines().size();
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= deadlinesSize) {
+                    deadlineLabels.get(i).setVisible(false);
+                } else {
+                    deadlineLabels.get(i).setText(Deadline.getDeadlines().get(i).getRequirement() + " - " + Deadline.getDeadlines().get(i).getDeadline().toLocalDate());
+                }
+            }
+        } else {
+            for (int i = 0; i < 5; i += 1) {
+                deadlineLabels.get(i).setText(Deadline.getDeadlines().get(i).getRequirement() + " - " + Deadline.getDeadlines().get(i).getDeadline().toLocalDate());
             }
         }
     }
@@ -274,6 +354,12 @@ public class HomeScreenController {
         currentStage.show();
 
         return loader;
+    }
+
+    private void openSelectdSubject(Node event, int index) throws IOException {
+        SubjectController sc = switchScene(event, "/application/subject.fxml").getController();
+
+        // initializing content here
     }
 
     private void openQuiz(Node event, int index) throws IOException {

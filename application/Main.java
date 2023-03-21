@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 
 public class Main extends Application {
 	@Override
@@ -109,6 +112,15 @@ public class Main extends Application {
 			Link: https://www.youtube.com/watch?v=A2zepLiuEJU
 			------------------------------------------------------
 			 */
+
+			// test deadline list
+			DeadlineList deadlineList = new DeadlineList("Important!");
+
+			// test deadlines
+			Deadline firstDeadline = new Deadline("Chemistry FA1", chem, deadlineList, LocalDateTime.of(2023, 3, 24, 12, 0));
+			Deadline secondDeadline = new Deadline("CS Milestone Two", cs, deadlineList, LocalDateTime.of(2023, 3, 21, 23, 0));
+			Deadline thirdDeadline = new Deadline("Bio AA3", bio, deadlineList, LocalDateTime.of(2023, 3, 23, 23, 0));
+			Deadline fourthDeadline = new Deadline("English Town Hall", eng, deadlineList, LocalDateTime.of(2023, 3, 28, 23, 0));
 
 			Parent root = FXMLLoader.load(getClass().getResource("/application/login.fxml"));
 			Scene scene = new Scene(root);

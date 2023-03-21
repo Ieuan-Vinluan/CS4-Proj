@@ -1,6 +1,7 @@
 package application;
 
 import application.model.Quiz;
+import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -124,7 +126,49 @@ public class QuizzesController {
 
     @FXML
     void searchQuiz(ActionEvent event) {
-        // todo
+        String searchedSubj = search.getText();
+        boolean found = false;
+        for (Subject s : Subject.getSubjects()) {
+            if (s.getSubjectName().equalsIgnoreCase(searchedSubj)) {
+                found = true;
+                int index = Subject.getSubjects().indexOf(s);
+                if (index == 0) return; // it's already there
+                Subject temp = Subject.getSubjects().get(0);
+                Subject.getSubjects().set(0, s);
+                Subject.getSubjects().set(index, temp);
+                if (index > 5) return; // no need to switch their places if one does not appear on screen
+                quiz1.setText(s.getSubjectName());
+                quiz1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                switch(index) {
+                    case 1:
+                        quiz2.setText(temp.getSubjectName());
+                        quiz2image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 2:
+                        quiz3.setText(temp.getSubjectName());
+                        quiz3image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 3:
+                        quiz4.setText(temp.getSubjectName());
+                        quiz4image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 4:
+                        quiz5.setText(temp.getSubjectName());
+                        quiz5image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                    case 5:
+                        quiz6.setText(temp.getSubjectName());
+                        quiz6image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        break;
+                }
+            }
+        }
+        if (!found) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Doesn't exist :<");
+            alert.setContentText("The inputted subject does not exist :\"((");
+            alert.showAndWait();
+        }
     }
 
     @FXML
