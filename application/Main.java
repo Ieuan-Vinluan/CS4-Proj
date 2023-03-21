@@ -85,9 +85,9 @@ public class Main extends Application {
 			);
 
 			// test quizzes
-			Quiz firstQuiz = new Quiz("Chem Q3-FA1", chem, 15);
-			Quiz secondQuiz = new Quiz("Health Q3-AA1", health, 25);
-			Quiz thirdQuiz = new Quiz("Bio Q3-FA1", bio, 15);
+			Quiz firstQuiz = new Quiz("Chem Q3-FA1", chem, 3);
+			Quiz secondQuiz = new Quiz("Health Q3-AA1", health, 1);
+			Quiz thirdQuiz = new Quiz("Bio Q3-FA1", bio, 1);
 
 			// test notes
 			Question chemFA1_one = new Question(firstQuiz, "T/F: Ice is less dense than water.", "True");

@@ -6,15 +6,18 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import application.model.Question;
+import application.model.Quiz;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -77,6 +80,8 @@ public class QuizController {
     @FXML
     private Label username;
 
+    private Quiz selectedQuiz;
+
     private ArrayList<Question> questions = new ArrayList<>();
 
     private ArrayList<String> answers = new ArrayList<>();
@@ -86,24 +91,26 @@ public class QuizController {
     private int index = 0;
 
     @FXML
-    void finish(ActionEvent event) {
-        int correctAnswers = 0;
+    void finish(ActionEvent event) throws IOException {
+        selectedQuiz.setCurrentScore(0);
+        System.out.println(answers);
         for (int i = 0; i < answers.size(); i += 1) {
             if (questions.get(i).getAnswer().equalsIgnoreCase(answers.get(i))) {
-                correctAnswers += 1;
+                selectedQuiz.setCurrentScore(selectedQuiz.getCurrentScore() + 1);
             }
         }
-        System.out.println(correctAnswers);
+        System.out.println(selectedQuiz.getCurrentScore());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("The quiz is finished!");
+        alert.setContentText(String.format("Your score is: %d/%d, or %.2f%", selectedQuiz.getCurrentScore(), selectedQuiz.getHighestPossibleScore(), (double) selectedQuiz.getCurrentScore() / selectedQuiz.getHighestPossibleScore() * 100));
+        alert.showAndWait();
+        
+        // send the user back to the home screen
+        HomeScreenController hsc = switchScene((Node) event.getSource(), "/application/homescreen.fxml").getController();
     }
 
     @FXML
     void goBack(ActionEvent event) {
-        // store answer of first TextArea
-        answers.set(2 * index, question1text.getText());
-
-        // if second textArea exists, store answer of second textArea
-        if (answers.size() >= 2 * index + 1 && answers.size() % 2 == 0) answers.set(2 * index + 1, question2text.getText());
-
         // go back
         index -= 1;
 
@@ -119,12 +126,6 @@ public class QuizController {
 
     @FXML
     void goNext(ActionEvent event) {
-        // store answer of first TextArea
-        answers.set(2 * index, question1text.getText());
-
-        // store answer of second textArea
-        if (answers.size() >= 2 * index + 1) answers.set(2 * index + 1, question2text.getText());
-
         // go to the next two questions
         index += 1;
 
@@ -136,6 +137,18 @@ public class QuizController {
 
         updateQuestions();
         updateAnswers();
+    }
+
+    @FXML
+    void recordAnswers(KeyEvent event) {
+        TextArea textAreaTyped = (TextArea) event.getSource();
+        String id = textAreaTyped.getId();
+
+        if (id.equalsIgnoreCase("question1text")) {
+            answers.set(2 * index, question1text.getText());
+        } else {
+            answers.set(2 * index + 1, question2text.getText());
+        }
     }
 
     @FXML
@@ -251,5 +264,13 @@ public class QuizController {
 
     public ArrayList<String> getAnswers() {
         return answers;
+    }
+
+    public Quiz getSelectedQuiz() {
+        return selectedQuiz;
+    }
+
+    public void setSelectedQuiz(Quiz selectedQuiz) {
+        this.selectedQuiz = selectedQuiz;
     }
 }

@@ -279,6 +279,7 @@ public class HomeScreenController {
     private void openQuiz(Node event, int index) throws IOException {
         QuizController qc = switchScene(event, "/application/quiz.fxml").getController();
         Quiz selectedQuiz = Quiz.getQuizzes().get(index);
+        qc.setSelectedQuiz(selectedQuiz);
         if (Quiz.getQuizzes().size() >= index + 1) {
             qc.setQuestions(selectedQuiz.getQuestions());
             for (int i = 0; i < selectedQuiz.getQuestions().size(); i += 1) {

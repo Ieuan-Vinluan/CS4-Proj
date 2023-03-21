@@ -119,7 +119,7 @@
                                     <Font name="Poppins Regular" size="17.0" />
                                  </font>
                               </Label>
-                              <TextArea fx:id="question1text" prefHeight="200.0" prefWidth="564.0" promptText="Your answer" stylesheets="@css/quiz.css">
+                              <TextArea fx:id="question1text" onKeyReleased="#recordAnswers" prefHeight="200.0" prefWidth="564.0" promptText="Your answer" stylesheets="@css/quiz.css">
                                  <font>
                                     <Font name="Poppins Regular" size="17.0" />
                                  </font>
@@ -137,7 +137,7 @@
                                     <Font name="Poppins Regular" size="17.0" />
                                  </font>
                               </Label>
-                              <TextArea fx:id="question2text" prefHeight="200.0" prefWidth="564.0" promptText="Your answer" stylesheets="@css/quiz.css">
+                              <TextArea fx:id="question2text" onKeyReleased="#recordAnswers" prefHeight="200.0" prefWidth="564.0" promptText="Your answer" stylesheets="@css/quiz.css">
                                  <font>
                                     <Font name="Poppins Regular" size="17.0" />
                                  </font>
