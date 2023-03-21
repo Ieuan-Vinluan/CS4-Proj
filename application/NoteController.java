@@ -58,7 +58,8 @@ public class NoteController {
     }
 
     @FXML
-    void goToPlaylists(ActionEvent actionEvent) {
+    void goToPlaylists(ActionEvent actionEvent) throws IOException {
+        PlaylistController pc = switchScene((Node) actionEvent.getSource(), "/application/playlist.fxml").getController();
     }
 
     @FXML

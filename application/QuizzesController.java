@@ -113,8 +113,8 @@ public class QuizzesController {
     }
 
     @FXML
-    void goToPlaylist(ActionEvent actionEvent) {
-
+    void goToPlaylist(ActionEvent actionEvent) throws IOException {
+        PlaylistController pc = switchScene((Node) actionEvent.getSource(), "/application/playlist.fxml").getController();
     }
 
     @FXML
