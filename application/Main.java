@@ -22,7 +22,7 @@ public class Main extends Application {
 			User u3 = new User("Yoowee", "10", "pw3");
 
 			// test subjects
-			Subject cs = new Subject("CS", "ComSci 4.png");
+			Subject cs = new Subject("CS", "CompSci 4.png");
 			Subject bio = new Subject("Biology", "Biology 2.png");
 			Subject chem = new Subject("Chemistry", "Chemistry 2.png");
 			Subject health = new Subject("Health", "Health 4.png");

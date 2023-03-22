@@ -36,6 +36,21 @@ public class HomeScreenController {
     private Label lg5;
 
     @FXML
+    private Label playlist1;
+
+    @FXML
+    private Label playlist2;
+
+    @FXML
+    private Label playlist3;
+
+    @FXML
+    private Label playlist4;
+
+    @FXML
+    private Label playlist5;
+
+    @FXML
     private Label subject1;
 
     @FXML
@@ -129,6 +144,8 @@ public class HomeScreenController {
     private ArrayList<Label> subjectLabels = new ArrayList<>();
 
     private ArrayList<Label> deadlineLabels = new ArrayList<>();
+
+    private ArrayList<Label> playlistLabels = new ArrayList<>();
 
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
@@ -257,6 +274,12 @@ public class HomeScreenController {
         deadlineLabels.add(deadline4);
         deadlineLabels.add(deadline5);
 
+        playlistLabels.add(playlist1);
+        playlistLabels.add(playlist2);
+        playlistLabels.add(playlist3);
+        playlistLabels.add(playlist4);
+        playlistLabels.add(playlist5);
+
         if (LearningGuide.getLearningGuides().size() < 5) {
             int lgSize = LearningGuide.getLearningGuides().size();
             for (int i = 0; i < 5; i += 1) {
@@ -335,6 +358,21 @@ public class HomeScreenController {
         } else {
             for (int i = 0; i < 5; i += 1) {
                 deadlineLabels.get(i).setText(Deadline.getDeadlines().get(i).getRequirement() + " - " + Deadline.getDeadlines().get(i).getDeadline().toLocalDate());
+            }
+        }
+
+        if (Playlist.getPlaylists().size() < 6) {
+            int playlistsSize = Playlist.getPlaylists().size();
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= playlistsSize) {
+                    playlistLabels.get(i).setVisible(false);
+                } else {
+                    playlistLabels.get(i).setText(Playlist.getPlaylists().get(i).getName());
+                }
+            }
+        } else {
+            for (int i = 0; i < 5; i += 1) {
+                playlistLabels.get(i).setText(Playlist.getPlaylists().get(i).getName());
             }
         }
     }
