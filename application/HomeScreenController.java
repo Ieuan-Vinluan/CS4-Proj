@@ -236,8 +236,40 @@ public class HomeScreenController {
 
     @FXML
     void openSubject(MouseEvent event) throws IOException {
-        SubjectScreenController sc = switchScene((Node) event.getSource(), "/application/subjectscreen.fxml").getController();
+        Label label = (Label) event.getSource();
+        String id = label.getId();
+        if (id.contains("1")) {
+            openSelectedSubject(label, 0);
+        } else if (id.contains("2")) {
+            openSelectedSubject(label, 1);
+        } else if (id.contains("3")) {
+            openSelectedSubject(label, 2);
+        } else if (id.contains("4")) {
+            openSelectedSubject(label, 3);
+        } else if (id.contains("5")) {
+            openSelectedSubject(label, 4);
+        } else if (id.contains("6")) {
+            openSelectedSubject(label, 5);
+        }
+    }
 
+    @FXML
+    void openClickedPlaylist(MouseEvent event) throws IOException {
+        Label label = (Label) event.getSource();
+        String id = label.getId();
+        if (id.contains("1")) {
+            openPlaylist(label, 0);
+        } else if (id.contains("2")) {
+            openPlaylist(label, 1);
+        } else if (id.contains("3")) {
+            openPlaylist(label, 2);
+        } else if (id.contains("4")) {
+            openPlaylist(label, 3);
+        } else if (id.contains("5")) {
+            openPlaylist(label, 4);
+        } else if (id.contains("6")) {
+            openPlaylist(label, 5);
+        }
     }
 
     @FXML
@@ -394,10 +426,41 @@ public class HomeScreenController {
         return loader;
     }
 
-    private void openSelectdSubject(Node event, int index) throws IOException {
-        SubjectController sc = switchScene(event, "/application/subject.fxml").getController();
+    private void openPlaylist(Node event, int index) throws IOException {
+        PlaylistController pc = switchScene(event, "/application/playlist.fxml").getController();
+        if (Playlist.getPlaylists().size() >= index + 1) {
+            Playlist selectedPlaylist = Playlist.getPlaylists().get(index);
+            pc.setSongs(selectedPlaylist.getSongs());
+            pc.initialize();
+        }
+    }
 
-        // initializing content here
+    private void openSelectedSubject(Node event, int index) throws IOException {
+        SubjectScreenController ssc = switchScene(event, "/application/subjectscreen.fxml").getController();
+        if (Subject.getSubjects().size() >= index + 1) {
+            Subject selectedSubject = Subject.getSubjects().get(index);
+            ssc.setLgs(selectedSubject.getLearningGuides());
+            ssc.setSubjectQuizzes(selectedSubject.getQuizzes());
+
+            int lgsSize = ssc.getLgs().size();
+            int quizzesSize = ssc.getSubjectQuizzes().size();
+
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= lgsSize) {
+                    ssc.getLgHBoxes().get(i).setVisible(false);
+                } else {
+                    ssc.getModuleLabels().get(i).setText(ssc.getLgs().get(i).getTitle());
+                }
+            }
+
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= quizzesSize) {
+                    ssc.getQuizHBoxes().get(i).setVisible(false);
+                } else {
+                    ssc.getQuizLabels().get(i).setText(ssc.getSubjectQuizzes().get(i).getQuizID());
+                }
+            }
+        }
     }
 
     private void openQuiz(Node event, int index) throws IOException {

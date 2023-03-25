@@ -9,7 +9,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -97,151 +100,166 @@
          <content>
             <AnchorPane prefHeight="626.0" prefWidth="1080.0" style="-fx-background-color: #203047;">
                <children>
-                  <Label layoutX="26.0" layoutY="14.0" text="Subject" textFill="#ffb703">
+                  <Label alignment="CENTER" layoutX="125.0" layoutY="24.0" prefHeight="84.0" prefWidth="730.0" text="Subject" textFill="#ffb703">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Poppins Regular" size="60.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="70.0" layoutY="80.0" prefHeight="100.0" prefWidth="200.0">
+                  <GridPane alignment="CENTER" layoutX="70.0" layoutY="87.0" prefHeight="738.0" prefWidth="940.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
                      <children>
-                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/original%20images/math.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 1" textFill="#ffb703">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0">
                            <children>
-                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/original%20images/research.png" />
+                                    <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 1" textFill="#ffb703">
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Montserrat Regular" size="24.0" />
                                  </font>
                               </Label>
                            </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="525.0" layoutY="80.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/original%20images/math.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 2" textFill="#ffb703">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1">
                            <children>
-                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/original%20images/research.png" />
+                                    <Image url="@images/original images/research.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 2" textFill="#ffb703">
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Montserrat Regular" size="24.0" />
                                  </font>
                               </Label>
                            </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="105.0" layoutY="290.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/original%20images/math.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 3" textFill="#ffb703">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="1">
                            <children>
-                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/original%20images/research.png" />
+                                    <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 3" textFill="#ffb703">
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Montserrat Regular" size="24.0" />
                                  </font>
                               </Label>
                            </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="560.0" layoutY="290.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/original%20images/math.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 4" textFill="#ffb703">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/original%20images/research.png" />
+                                    <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 4" textFill="#ffb703">
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Montserrat Regular" size="24.0" />
                                  </font>
                               </Label>
                            </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="140.0" layoutY="500.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/original%20images/math.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="104.0" layoutY="25.0" text="Learning Guide 5" textFill="#ffb703">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="3">
                            <children>
-                              <ImageView fitHeight="88.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/original%20images/research.png" />
+                                    <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="104.0" layoutY="25.0" text="Quiz 5" textFill="#ffb703">
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Montserrat Regular" size="24.0" />
                                  </font>
                               </Label>
                            </children>
-                        </AnchorPane>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original images/math.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/original images/research.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
-                  </AnchorPane>
+                  </GridPane>
                </children>
             </AnchorPane>
          </content>

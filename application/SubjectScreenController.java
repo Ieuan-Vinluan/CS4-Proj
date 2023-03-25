@@ -2,23 +2,18 @@ package application;
 
 import application.model.LearningGuide;
 import application.model.Quiz;
-import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,92 +21,102 @@ import java.util.ArrayList;
 public class SubjectScreenController {
 
     @FXML
-    private Label username;
-
-    @FXML
-    private Button modules;
-    @FXML
     private Button home;
-    @FXML
-    private Button subject;
 
     @FXML
-    private Button quizzes;
-    @FXML
-    private Button playlists;
-
-     @FXML
     private Label mod1;
-
-    @FXML
-    private ImageView mod1image;
 
     @FXML
     private Label mod2;
 
     @FXML
-    private ImageView mod2image;
-
-    @FXML
     private Label mod3;
-
-    @FXML
-    private ImageView mod3image;
 
     @FXML
     private Label mod4;
 
     @FXML
-    private ImageView mod4image;
-
-    @FXML
     private Label mod5;
 
     @FXML
-    private ImageView mod5image;
-    
-    @FXML
-    private Label quiz1;
+    private Button modules;
 
     @FXML
-    private ImageView quiz1image;
+    private Button playlists;
+
+    @FXML
+    private Label quiz1;
 
     @FXML
     private Label quiz2;
 
     @FXML
-    private ImageView quiz2image;
-
-    @FXML
     private Label quiz3;
-
-    @FXML
-    private ImageView quiz3image;
 
     @FXML
     private Label quiz4;
 
     @FXML
-    private ImageView quiz4image;
-
-    @FXML
     private Label quiz5;
 
     @FXML
-    private ImageView quiz5image;
+    private HBox lgBox1;
 
-    private ArrayList<Label> labels = new ArrayList<>();
-    private ArrayList<ImageView> ivs = new ArrayList<>();
-    
+    @FXML
+    private HBox lgBox2;
+
+    @FXML
+    private HBox lgBox3;
+
+    @FXML
+    private HBox lgBox4;
+
+    @FXML
+    private HBox lgBox5;
+
+    @FXML
+    private HBox quizBox1;
+
+    @FXML
+    private HBox quizBox2;
+
+    @FXML
+    private HBox quizBox3;
+
+    @FXML
+    private HBox quizBox4;
+
+    @FXML
+    private HBox quizBox5;
+
+    @FXML
+    private Button quizzes;
+
+    @FXML
+    private Button subject;
+
+    @FXML
+    private Label subjectName;
+
+    @FXML
+    private Label username;
+
+    private ArrayList<Label> moduleLabels = new ArrayList<>();
+    private ArrayList<Label> quizLabels = new ArrayList<>();
+
     private ArrayList<LearningGuide> lgs = new ArrayList<>();
     private ArrayList<Quiz> subjectQuizzes = new ArrayList<>();
+
+    private ArrayList<HBox> lgHBoxes = new ArrayList<>();
+
+    private ArrayList<HBox> quizHBoxes = new ArrayList<>();
 
     @FXML
     void goToHome(ActionEvent actionEvent) throws IOException {
         HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
         System.out.println("Went back to home!");
     }
-    
+
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
@@ -141,8 +146,32 @@ public class SubjectScreenController {
     @FXML
     void initialize() {
         LoginController.setProfileText(username);
+
+        moduleLabels.add(mod1);
+        moduleLabels.add(mod2);
+        moduleLabels.add(mod3);
+        moduleLabels.add(mod4);
+        moduleLabels.add(mod5);
+
+        quizLabels.add(quiz1);
+        quizLabels.add(quiz2);
+        quizLabels.add(quiz3);
+        quizLabels.add(quiz4);
+        quizLabels.add(quiz5);
+
+        lgHBoxes.add(lgBox1);
+        lgHBoxes.add(lgBox2);
+        lgHBoxes.add(lgBox3);
+        lgHBoxes.add(lgBox4);
+        lgHBoxes.add(lgBox5);
+
+        quizHBoxes.add(quizBox1);
+        quizHBoxes.add(quizBox2);
+        quizHBoxes.add(quizBox3);
+        quizHBoxes.add(quizBox4);
+        quizHBoxes.add(quizBox5);
     }
-    
+
     @FXML
     private FXMLLoader switchScene(Node node, String path) throws IOException {
         // getting current window
@@ -160,7 +189,7 @@ public class SubjectScreenController {
 
         return loader;
     }
-    
+
     @FXML
     private void openLearningGuide(Node event, int index) throws IOException {
         ModuleController mc = switchScene(event, "/application/module.fxml").getController();
@@ -170,7 +199,7 @@ public class SubjectScreenController {
             mc.setLGTitleText(LearningGuide.getLearningGuides().get(index).getTitle());
         }
     }
-    
+
     @FXML
     void openModule(MouseEvent event) throws IOException {
         ImageView iv = (ImageView) event.getSource();
@@ -187,7 +216,7 @@ public class SubjectScreenController {
 //            openSelectedModule(iv, 4);
 //        }
     }
-    
+
     @FXML
     private void openQuiz(Node event, int index) throws IOException {
         QuizController qc = switchScene(event, "/application/quiz.fxml").getController();
@@ -212,7 +241,7 @@ public class SubjectScreenController {
             qc.getQuizID().setText("ID: " + selectedQuiz.getQuizID());
         }
     }
-    
+
     @FXML
     void goToQuiz(MouseEvent event) throws IOException {
         Label clicked = (Label) event.getSource();
@@ -230,4 +259,35 @@ public class SubjectScreenController {
         }
     }
 
+    public ArrayList<LearningGuide> getLgs() {
+        return lgs;
+    }
+
+    public void setLgs(ArrayList<LearningGuide> lgs) {
+        this.lgs = lgs;
+    }
+
+    public ArrayList<Quiz> getSubjectQuizzes() {
+        return subjectQuizzes;
+    }
+
+    public void setSubjectQuizzes(ArrayList<Quiz> subjectQuizzes) {
+        this.subjectQuizzes = subjectQuizzes;
+    }
+
+    public ArrayList<Label> getModuleLabels() {
+        return moduleLabels;
+    }
+
+    public ArrayList<Label> getQuizLabels() {
+        return quizLabels;
+    }
+
+    public ArrayList<HBox> getLgHBoxes() {
+        return lgHBoxes;
+    }
+
+    public ArrayList<HBox> getQuizHBoxes() {
+        return quizHBoxes;
+    }
 }

@@ -359,4 +359,11 @@ public class PlaylistController {
         });
     }
 
+    public ArrayList<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(ArrayList<Song> songs) {
+        this.songs = songs;
+    }
 }

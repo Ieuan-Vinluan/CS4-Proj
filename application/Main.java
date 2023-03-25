@@ -43,7 +43,7 @@ public class Main extends Application {
 			);
 
 			LearningGuide thirdLG = new LearningGuide(
-					"Biology 2 - Mendelian Inheritance",
+					"Biology 2 - Inheritance",
 					bio,
 					"Mendelian Inheritance is completely dominant. That is, only one dominant allele is required for the trait to appear in an organism, but two recessive alleles are required for a trait to not appear in an organism."
 			);
