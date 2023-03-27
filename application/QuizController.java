@@ -102,7 +102,7 @@ public class QuizController {
         System.out.println(selectedQuiz.getCurrentScore());
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("The quiz is finished!");
-        alert.setContentText(String.format("Your score is: %d/%d, or %.2f%", selectedQuiz.getCurrentScore(), selectedQuiz.getHighestPossibleScore(), (double) selectedQuiz.getCurrentScore() / selectedQuiz.getHighestPossibleScore() * 100));
+        alert.setContentText(String.format("Your score is: %d/%d, or %.2f", selectedQuiz.getCurrentScore(), selectedQuiz.getHighestPossibleScore(), (double) selectedQuiz.getCurrentScore() / selectedQuiz.getHighestPossibleScore() * 100));
         alert.showAndWait();
 
         // send the user back to the home screen
