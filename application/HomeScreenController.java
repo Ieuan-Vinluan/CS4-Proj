@@ -375,10 +375,10 @@ public class HomeScreenController {
             }
         }
 
-        if (Deadline.getDeadlines().size() < 6) {
-            // to show most urgent deadlines
-            DeadlineList.sortDeadlineList(Deadline.getDeadlines(), 0, Deadline.getDeadlines().size() - 1, Deadline.getDeadlines().get(Deadline.getDeadlines().size() - 1));
+        // to show most urgent deadlines
+        DeadlineList.sortDeadlineList(Deadline.getDeadlines(), 0, Deadline.getDeadlines().size() - 1, Deadline.getDeadlines().get(Deadline.getDeadlines().size() - 1));
 
+        if (Deadline.getDeadlines().size() < 6) {
             int deadlinesSize = Deadline.getDeadlines().size();
             for (int i = 0; i < 5; i += 1) {
                 if (i >= deadlinesSize) {
@@ -441,6 +441,7 @@ public class HomeScreenController {
             Subject selectedSubject = Subject.getSubjects().get(index);
             ssc.setLgs(selectedSubject.getLearningGuides());
             ssc.setSubjectQuizzes(selectedSubject.getQuizzes());
+            ssc.setSubjectNameText(selectedSubject.getSubjectName());
 
             int lgsSize = ssc.getLgs().size();
             int quizzesSize = ssc.getSubjectQuizzes().size();

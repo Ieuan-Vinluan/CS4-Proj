@@ -124,11 +124,6 @@ public class SubjectScreenController {
     }
 
     @FXML
-    void goToCourse(MouseEvent event) {
-        System.out.println("Clicked from " + event.getPickResult().getIntersectedNode().getId()); // debug purposes
-    }
-
-    @FXML
     void goToModule(ActionEvent event) throws IOException {
         ModuleScreenController msc = switchScene((Node) event.getSource(), "/application/modulescreen.fxml").getController();
     }
@@ -202,61 +197,55 @@ public class SubjectScreenController {
 
     @FXML
     void openModule(MouseEvent event) throws IOException {
-        ImageView iv = (ImageView) event.getSource();
-        String id = iv.getId();
-//        if (id.contains("1")) {
-//            openSelectedModule(iv, 0);
-//        } else if (id.contains("2")) {
-//            openSelectedModule(iv, 1);
-//        } else if (id.contains("3")) {
-//            openSelectedModule(iv, 2);
-//        } else if (id.contains("4")) {
-//            openSelectedModule(iv, 3);
-//        } else if (id.contains("5")) {
-//            openSelectedModule(iv, 4);
-//        }
-    }
-
-    @FXML
-    private void openQuiz(Node event, int index) throws IOException {
-        QuizController qc = switchScene(event, "/application/quiz.fxml").getController();
-        Quiz selectedQuiz = Quiz.getQuizzes().get(index);
-        if (Quiz.getQuizzes().size() >= index + 1) {
-            qc.setQuestions(selectedQuiz.getQuestions());
-            for (int i = 0; i < selectedQuiz.getQuestions().size(); i += 1) {
-                qc.getAnswers().add("");
+        Label clicked = (Label) event.getSource();
+        String id = clicked.getText();
+        LearningGuide selectedLG = null;
+        for (LearningGuide l : LearningGuide.getLearningGuides()) {
+            if (l.getTitle().equalsIgnoreCase(id)) {
+                selectedLG = l;
             }
-            try {
-                for (int i = 0; i < 2; i += 1) {
-                    try {
-                        qc.setQuestionText(i, qc.getQuestions().get(i).getQuestion());
-                    } catch (IndexOutOfBoundsException e) {
-                        qc.getAnchorpanes().get(i).setVisible(false);
-                    }
-                }
-            } catch (IndexOutOfBoundsException e) {
-                e.printStackTrace();
-            }
-            qc.getQuizSubject().setText("Subject: " + selectedQuiz.getSubject().getSubjectName());
-            qc.getQuizID().setText("ID: " + selectedQuiz.getQuizID());
         }
+
+        if (selectedLG == null) return;
+
+        ModuleController mc = switchScene((Node) event.getSource(), "/application/module.fxml").getController();
+        mc.setPathText("Home > " + selectedLG.getSubject().getSubjectName() + " > " + selectedLG.getTitle());
+        mc.setLGTitleText(selectedLG.getTitle());
+        mc.setLgContentText(selectedLG.getContent());
     }
 
     @FXML
     void goToQuiz(MouseEvent event) throws IOException {
         Label clicked = (Label) event.getSource();
-        String id = clicked.getId();
-        if (id.contains("1")) {
-            openQuiz(clicked, 0);
-        } else if (id.contains("2")) {
-            openQuiz(clicked, 1);
-        } else if (id.contains("3")) {
-            openQuiz(clicked, 2);
-        } else if (id.contains("4")) {
-            openQuiz(clicked, 3);
-        } else if (id.contains("5")) {
-            openQuiz(clicked, 4);
+        String id = clicked.getText();
+        Quiz selectedQuiz = null;
+        for (Quiz q : Quiz.getQuizzes()) {
+            if (q.getQuizID().equalsIgnoreCase(id)) {
+                selectedQuiz = q;
+            }
         }
+
+        if (selectedQuiz == null) return;
+
+        QuizController qc = switchScene((Node) event.getSource(), "/application/quiz.fxml").getController();
+        qc.setSelectedQuiz(selectedQuiz);
+        qc.setQuestions(selectedQuiz.getQuestions());
+        for (int i = 0; i < selectedQuiz.getQuestions().size(); i += 1) {
+            qc.getAnswers().add("");
+        }
+        try {
+            for (int i = 0; i < 2; i += 1) {
+                try {
+                    qc.setQuestionText(i, qc.getQuestions().get(i).getQuestion());
+                } catch (IndexOutOfBoundsException e) {
+                    qc.getAnchorpanes().get(i).setVisible(false);
+                }
+            }
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        qc.getQuizSubject().setText("Subject: " + selectedQuiz.getSubject().getSubjectName());
+        qc.getQuizID().setText("ID: " + selectedQuiz.getQuizID());
     }
 
     public ArrayList<LearningGuide> getLgs() {
@@ -289,5 +278,9 @@ public class SubjectScreenController {
 
     public ArrayList<HBox> getQuizHBoxes() {
         return quizHBoxes;
+    }
+
+    public void setSubjectNameText(String text) {
+        this.subjectName.setText(text);
     }
 }

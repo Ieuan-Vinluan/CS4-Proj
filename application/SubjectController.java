@@ -118,8 +118,21 @@ public class SubjectController {
 
     @FXML
     void goToCourse(MouseEvent event) throws IOException {
-        System.out.println("Clicked from " + event.getPickResult().getIntersectedNode().getId()); // debug purposes
-        SubjectScreenController ssc = switchScene((Node) event.getSource(), "/application/subjectscreen.fxml").getController();
+        ImageView iv = (ImageView) event.getSource();
+        String id = iv.getId();
+        if (id.contains("1")) {
+            openSelectedSubject(iv, 0);
+        } else if (id.contains("2")) {
+            openSelectedSubject(iv, 1);
+        } else if (id.contains("3")) {
+            openSelectedSubject(iv, 2);
+        } else if (id.contains("4")) {
+            openSelectedSubject(iv, 3);
+        } else if (id.contains("5")) {
+            openSelectedSubject(iv, 4);
+        } else if (id.contains("6")) {
+            openSelectedSubject(iv, 5);
+        }
     }
 
     @FXML
@@ -238,6 +251,35 @@ public class SubjectController {
         currentStage.show();
 
         return loader;
+    }
+
+    private void openSelectedSubject(Node event, int index) throws IOException {
+        SubjectScreenController ssc = switchScene(event, "/application/subjectscreen.fxml").getController();
+        if (Subject.getSubjects().size() >= index + 1) {
+            Subject selectedSubject = Subject.getSubjects().get(index);
+            ssc.setLgs(selectedSubject.getLearningGuides());
+            ssc.setSubjectQuizzes(selectedSubject.getQuizzes());
+            ssc.setSubjectNameText(selectedSubject.getSubjectName());
+
+            int lgsSize = ssc.getLgs().size();
+            int quizzesSize = ssc.getSubjectQuizzes().size();
+
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= lgsSize) {
+                    ssc.getLgHBoxes().get(i).setVisible(false);
+                } else {
+                    ssc.getModuleLabels().get(i).setText(ssc.getLgs().get(i).getTitle());
+                }
+            }
+
+            for (int i = 0; i < 5; i += 1) {
+                if (i >= quizzesSize) {
+                    ssc.getQuizHBoxes().get(i).setVisible(false);
+                } else {
+                    ssc.getQuizLabels().get(i).setText(ssc.getSubjectQuizzes().get(i).getQuizID());
+                }
+            }
+        }
     }
 
 }
