@@ -107,6 +107,19 @@ public class QuizzesController {
         ImageView iv = (ImageView) event.getSource();
         String id = iv.getId();
         System.out.println("Clicked from " + id);
+        if (id.contains("1")) {
+            openQuiz(iv, 0);
+        } else if (id.contains("2")) {
+            openQuiz(iv, 1);
+        } else if (id.contains("3")) {
+            openQuiz(iv, 2);
+        } else if (id.contains("4")) {
+            openQuiz(iv, 3);
+        } else if (id.contains("5")) {
+            openQuiz(iv, 4);
+        } else {
+            openQuiz(iv, 5);
+        }
     }
 
     @FXML
@@ -126,39 +139,39 @@ public class QuizzesController {
 
     @FXML
     void searchQuiz(ActionEvent event) {
-        String searchedSubj = search.getText();
+        String searchedQuiz = search.getText();
         boolean found = false;
-        for (Subject s : Subject.getSubjects()) {
-            if (s.getSubjectName().equalsIgnoreCase(searchedSubj)) {
+        for (Quiz q : Quiz.getQuizzes()) {
+            if (q.getQuizID().equalsIgnoreCase(searchedQuiz)) {
                 found = true;
-                int index = Subject.getSubjects().indexOf(s);
+                int index = Quiz.getQuizzes().indexOf(q);
                 if (index == 0) return; // it's already there
-                Subject temp = Subject.getSubjects().get(0);
-                Subject.getSubjects().set(0, s);
-                Subject.getSubjects().set(index, temp);
+                Quiz temp = Quiz.getQuizzes().get(0);
+                Quiz.getQuizzes().set(0, q);
+                Quiz.getQuizzes().set(index, temp);
                 if (index > 5) return; // no need to switch their places if one does not appear on screen
-                quiz1.setText(s.getSubjectName());
-                quiz1image.setImage(new Image("application/images/" + s.getImageFilename()));
+                quiz1.setText(q.getQuizID());
+                quiz1image.setImage(new Image("application/images/" + q.getSubject().getImageFilename()));
                 switch(index) {
                     case 1:
-                        quiz2.setText(temp.getSubjectName());
-                        quiz2image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        quiz2.setText(temp.getSubject().getSubjectName());
+                        quiz2image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
                         break;
                     case 2:
-                        quiz3.setText(temp.getSubjectName());
-                        quiz3image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        quiz3.setText(temp.getSubject().getSubjectName());
+                        quiz3image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
                         break;
                     case 3:
-                        quiz4.setText(temp.getSubjectName());
-                        quiz4image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        quiz4.setText(temp.getSubject().getSubjectName());
+                        quiz4image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
                         break;
                     case 4:
-                        quiz5.setText(temp.getSubjectName());
-                        quiz5image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        quiz5.setText(temp.getSubject().getSubjectName());
+                        quiz5image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
                         break;
                     case 5:
-                        quiz6.setText(temp.getSubjectName());
-                        quiz6image.setImage(new Image("application/images/" + temp.getImageFilename()));
+                        quiz6.setText(temp.getSubject().getSubjectName());
+                        quiz6image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));
                         break;
                 }
             }
@@ -217,4 +230,28 @@ public class QuizzesController {
         return loader;
     }
 
+    private void openQuiz(Node event, int index) throws IOException {
+        QuizController qc = switchScene(event, "/application/quiz.fxml").getController();
+        Quiz selectedQuiz = Quiz.getQuizzes().get(index);
+        qc.setSelectedQuiz(selectedQuiz);
+        if (Quiz.getQuizzes().size() >= index + 1) {
+            qc.setQuestions(selectedQuiz.getQuestions());
+            for (int i = 0; i < selectedQuiz.getQuestions().size(); i += 1) {
+                qc.getAnswers().add("");
+            }
+            try {
+                for (int i = 0; i < 2; i += 1) {
+                    try {
+                        qc.setQuestionText(i, qc.getQuestions().get(i).getQuestion());
+                    } catch (IndexOutOfBoundsException e) {
+                        qc.getAnchorpanes().get(i).setVisible(false);
+                    }
+                }
+            } catch (IndexOutOfBoundsException e) {
+                e.printStackTrace();
+            }
+            qc.getQuizSubject().setText("Subject: " + selectedQuiz.getSubject().getSubjectName());
+            qc.getQuizID().setText("ID: " + selectedQuiz.getQuizID());
+        }
+    }
 }
