@@ -456,7 +456,7 @@
                   </Label>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
+                        <Label fx:id="playlist1" prefHeight="40.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -467,7 +467,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
+                        <Label fx:id="playlist2" prefHeight="40.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -475,7 +475,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
+                        <Label fx:id="playlist3" prefHeight="40.0" prefWidth="326.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -483,7 +483,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
+                        <Label fx:id="playlist4" prefHeight="40.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -491,7 +491,7 @@
                               <Insets left="6.0" top="8.0" />
                            </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
+                        <Label fx:id="playlist5" prefHeight="40.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
