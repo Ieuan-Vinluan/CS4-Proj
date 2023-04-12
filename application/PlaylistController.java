@@ -209,7 +209,7 @@ public class PlaylistController {
     }
 
     @FXML
-    void playSong(ActionEvent event) {
+    void playSong(ActionEvent event) throws URISyntaxException {
         Button clicked = (Button) event.getSource();
         String idOfClicked = clicked.getId();
 
@@ -232,7 +232,7 @@ public class PlaylistController {
             return;
         }
         mp.stop();
-        mp = new MediaPlayer(new Media(new File("application/music/" + currentSong.getFilePath()).toURI().toString()));
+        mp = new MediaPlayer(new Media(getClass().getResource("music/" + currentSong.getFilePath()).toURI().toString()));
         currentSong.setPlaying(true);
         playingSong.setText(currentSong.getTitle());
         mp.play();
