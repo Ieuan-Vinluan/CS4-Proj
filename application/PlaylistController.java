@@ -17,6 +17,7 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -349,14 +350,19 @@ public class PlaylistController {
     }
 
     private void setDetails(Song song, int index) {
-        Media media = new Media(new File("application/music/" + song.getFilePath()).toURI().toString());
-        mp = new MediaPlayer(media);
-        mp.setOnReady(() -> {
-            songTitles.get(index).setText(song.getTitle());
-            artists.get(index).setText(song.getArtist());
-            dateAdded.get(index).setText(song.getAdded());
-            durations.get(index).setText(String.format("%dm %ds", (int) Math.floor(media.getDuration().toSeconds() / 60), Math.round(media.getDuration().toSeconds() % 60)));
-        });
+        Media media;
+        try {
+            media = new Media(getClass().getResource("music/" + song.getFilePath()).toURI().toString());
+            mp = new MediaPlayer(media);
+            mp.setOnReady(() -> {
+                songTitles.get(index).setText(song.getTitle());
+                artists.get(index).setText(song.getArtist());
+                dateAdded.get(index).setText(song.getAdded());
+                durations.get(index).setText(String.format("%dm %ds", (int) Math.floor(media.getDuration().toSeconds() / 60), Math.round(media.getDuration().toSeconds() % 60)));
+            });
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 
     public ArrayList<Song> getSongs() {
