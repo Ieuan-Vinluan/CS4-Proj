@@ -1,14 +1,13 @@
 package application;
-	
+
 import application.model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 
 public class Main extends Application {
@@ -72,16 +71,11 @@ public class Main extends Application {
 					chem
 			);
 			Note thirdNote = new Note(
-					"Acids and Bases",
-					"Acids give H+, bases accept H+",
-					chem
-			);
-			Note fourthNote = new Note(
 					"Ratios for M. Inheritance",
 					"1 DD : 2 Dd : 1 dd --> 3 have : 1 doesn't have",
 					bio
 			);
-			Note fifthNote = new Note(
+			Note fourthNote = new Note(
 				"Kyle Dulay Triangle Problem",
 				"HC = 52/3, MC = 26/3, PC = 169/18, BP = 209/18, BQ (from Law of Cosines) = 1045/117, AQ = 476/117. After some trig, AX = 119/54?",
 				null

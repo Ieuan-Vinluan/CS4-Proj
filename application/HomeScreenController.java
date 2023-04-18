@@ -15,10 +15,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class HomeScreenController {
+
+    @FXML
+    private Button addNotesBtn;
+
+    @FXML
+    private Button addDeadlinesBtn;
 
     @FXML
     private Label lg1;
@@ -505,5 +512,17 @@ public class HomeScreenController {
             nc.setNoteTitleText(nc.getSelectedNote().getTitle());
             nc.setNoteContentText(nc.getSelectedNote().getContent());
         }
+    }
+
+    @FXML
+    void addNote(ActionEvent actionEvent) throws IOException {
+        Note newNote = new Note("New Note!", "This note was just created.", null);
+        HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
+    }
+
+    @FXML
+    void addDeadline(ActionEvent actionEvent) throws IOException {
+        Deadline newDeadline = new Deadline("New deadline", null, LocalDateTime.of(2023, 3, 28, 23, 0));
+        HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
     }
 }

@@ -231,11 +231,27 @@
             </FlowPane>
             <FlowPane layoutX="356.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
                <children>
-                  <Label text="Recent Notes" textFill="#ffb703">
-                     <font>
-                        <Font name="Montserrat Bold" size="18.0" />
-                     </font>
-                  </Label>
+                  <AnchorPane>
+                     <children>
+                        <AnchorPane prefHeight="23.0" prefWidth="326.0">
+                           <children>
+                              <Label text="Recent Notes" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addNotesBtn" layoutX="251.0" layoutY="-6.0" mnemonicParsing="false" onAction="#addNote" prefHeight="34.0" prefWidth="74.0" style="-fx-background-color: #20465F;" text="Add" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="17.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
@@ -316,11 +332,23 @@
             </FlowPane>
             <FlowPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
                <children>
-                  <Label text="Upcoming Deadlines" textFill="#ffb703">
-                     <font>
-                        <Font name="Montserrat Bold" size="18.0" />
-                     </font>
-                  </Label>
+                  <AnchorPane>
+                     <children>
+                        <Label text="Upcoming Deadlines" textFill="#ffb703">
+                           <font>
+                              <Font name="Montserrat Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addDeadlinesBtn" layoutX="252.0" layoutY="-8.0" mnemonicParsing="false" onAction="#addDeadline" prefHeight="0.0" prefWidth="74.0" style="-fx-background-color: #20465F;" text="Add" textFill="#ffb703">
+                           <font>
+                              <Font name="Montserrat Bold" size="17.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
                      <children>
                         <Label fx:id="deadline1" prefHeight="40.0" prefWidth="326.0" text="Math LT - Feb 21" textFill="#023047">

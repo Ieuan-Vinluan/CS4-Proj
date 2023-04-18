@@ -21,6 +21,13 @@ public class Deadline {
 		deadlineList.getDeadlines().add(this);
 	}
 
+	public Deadline(String requirement, Subject subject, LocalDateTime deadline) {
+		this.requirement = requirement;
+		this.subject = subject;
+		this.deadline = deadline;
+		deadlines.add(this);
+	}
+
 	public LocalDateTime getDeadline() {
 		return deadline;
 	}
