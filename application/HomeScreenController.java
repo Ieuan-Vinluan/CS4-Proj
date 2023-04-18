@@ -25,9 +25,6 @@ public class HomeScreenController {
     private Button addNotesBtn;
 
     @FXML
-    private Button addDeadlinesBtn;
-
-    @FXML
     private Label lg1;
 
     @FXML
@@ -107,6 +104,9 @@ public class HomeScreenController {
 
     @FXML
     private Label deadline5;
+
+    @FXML
+    private Label deadline6;
 
     @FXML
     private Label note1;
@@ -312,6 +312,7 @@ public class HomeScreenController {
         deadlineLabels.add(deadline3);
         deadlineLabels.add(deadline4);
         deadlineLabels.add(deadline5);
+        deadlineLabels.add(deadline6);
 
         playlistLabels.add(playlist1);
         playlistLabels.add(playlist2);
@@ -385,9 +386,9 @@ public class HomeScreenController {
         // to show most urgent deadlines
         DeadlineList.sortDeadlineList(Deadline.getDeadlines(), 0, Deadline.getDeadlines().size() - 1, Deadline.getDeadlines().get(Deadline.getDeadlines().size() - 1));
 
-        if (Deadline.getDeadlines().size() < 6) {
+        if (Deadline.getDeadlines().size() < 7) {
             int deadlinesSize = Deadline.getDeadlines().size();
-            for (int i = 0; i < 5; i += 1) {
+            for (int i = 0; i < 6; i += 1) {
                 if (i >= deadlinesSize) {
                     deadlineLabels.get(i).setVisible(false);
                 } else {
@@ -516,13 +517,7 @@ public class HomeScreenController {
 
     @FXML
     void addNote(ActionEvent actionEvent) throws IOException {
-        Note newNote = new Note("New Note!", "This note was just created.", null);
-        HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
+       NoteCreateScreenController ncsc = switchScene((Node) actionEvent.getSource(), "/application/notecreate.fxml").getController();
     }
 
-    @FXML
-    void addDeadline(ActionEvent actionEvent) throws IOException {
-        Deadline newDeadline = new Deadline("New deadline", null, LocalDateTime.of(2023, 3, 28, 23, 0));
-        HomeScreenController hsc = switchScene((Node) actionEvent.getSource(), "/application/homescreen.fxml").getController();
-    }
 }

@@ -339,14 +339,6 @@
                               <Font name="Montserrat Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Button fx:id="addDeadlinesBtn" layoutX="252.0" layoutY="-8.0" mnemonicParsing="false" onAction="#addDeadline" prefHeight="0.0" prefWidth="74.0" style="-fx-background-color: #20465F;" text="Add" textFill="#ffb703">
-                           <font>
-                              <Font name="Montserrat Bold" size="17.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
                      </children>
                   </AnchorPane>
                   <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
@@ -386,7 +378,15 @@
                               <Insets left="9.0" top="12.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="deadline5" prefHeight="40.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
+                        <Label fx:id="deadline5" prefHeight="40.0" prefWidth="326.0" textFill="#023047">
+                           <font>
+                              <Font name="Poppins Regular" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="9.0" top="12.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="deadline6" prefHeight="40.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>

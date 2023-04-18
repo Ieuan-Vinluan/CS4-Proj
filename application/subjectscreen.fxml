@@ -100,161 +100,191 @@
          <content>
             <AnchorPane prefHeight="626.0" prefWidth="1080.0" style="-fx-background-color: #203047;">
                <children>
-                  <Label alignment="CENTER" layoutX="125.0" layoutY="24.0" prefHeight="84.0" prefWidth="730.0" text="Subject" textFill="#ffb703">
+                  <Label fx:id="subjectName" alignment="CENTER" layoutX="125.0" layoutY="24.0" prefHeight="84.0" prefWidth="730.0" text="Subject" textFill="#ffb703">
                      <font>
                         <Font name="Poppins Regular" size="60.0" />
                      </font>
                   </Label>
                   <GridPane alignment="CENTER" layoutX="70.0" layoutY="87.0" prefHeight="738.0" prefWidth="940.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
                      <children>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0">
+                        <HBox fx:id="lgBox1" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
+                              <Label onMouseClicked="#openModule" fx:id="mod1" alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1">
+                        <HBox fx:id="quizBox1" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/research.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                              <Label onMouseClicked="#goToQuiz" fx:id="quiz1" alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="1">
+                        <HBox fx:id="lgBox2" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="1">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
+                              <Label onMouseClicked="#openModule" fx:id="mod2" alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="2">
+                        <HBox fx:id="lgBox3" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="2">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
+                              <Label onMouseClicked="#openModule" fx:id="mod3" alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="3">
+                        <HBox fx:id="lgBox4" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="3">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
+                              <Label onMouseClicked="#openModule" fx:id="mod4" alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="4">
+                        <HBox fx:id="lgBox5" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.rowIndex="4">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/math.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
+                              <Label onMouseClicked="#openModule" fx:id="mod5" alignment="CENTER" prefHeight="35.0" prefWidth="411.0" text="Learning Guide 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <HBox fx:id="quizBox2" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/research.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                              <Label onMouseClicked="#goToQuiz" fx:id="quiz2" alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <HBox fx:id="quizBox3" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/research.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                              <Label onMouseClicked="#goToQuiz" fx:id="quiz3" alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <HBox fx:id="quizBox4" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/research.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                              <Label onMouseClicked="#goToQuiz" fx:id="quiz4" alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <HBox fx:id="quizBox5" alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <children>
                               <ImageView fitHeight="88.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/original images/research.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
+                              <Label onMouseClicked="#goToQuiz" fx:id="quiz5" alignment="CENTER" prefHeight="35.0" prefWidth="424.0" text="Quiz 1" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Regular" size="24.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Label>
                            </children>
                         </HBox>
