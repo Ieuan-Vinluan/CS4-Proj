@@ -2,10 +2,10 @@
 
 ### Credits for Music Used
 
------------------------ Credits -----------------------<br>
+----------------------- Credits -----------------------<br><br>
 Song: foreverland<br>
 Artist: Lilypichu<br>
-Link: https://www.youtube.com/watch?v=A2zepLiuEJU
-------------------------------------------------------
+Link: https://www.youtube.com/watch?v=A2zepLiuEJU <br><br>
+---------------------------------------------------------<br>
 
 
