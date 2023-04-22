@@ -103,7 +103,7 @@
                            <children>
                               <Label text="Latest Quizzes" textFill="#ffb703">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font name="Montserrat Bold" size="16.0" />
                                  </font>
                               </Label>
                               <VBox prefHeight="150.0" prefWidth="660.0" style="-fx-background-color: #a6e2ff;">
@@ -118,6 +118,9 @@
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="quiz2" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
                                        <cursor>
@@ -126,6 +129,9 @@
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="quiz3" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Chemistry 2 - Acids &amp; Bases" textFill="#023047">
                                        <cursor>
@@ -134,6 +140,9 @@
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="quiz4" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
                                        <cursor>
@@ -142,6 +151,9 @@
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="quiz5" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="English 4 - Sonnets &amp; Poems" textFill="#023047">
                                        <cursor>
@@ -150,6 +162,9 @@
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                  </children>
                               </VBox>
@@ -167,7 +182,7 @@
                                  <children>
                                     <Label text="Upcoming Deadlines" textFill="#ffb703">
                                        <font>
-                                          <Font size="16.0" />
+                                          <Font name="Montserrat Bold" size="16.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -181,16 +196,41 @@
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="deadline2" prefHeight="30.0" prefWidth="326.0" text="Physics Quiz - Feb 20" textFill="#023047">
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="deadline3" prefHeight="30.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="deadline4" prefHeight="30.0" prefWidth="326.0" text="deadline 4" textFill="#023047">
+                                       <padding>
+                                          <Insets left="9.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="deadline5" prefHeight="30.0" prefWidth="326.0" text="deadline 5" textFill="#023047">
+                                       <padding>
+                                          <Insets left="9.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                  </children>
                               </VBox>
@@ -214,12 +254,12 @@
                                        <children>
                                           <Label text="Recent Notes" textFill="#ffb703">
                                              <font>
-                                                <Font size="16.0" />
+                                                <Font name="Montserrat Bold" size="16.0" />
                                              </font>
                                           </Label>
                                           <Button fx:id="addNotesBtn" layoutX="134.0" layoutY="-2.0" mnemonicParsing="false" onAction="#addNote" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #023047;" text="Add" textFill="#ffb703">
                                              <font>
-                                                <Font size="15.0" />
+                                                <Font name="Montserrat Bold" size="15.0" />
                                              </font>
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
@@ -241,6 +281,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="note2" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
                                        <padding>
@@ -249,6 +292,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="note3" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
                                        <padding>
@@ -257,6 +303,31 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="note4" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="sample note 1" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="note5" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="sample note 2" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                  </children>
                               </VBox>
@@ -272,7 +343,7 @@
                            <children>
                               <Label text="Playlist Preview" textFill="#ffb703">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font name="Montserrat Bold" size="16.0" />
                                  </font>
                               </Label>
                               <VBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #a6e2ff;">
@@ -287,6 +358,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="playlist2" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
                                        <padding>
@@ -295,6 +369,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="playlist3" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="200.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
                                        <padding>
@@ -303,6 +380,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="playlist4" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
                                        <padding>
@@ -311,6 +391,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                     <Label fx:id="playlist5" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
                                        <padding>
@@ -319,6 +402,9 @@
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font>
                                     </Label>
                                  </children>
                               </VBox>
@@ -340,18 +426,24 @@
                      <children>
                         <Label text="Recently Accessed Modules" textFill="#ffb703">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="Montserrat Bold" size="16.0" />
                            </font>
                         </Label>
                         <HBox prefHeight="50.0" prefWidth="460.0">
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" layoutX="12.0" layoutY="49.0" text="Electrostatics" textAlignment="CENTER" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
-                                    <ImageView fx:id="lg1" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG1" pickOnBounds="true" preserveRatio="true">
+                                    <Label fx:id="lg1" alignment="CENTER" layoutY="49.0" prefWidth="92.0" text="Electrostatics" textAlignment="CENTER" textFill="#a6e2ff" AnchorPane.topAnchor="49.0">
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font></Label>
+                                    <ImageView fx:id="lg1subject" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG1" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@images/Physics%202.png" />
+                                          <Image url="@images/Physics 2.png" />
                                        </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </ImageView>
                                  </children>
                                  <HBox.margin>
@@ -360,11 +452,17 @@
                               </AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Label layoutX="6.0" layoutY="49.0" text="Ang Katipunan" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
-                                    <ImageView fx:id="lg2" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG2" pickOnBounds="true" preserveRatio="true">
+                                    <Label fx:id="lg2" alignment="CENTER" layoutY="49.0" prefWidth="92.0" text="Ang Katipunan" textFill="#a6e2ff" AnchorPane.topAnchor="49.0">
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font></Label>
+                                    <ImageView fx:id="lg2subject" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG2" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@images/Filipino%204.png" />
+                                          <Image url="@images/Filipino 4.png" />
                                        </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </ImageView>
                                  </children>
                                  <HBox.margin>
@@ -373,11 +471,17 @@
                               </AnchorPane>
                               <AnchorPane layoutX="102.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Label layoutY="49.0" text="Volumes &amp; Areas" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
-                                    <ImageView fx:id="lg3" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG3" pickOnBounds="true" preserveRatio="true">
+                                    <Label fx:id="lg3" alignment="CENTER" layoutY="49.0" prefWidth="92.0" text="Volumes &amp; Areas" textFill="#a6e2ff" AnchorPane.topAnchor="49.0">
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font></Label>
+                                    <ImageView fx:id="lg3subject" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG3" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@images/Math%204.png" />
+                                          <Image url="@images/Math 4.png" />
                                        </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </ImageView>
                                  </children>
                                  <HBox.margin>
@@ -386,11 +490,17 @@
                               </AnchorPane>
                               <AnchorPane layoutX="194.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Label layoutX="13.0" layoutY="49.0" text="Bill of Rights" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
-                                    <ImageView fx:id="lg4" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG4" pickOnBounds="true" preserveRatio="true">
+                                    <Label fx:id="lg4" alignment="CENTER" layoutY="49.0" prefWidth="92.0" text="Bill of Rights" textFill="#a6e2ff" AnchorPane.topAnchor="49.0">
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font></Label>
+                                    <ImageView fx:id="lg4subject" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG4" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@images/Social%20Science%204.png" />
+                                          <Image url="@images/Social Science 4.png" />
                                        </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </ImageView>
                                  </children>
                                  <HBox.margin>
@@ -399,11 +509,17 @@
                               </AnchorPane>
                               <AnchorPane layoutX="286.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Label layoutX="8.0" layoutY="49.0" text="College Essays" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
-                                    <ImageView fx:id="lg5" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG5" pickOnBounds="true" preserveRatio="true">
+                                    <Label fx:id="lg5" alignment="CENTER" layoutY="49.0" prefWidth="92.0" text="College Essays" textFill="#a6e2ff" AnchorPane.topAnchor="49.0">
+                                       <font>
+                                          <Font name="Poppins Regular" size="12.0" />
+                                       </font></Label>
+                                    <ImageView fx:id="lg5subject" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG5" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@images/English%204.png" />
+                                          <Image url="@images/English 4.png" />
                                        </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </ImageView>
                                  </children>
                                  <HBox.margin>
@@ -427,50 +543,65 @@
                      <children>
                         <Label text="Recently Accessed Subjects" textFill="#ffb703">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="Montserrat Bold" size="16.0" />
                            </font>
                         </Label>
                         <HBox prefHeight="50.0" prefWidth="460.0">
                            <children>
                               <ImageView fx:id="subject1" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/Physics%202.png" />
+                                    <Image url="@images/Physics 2.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
                               <ImageView fx:id="subject2" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/Filipino%204.png" />
+                                    <Image url="@images/Filipino 4.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
                               <ImageView fx:id="subject3" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/Math%204.png" />
+                                    <Image url="@images/Math 4.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
                               <ImageView fx:id="subject4" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/Social%20Science%204.png" />
+                                    <Image url="@images/Social Science 4.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
                               <ImageView fx:id="subject5" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/English%204.png" />
+                                    <Image url="@images/English 4.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
                            </children>
                            <FlowPane.margin>

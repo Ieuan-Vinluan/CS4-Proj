@@ -10,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -40,6 +42,21 @@ public class HomeScreenController {
     private Label lg5;
 
     @FXML
+    private ImageView lg1subject;
+
+    @FXML
+    private ImageView lg2subject;
+
+    @FXML
+    private ImageView lg3subject;
+
+    @FXML
+    private ImageView lg4subject;
+
+    @FXML
+    private ImageView lg5subject;
+
+    @FXML
     private Label playlist1;
 
     @FXML
@@ -55,19 +72,19 @@ public class HomeScreenController {
     private Label playlist5;
 
     @FXML
-    private Label subject1;
+    private ImageView subject1;
 
     @FXML
-    private Label subject2;
+    private ImageView subject2;
 
     @FXML
-    private Label subject3;
+    private ImageView subject3;
 
     @FXML
-    private Label subject4;
+    private ImageView subject4;
 
     @FXML
-    private Label subject5;
+    private ImageView subject5;
 
     @FXML
     private Button home;
@@ -106,9 +123,6 @@ public class HomeScreenController {
     private Label deadline5;
 
     @FXML
-    private Label deadline6;
-
-    @FXML
     private Label note1;
 
     @FXML
@@ -122,9 +136,6 @@ public class HomeScreenController {
 
     @FXML
     private Label note5;
-
-    @FXML
-    private Label note6;
 
     @FXML
     private Label username;
@@ -148,7 +159,9 @@ public class HomeScreenController {
     private ArrayList<Label> noteLabels = new ArrayList<>();
     private ArrayList<Label> quizLabels = new ArrayList<>();
 
-    private ArrayList<Label> subjectLabels = new ArrayList<>();
+    private ArrayList<ImageView> subjectLabels = new ArrayList<>();
+
+    private ArrayList<ImageView> lgImages = new ArrayList<>();
 
     private ArrayList<Label> deadlineLabels = new ArrayList<>();
 
@@ -157,7 +170,6 @@ public class HomeScreenController {
     @FXML
     void goToSubject(ActionEvent event) throws IOException {
         SubjectController sc = switchScene((Node) event.getSource(), "/application/subject.fxml").getController();
-        System.out.println("Successfully opened Subjects"); // debug purposes
     }
 
     @FXML
@@ -243,7 +255,7 @@ public class HomeScreenController {
 
     @FXML
     void openSubject(MouseEvent event) throws IOException {
-        Label label = (Label) event.getSource();
+        ImageView label = (ImageView) event.getSource();
         String id = label.getId();
         if (id.contains("1")) {
             openSelectedSubject(label, 0);
@@ -282,18 +294,26 @@ public class HomeScreenController {
     @FXML
     void initialize() {
         LoginController.setProfileText(username);
+
+        if (Note.getNotes().size() == 5) addNotesBtn.setDisable(true);
+
         lgs.add(lg1);
         lgs.add(lg2);
         lgs.add(lg3);
         lgs.add(lg4);
         lgs.add(lg5);
 
+        lgImages.add(lg1subject);
+        lgImages.add(lg2subject);
+        lgImages.add(lg3subject);
+        lgImages.add(lg4subject);
+        lgImages.add(lg5subject);
+
         noteLabels.add(note1);
         noteLabels.add(note2);
         noteLabels.add(note3);
         noteLabels.add(note4);
         noteLabels.add(note5);
-        noteLabels.add(note6);
 
         quizLabels.add(quiz1);
         quizLabels.add(quiz2);
@@ -312,7 +332,6 @@ public class HomeScreenController {
         deadlineLabels.add(deadline3);
         deadlineLabels.add(deadline4);
         deadlineLabels.add(deadline5);
-        deadlineLabels.add(deadline6);
 
         playlistLabels.add(playlist1);
         playlistLabels.add(playlist2);
@@ -325,21 +344,24 @@ public class HomeScreenController {
             for (int i = 0; i < 5; i += 1) {
                 if (i >= lgSize) {
                     lgs.get(i).setVisible(false);
+                    lgImages.get(i).setVisible(false);
                 } else {
                     lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
+                    lgImages.get(i).setImage(new Image(getClass().getResource("/application/images/" + LearningGuide.getLearningGuides().get(i).getSubject().getImageFilename()).toString(), 92, 102, true, false));
                     lgs.get(i).setCursor(Cursor.HAND);
                 }
             }
         } else {
             for (int i = 0; i < 5; i += 1) {
                 lgs.get(i).setText(LearningGuide.getLearningGuides().get(i).getTitle());
+                lgImages.get(i).setImage(new Image(getClass().getResource("/application/images/" + LearningGuide.getLearningGuides().get(i).getSubject().getImageFilename()).toString(), 92, 102, true, false));
                 lgs.get(i).setCursor(Cursor.HAND);
             }
         }
 
-        if (Note.getNotes().size() < 6) {
+        if (Note.getNotes().size() < 5) {
             int noteSize = Note.getNotes().size();
-            for (int i = 0; i < 6; i += 1) {
+            for (int i = 0; i < 5; i += 1) {
                 if (i >= noteSize) {
                     // hide
                     noteLabels.get(i).setVisible(false);
@@ -348,7 +370,7 @@ public class HomeScreenController {
                 }
             }
         } else {
-            for (int i = 0; i < 6; i += 1) {
+            for (int i = 0; i < 5; i += 1) {
                 noteLabels.get(i).setText(Note.getNotes().get(i).getTitle());
             }
         }
@@ -374,21 +396,21 @@ public class HomeScreenController {
                 if (i >= subjectSize) {
                     subjectLabels.get(i).setVisible(false);
                 } else {
-                    subjectLabels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
+                    subjectLabels.get(i).setImage(new Image(getClass().getResource("/application/images/" + Subject.getSubjects().get(i).getImageFilename()).toString(), 102, 92, false, false));
                 }
             }
         } else {
             for (int i = 0; i < 5; i += 1) {
-                subjectLabels.get(i).setText(Subject.getSubjects().get(i).getSubjectName());
+                subjectLabels.get(i).setImage(new Image(getClass().getResource("/application/images/" + Subject.getSubjects().get(i).getImageFilename()).toString()));
             }
         }
 
         // to show most urgent deadlines
         DeadlineList.sortDeadlineList(Deadline.getDeadlines(), 0, Deadline.getDeadlines().size() - 1, Deadline.getDeadlines().get(Deadline.getDeadlines().size() - 1));
 
-        if (Deadline.getDeadlines().size() < 7) {
+        if (Deadline.getDeadlines().size() < 5) {
             int deadlinesSize = Deadline.getDeadlines().size();
-            for (int i = 0; i < 6; i += 1) {
+            for (int i = 0; i < 5; i += 1) {
                 if (i >= deadlinesSize) {
                     deadlineLabels.get(i).setVisible(false);
                 } else {
@@ -517,7 +539,7 @@ public class HomeScreenController {
 
     @FXML
     void addNote(ActionEvent actionEvent) throws IOException {
-       NoteCreateScreenController ncsc = switchScene((Node) actionEvent.getSource(), "/application/notecreate.fxml").getController();
+        NoteCreateScreenController ncsc = switchScene((Node) actionEvent.getSource(), "/application/notecreate.fxml").getController();
     }
 
 }
