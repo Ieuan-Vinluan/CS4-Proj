@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -94,462 +93,401 @@
             </HBox>
          </items>
       </SplitPane>
-      <TilePane prefHeight="630.0" prefWidth="1080.0" style="-fx-background-color: #023047;" tileAlignment="CENTER_RIGHT">
+      <VBox prefHeight="630.0" prefWidth="1080.0" style="-fx-background-color: #023047;">
          <children>
-            <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
+            <HBox prefHeight="440.0" prefWidth="1200.0">
                <children>
-                  <Label text="Latest Quizzes" textFill="#ffb703">
-                     <font>
-                        <Font name="Montserrat Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
+                  <VBox prefHeight="630.0" prefWidth="770.0">
                      <children>
-                        <Label fx:id="quiz1" onMouseClicked="#goToQuiz" prefHeight="40.0" prefWidth="326.0" text="Math 4 - Trigonometry" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="quiz2" onMouseClicked="#goToQuiz" prefHeight="40.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="quiz3" onMouseClicked="#goToQuiz" prefHeight="40.0" prefWidth="326.0" text="Chemistry 2 - Acids &amp; Bases" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="quiz4" onMouseClicked="#goToQuiz" prefHeight="40.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="quiz5" onMouseClicked="#goToQuiz" prefHeight="40.0" prefWidth="326.0" text="English 4 - Sonnets &amp; Poems" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
-               <children>
-                  <Label text="Recently Accessed Modules" textFill="#ffb703">
-                     <font>
-                        <Font name="Montserrat Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
-                     <children>
-                        <Label fx:id="lg1" onMouseClicked="#openLG1" prefHeight="40.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="lg2" onMouseClicked="#openLG2" prefHeight="40.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="lg3" onMouseClicked="#openLG3" prefHeight="40.0" prefWidth="326.0" text="Math 4- Volumes &amp; Surface Areas" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="lg4" onMouseClicked="#openLG4" prefHeight="40.0" prefWidth="326.0" text="Social Science 4 - Bill of Rights" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="lg5" onMouseClicked="#openLG5" prefHeight="40.0" prefWidth="326.0" text="English 4 - College Application Essays" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </FlowPane>
-            <FlowPane layoutX="356.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
-               <children>
-                  <AnchorPane>
-                     <children>
-                        <AnchorPane prefHeight="23.0" prefWidth="326.0">
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="700.0">
                            <children>
-                              <Label text="Recent Notes" textFill="#ffb703">
+                              <Label text="Latest Quizzes" textFill="#ffb703">
                                  <font>
-                                    <Font name="Montserrat Bold" size="18.0" />
+                                    <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="addNotesBtn" layoutX="251.0" layoutY="-6.0" mnemonicParsing="false" onAction="#addNote" prefHeight="34.0" prefWidth="74.0" style="-fx-background-color: #20465F;" text="Add" textFill="#ffb703">
-                                 <font>
-                                    <Font name="Montserrat Bold" size="17.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
+                              <VBox prefHeight="150.0" prefWidth="660.0" style="-fx-background-color: #a6e2ff;">
+                                 <children>
+                                    <Label fx:id="quiz1" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Math 4 - Trigonometry" textFill="#023047">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="quiz2" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="quiz3" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Chemistry 2 - Acids &amp; Bases" textFill="#023047">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="quiz4" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="quiz5" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="English 4 - Sonnets &amp; Poems" textFill="#023047">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
                            </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
-                     <children>
-                        <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                           </padding>
                            <VBox.margin>
-                              <Insets />
+                              <Insets left="20.0" top="10.0" />
                            </VBox.margin>
+                        </FlowPane>
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="700.0">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <Label text="Upcoming Deadlines" textFill="#ffb703">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <VBox prefHeight="150.0" prefWidth="660.0" style="-fx-background-color: #a6e2ff;">
+                                 <children>
+                                    <Label fx:id="deadline1" prefHeight="30.0" prefWidth="326.0" text="Math LT - Feb 21" textFill="#023047">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="9.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="deadline2" prefHeight="30.0" prefWidth="326.0" text="Physics Quiz - Feb 20" textFill="#023047">
+                                       <padding>
+                                          <Insets left="9.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="deadline3" prefHeight="30.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
+                                       <padding>
+                                          <Insets left="9.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
                            <padding>
-                              <Insets left="6.0" top="8.0" />
+                              <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
                            </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="note2" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="630.0" prefWidth="385.0">
+                     <children>
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="220.0" style="-fx-background-color: #20465F;">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <AnchorPane prefHeight="23.0" prefWidth="250.0">
+                                       <children>
+                                          <Label text="Recent Notes" textFill="#ffb703">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="addNotesBtn" layoutX="134.0" layoutY="-2.0" mnemonicParsing="false" onAction="#addNote" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #023047;" text="Add" textFill="#ffb703">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <VBox prefHeight="125.0" prefWidth="200.0" style="-fx-background-color: #a6e2ff;">
+                                 <children>
+                                    <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="note2" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="note3" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
                            <padding>
-                              <Insets left="6.0" top="8.0" />
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="note3" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="220.0" style="-fx-background-color: #20465F;">
+                           <children>
+                              <Label text="Playlist Preview" textFill="#ffb703">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #a6e2ff;">
+                                 <children>
+                                    <Label fx:id="playlist1" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="6.0" top="8.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="playlist2" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" top="8.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="playlist3" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="200.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" top="8.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="playlist4" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" top="8.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="playlist5" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
+                                       <padding>
+                                          <Insets left="6.0" top="8.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
                            <padding>
-                              <Insets left="6.0" top="8.0" />
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="note4" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="note5" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="note6" onMouseClicked="#openNote" prefHeight="40.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </FlowPane>
                      </children>
                   </VBox>
                </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <AnchorPane>
+                  <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="490.0">
                      <children>
-                        <Label text="Upcoming Deadlines" textFill="#ffb703">
+                        <Label text="Recently Accessed Modules" textFill="#ffb703">
                            <font>
-                              <Font name="Montserrat Bold" size="18.0" />
+                              <Font size="16.0" />
                            </font>
                         </Label>
+                        <HBox prefHeight="50.0" prefWidth="460.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="12.0" layoutY="49.0" text="Electrostatics" textAlignment="CENTER" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
+                                    <ImageView fx:id="lg1" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG1" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Physics%202.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="6.0" layoutY="49.0" text="Ang Katipunan" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
+                                    <ImageView fx:id="lg2" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG2" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Filipino%204.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <AnchorPane layoutX="102.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutY="49.0" text="Volumes &amp; Areas" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
+                                    <ImageView fx:id="lg3" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG3" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Math%204.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <AnchorPane layoutX="194.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="49.0" text="Bill of Rights" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
+                                    <ImageView fx:id="lg4" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG4" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Social%20Science%204.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <AnchorPane layoutX="286.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="8.0" layoutY="49.0" text="College Essays" textFill="#a6e2ff" AnchorPane.topAnchor="49.0" />
+                                    <ImageView fx:id="lg5" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openLG5" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/English%204.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                           <FlowPane.margin>
+                              <Insets top="5.0" />
+                           </FlowPane.margin>
+                        </HBox>
                      </children>
-                  </AnchorPane>
-                  <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </FlowPane>
+                  <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="600.0">
                      <children>
-                        <Label fx:id="deadline1" prefHeight="40.0" prefWidth="326.0" text="Math LT - Feb 21" textFill="#023047">
+                        <Label text="Recently Accessed Subjects" textFill="#ffb703">
                            <font>
-                              <Font name="Poppins Regular" size="18.0" />
+                              <Font size="16.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <padding>
-                              <Insets left="9.0" top="12.0" />
-                           </padding>
                         </Label>
-                        <Label fx:id="deadline2" prefHeight="40.0" prefWidth="326.0" text="Physics Quiz - Feb 20" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="9.0" top="12.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="deadline3" prefHeight="40.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="9.0" top="12.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="deadline4" prefHeight="40.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="9.0" top="12.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="deadline5" prefHeight="40.0" prefWidth="326.0" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="9.0" top="12.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="deadline6" prefHeight="40.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="9.0" top="12.0" />
-                           </padding>
-                        </Label>
+                        <HBox prefHeight="50.0" prefWidth="460.0">
+                           <children>
+                              <ImageView fx:id="subject1" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Physics%202.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="subject2" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Filipino%204.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="subject3" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Math%204.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="subject4" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Social%20Science%204.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="subject5" fitHeight="102.0" fitWidth="92.0" onMouseClicked="#openSubject" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/English%204.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <FlowPane.margin>
+                              <Insets top="5.0" />
+                           </FlowPane.margin>
+                        </HBox>
                      </children>
-                  </VBox>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </FlowPane>
                </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </FlowPane>
-            <FlowPane layoutX="356.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
-               <children>
-                  <Label text="Recently Accessed Subjects" textFill="#ffb703">
-                     <font>
-                        <Font name="Montserrat Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
-                     <children>
-                        <Label fx:id="subject1" onMouseClicked="#openSubject" prefHeight="40.0" prefWidth="326.0" text="Physics 2" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="subject2" onMouseClicked="#openSubject" prefHeight="40.0" prefWidth="326.0" text="Filipino 4" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="subject3" onMouseClicked="#openSubject" prefHeight="40.0" prefWidth="326.0" text="Math 4" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="subject4" onMouseClicked="#openSubject" prefHeight="40.0" prefWidth="326.0" text="Social Science 4" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="subject5" onMouseClicked="#openSubject" prefHeight="40.0" prefWidth="326.0" text="English 4" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </FlowPane>
-            <FlowPane layoutX="701.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="345.0">
-               <children>
-                  <Label text="Playlist Preview" textFill="#ffb703">
-                     <font>
-                        <Font name="Montserrat Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <VBox prefHeight="250.0" prefWidth="326.0" style="-fx-background-color: #a6e2ff;">
-                     <children>
-                        <Label fx:id="playlist1" onMouseClicked="#openClickedPlaylist" prefHeight="40.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="playlist2" onMouseClicked="#openClickedPlaylist" prefHeight="40.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="playlist3" onMouseClicked="#openClickedPlaylist" prefHeight="40.0" prefWidth="326.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="playlist4" onMouseClicked="#openClickedPlaylist" prefHeight="40.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label fx:id="playlist5" onMouseClicked="#openClickedPlaylist" prefHeight="40.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
-                           <font>
-                              <Font name="Poppins Regular" size="18.0" />
-                           </font>
-                           <padding>
-                              <Insets left="6.0" top="8.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </FlowPane>
+            </HBox>
          </children>
-      </TilePane>
+      </VBox>
    </children>
 </VBox>
