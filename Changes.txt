@@ -1,0 +1,4 @@
+==================== CHANGES IN MILESTONE 1 ==================== 
+
+- Added functionality for adding notes (maximum of 5 notes)
+- Updated layout of the home screen
