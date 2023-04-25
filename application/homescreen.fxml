@@ -99,16 +99,16 @@
                <children>
                   <VBox prefHeight="630.0" prefWidth="770.0">
                      <children>
-                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="700.0">
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="775.0">
                            <children>
                               <Label text="Latest Quizzes" textFill="#ffb703">
                                  <font>
-                                    <Font name="Montserrat Bold" size="16.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
-                              <VBox prefHeight="150.0" prefWidth="660.0" style="-fx-background-color: #a6e2ff;">
+                              <VBox prefHeight="200.0" prefWidth="750.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
-                                    <Label fx:id="quiz1" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Math 4 - Trigonometry" textFill="#023047">
+                                    <Label fx:id="quiz1" onMouseClicked="#goToQuiz" prefHeight="50.0" prefWidth="326.0" text="Math 4 - Trigonometry" textFill="#023047">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
@@ -119,10 +119,10 @@
                                           <Insets left="6.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="quiz2" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
+                                    <Label fx:id="quiz2" onMouseClicked="#goToQuiz" prefHeight="50.0" prefWidth="326.0" text="Physics 2 - Electrostatics" textFill="#023047">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -130,10 +130,10 @@
                                           <Insets left="6.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="quiz3" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Chemistry 2 - Acids &amp; Bases" textFill="#023047">
+                                    <Label fx:id="quiz3" onMouseClicked="#goToQuiz" prefHeight="50.0" prefWidth="326.0" text="Chemistry 2 - Acids &amp; Bases" textFill="#023047">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -141,10 +141,10 @@
                                           <Insets left="6.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="quiz4" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
+                                    <Label fx:id="quiz4" onMouseClicked="#goToQuiz" prefHeight="50.0" prefWidth="326.0" text="Filipino 4 - Ang Katipunan" textFill="#023047">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -152,10 +152,10 @@
                                           <Insets left="6.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="quiz5" onMouseClicked="#goToQuiz" prefHeight="30.0" prefWidth="326.0" text="English 4 - Sonnets &amp; Poems" textFill="#023047">
+                                    <Label fx:id="quiz5" onMouseClicked="#goToQuiz" prefHeight="50.0" prefWidth="326.0" text="English 4 - Sonnets &amp; Poems" textFill="#023047">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -163,7 +163,7 @@
                                           <Insets left="6.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -176,20 +176,20 @@
                               <Insets left="20.0" top="10.0" />
                            </VBox.margin>
                         </FlowPane>
-                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="700.0">
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="775.0">
                            <children>
                               <AnchorPane>
                                  <children>
                                     <Label text="Upcoming Deadlines" textFill="#ffb703">
                                        <font>
-                                          <Font name="Montserrat Bold" size="16.0" />
+                                          <Font size="18.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </AnchorPane>
-                              <VBox prefHeight="150.0" prefWidth="660.0" style="-fx-background-color: #a6e2ff;">
+                              <VBox prefHeight="200.0" prefWidth="750.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
-                                    <Label fx:id="deadline1" prefHeight="30.0" prefWidth="326.0" text="Math LT - Feb 21" textFill="#023047">
+                                    <Label fx:id="deadline1" prefHeight="50.0" prefWidth="326.0" text="Math LT - Feb 21" textFill="#023047">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
@@ -197,39 +197,39 @@
                                           <Insets left="9.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="deadline2" prefHeight="30.0" prefWidth="326.0" text="Physics Quiz - Feb 20" textFill="#023047">
+                                    <Label fx:id="deadline2" prefHeight="50.0" prefWidth="326.0" text="Physics Quiz - Feb 20" textFill="#023047">
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="deadline3" prefHeight="30.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
+                                    <Label fx:id="deadline3" prefHeight="50.0" prefWidth="326.0" text="Chemistry FA - Feb 24" textFill="#023047">
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="deadline4" prefHeight="30.0" prefWidth="326.0" text="deadline 4" textFill="#023047">
+                                    <Label fx:id="deadline4" prefHeight="50.0" prefWidth="326.0" text="deadline 4" textFill="#023047">
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="deadline5" prefHeight="30.0" prefWidth="326.0" text="deadline 5" textFill="#023047">
+                                    <Label fx:id="deadline5" prefHeight="50.0" prefWidth="326.0" text="deadline 5" textFill="#023047">
                                        <padding>
                                           <Insets left="9.0" />
                                        </padding>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -246,7 +246,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="630.0" prefWidth="385.0">
                      <children>
-                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="220.0" style="-fx-background-color: #20465F;">
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #20465F;">
                            <children>
                               <AnchorPane>
                                  <children>
@@ -269,7 +269,7 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <VBox prefHeight="125.0" prefWidth="200.0" style="-fx-background-color: #a6e2ff;">
+                              <VBox prefHeight="150.0" prefWidth="225.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
                                     <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
                                        <VBox.margin>
@@ -336,17 +336,17 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                            <VBox.margin>
-                              <Insets top="10.0" />
+                              <Insets />
                            </VBox.margin>
                         </FlowPane>
-                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="220.0" style="-fx-background-color: #20465F;">
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #20465F;">
                            <children>
                               <Label text="Playlist Preview" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <VBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #a6e2ff;">
+                              <VBox prefHeight="150.0" prefWidth="225.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
                                     <Label fx:id="playlist1" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
                                        <VBox.margin>
@@ -413,7 +413,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                            <VBox.margin>
-                              <Insets top="10.0" />
+                              <Insets top="40.0" />
                            </VBox.margin>
                         </FlowPane>
                      </children>
