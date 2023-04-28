@@ -98,36 +98,47 @@
          <children>
             <AnchorPane prefHeight="630.0" prefWidth="1080.0">
                <children>
-                  <Label alignment="CENTER" layoutY="24.0" prefHeight="98.0" prefWidth="1080.0" text="Create New Note" textFill="WHITE">
+                  <Label alignment="CENTER" layoutY="24.0" prefHeight="98.0" prefWidth="1080.0" text="Create New Deadline" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Regular" size="55.0" />
                      </font>
                   </Label>
                   <HBox layoutX="140.0" layoutY="156.0" prefHeight="0.0" prefWidth="800.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="7.0" prefWidth="266.0" text="Title" textFill="WHITE">
+                        <Label alignment="CENTER" minWidth="-Infinity" prefHeight="45.0" prefWidth="250.0" text="Requirement" textFill="WHITE">
                            <font>
                               <Font name="Poppins Regular" size="29.0" />
                            </font>
-                           <HBox.margin>
-                              <Insets top="15.0" />
-                           </HBox.margin>
                         </Label>
-                        <TextArea fx:id="titleText" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
+                        <TextArea fx:id="titleText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="625.0">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
                         </TextArea>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="140.0" layoutY="240.0" prefHeight="200.0" prefWidth="800.0">
+                  <HBox alignment="CENTER" layoutX="62.0" layoutY="239.0" prefHeight="100.0" prefWidth="1000.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="7.0" prefWidth="266.0" text="Content" textFill="WHITE">
+                        <Label alignment="CENTER" prefHeight="7.0" prefWidth="282.0" text="Date (YYYY-MM-DD)" textFill="WHITE">
                            <font>
                               <Font name="Poppins Regular" size="29.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="contentText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="625.0">
+                        <TextArea fx:id="titleText1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
+                           <font>
+                              <Font name="Poppins Regular" size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="70.0" layoutY="349.0" prefHeight="100.0" prefWidth="1000.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="7.0" prefWidth="266.0" text="Time (HH:MM)" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Regular" size="29.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="titleText11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>

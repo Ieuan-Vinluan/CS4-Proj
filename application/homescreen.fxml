@@ -57,7 +57,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="modules" mnemonicParsing="false" onAction="#goToModules" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
+                  <Button fx:id="modules" mnemonicParsing="false" onAction="#goToModules" style="-fx-background-color: transparent;" text="All Modules" textFill="#ffb703">
                      <font>
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
@@ -65,7 +65,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject" style="-fx-background-color: transparent;" text="Subjects" textFill="#ffb703">
+                  <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject" style="-fx-background-color: transparent;" text="All Subjects" textFill="#ffb703">
                      <font>
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
@@ -73,7 +73,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="quizzes" mnemonicParsing="false" onAction="#goToQuizzes" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
+                  <Button fx:id="quizzes" mnemonicParsing="false" onAction="#goToQuizzes" style="-fx-background-color: transparent;" text="All Quizzes" textFill="#ffb703">
                      <font>
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
@@ -180,6 +180,14 @@
                            <children>
                               <AnchorPane>
                                  <children>
+                                    <Button fx:id="addDeadlinesBtn" layoutX="685.0" mnemonicParsing="false" onAction="#addDeadline" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #20465F;" text="Add" textFill="#ffb703">
+                                       <font>
+                                          <Font name="Montserrat Bold" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
                                     <Label text="Upcoming Deadlines" textFill="#ffb703">
                                        <font>
                                           <Font size="18.0" />
@@ -257,7 +265,7 @@
                                                 <Font name="Montserrat Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Button fx:id="addNotesBtn" layoutX="134.0" layoutY="-2.0" mnemonicParsing="false" onAction="#addNote" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #023047;" text="Add" textFill="#ffb703">
+                                          <Button fx:id="addNotesBtn1" layoutX="160.0" layoutY="7.0" mnemonicParsing="false" onAction="#addNote" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #023047;" text="Add" textFill="#ffb703">
                                              <font>
                                                 <Font name="Montserrat Bold" size="15.0" />
                                              </font>
@@ -271,7 +279,7 @@
                               </AnchorPane>
                               <VBox prefHeight="150.0" prefWidth="225.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
-                                    <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
+                                    <Label fx:id="note1" onMouseClicked="#openNote" prefHeight="30.0" prefWidth="326.0" text="tanx = sinx/cox" textFill="#023047">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
@@ -282,10 +290,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="note2" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
+                                    <Label fx:id="note2" onMouseClicked="#openNote" prefHeight="30.0" prefWidth="326.0" text="E = kq/r^2" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
@@ -293,10 +301,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="note3" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
+                                    <Label fx:id="note3" onMouseClicked="#openNote" prefHeight="30.0" prefWidth="326.0" text="Acids give H+, bases accept H+" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
@@ -304,10 +312,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="note4" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="sample note 1" textFill="#023047">
+                                    <Label fx:id="note4" onMouseClicked="#openNote" prefHeight="30.0" prefWidth="326.0" text="sample note 1" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
@@ -315,10 +323,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="note5" onMouseClicked="#openNote" prefHeight="25.0" prefWidth="326.0" text="sample note 2" textFill="#023047">
+                                    <Label fx:id="note5" onMouseClicked="#openNote" prefHeight="30.0" prefWidth="326.0" text="sample note 2" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" />
                                        </padding>
@@ -326,7 +334,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -348,7 +356,7 @@
                               </Label>
                               <VBox prefHeight="150.0" prefWidth="225.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
-                                    <Label fx:id="playlist1" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
+                                    <Label fx:id="playlist1" onMouseClicked="#openClickedPlaylist" prefHeight="30.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
@@ -359,10 +367,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="playlist2" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
+                                    <Label fx:id="playlist2" onMouseClicked="#openClickedPlaylist" prefHeight="30.0" prefWidth="326.0" text="Dynamite - BTS" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" top="8.0" />
                                        </padding>
@@ -370,10 +378,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="playlist3" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="200.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
+                                    <Label fx:id="playlist3" onMouseClicked="#openClickedPlaylist" prefHeight="30.0" prefWidth="200.0" text="Mystery Girl - Roy Orbison" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" top="8.0" />
                                        </padding>
@@ -381,10 +389,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="playlist4" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
+                                    <Label fx:id="playlist4" onMouseClicked="#openClickedPlaylist" prefHeight="30.0" prefWidth="326.0" text="Buwan - Juan Karlos" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" top="8.0" />
                                        </padding>
@@ -392,10 +400,10 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="playlist5" onMouseClicked="#openClickedPlaylist" prefHeight="20.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
+                                    <Label fx:id="playlist5" onMouseClicked="#openClickedPlaylist" prefHeight="30.0" prefWidth="326.0" text="All Star - Smash Mouth" textFill="#023047">
                                        <padding>
                                           <Insets left="6.0" top="8.0" />
                                        </padding>
@@ -403,7 +411,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <font>
-                                          <Font name="Poppins Regular" size="12.0" />
+                                          <Font size="14.0" />
                                        </font>
                                     </Label>
                                  </children>

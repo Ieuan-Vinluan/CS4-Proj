@@ -406,8 +406,9 @@ public class HomeScreenController {
         }
 
         // to show most urgent deadlines
+        /***
         DeadlineList.sortDeadlineList(Deadline.getDeadlines(), 0, Deadline.getDeadlines().size() - 1, Deadline.getDeadlines().get(Deadline.getDeadlines().size() - 1));
-
+        ***/
         if (Deadline.getDeadlines().size() < 5) {
             int deadlinesSize = Deadline.getDeadlines().size();
             for (int i = 0; i < 5; i += 1) {
@@ -540,6 +541,11 @@ public class HomeScreenController {
     @FXML
     void addNote(ActionEvent actionEvent) throws IOException {
         NoteCreateScreenController ncsc = switchScene((Node) actionEvent.getSource(), "/application/notecreate.fxml").getController();
+    }
+
+   @FXML
+    void addDeadline(ActionEvent actionEvent) throws IOException {
+        DeadlineCreateScreenController dcsc = switchScene((Node) actionEvent.getSource(), "/application/deadlinecreate.fxml").getController();
     }
 
 }
