@@ -1,10 +1,5 @@
 package application;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.time.*;
-
 import application.model.Deadline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,28 +12,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
+
 public class DeadlineCreateScreenController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private Button addDeadlineBtn;
-
-    @FXML
-    private Button submitBtn;
-
-    @FXML
-    private TextArea reqText;
-
-    @FXML
     private TextArea dateText;
-
-    @FXML
-    private TextArea timeText;
 
     @FXML
     private Button home;
@@ -53,7 +33,16 @@ public class DeadlineCreateScreenController {
     private Button quizzes;
 
     @FXML
+    private TextArea reqText;
+
+    @FXML
     private Button subject;
+
+    @FXML
+    private Button submitBtn;
+
+    @FXML
+    private TextArea timeText;
 
     @FXML
     private Label username;
@@ -85,19 +74,18 @@ public class DeadlineCreateScreenController {
     }
 
     @FXML
-    void createDateTime() {
-    DateTimeFormatter date = DateTimeFormatter.ofLocalizedDate("yyyy-MM-dd");
-    LocalDate.parse(dateText.getText(), date);
-    DateTimeFormatter time = DateTimeFormatter.ofLocalizedTime("HH:mm");
-    LocalTime.parse(timeText.getText(), time);
+    void submitText(ActionEvent event) throws IOException {
+        String requirement = reqText.getText();
+        String date = dateText.getText();
+        String time = timeText.getText();
+        Deadline createdDeadline = new Deadline(requirement, null, LocalDateTime.parse(date + "T" + time));
+        System.out.println(createdDeadline.getDeadline());
+        goToHome(event);
     }
 
     @FXML
-    void submitText(ActionEvent event) throws IOException {
-        Deadline createdDeadline = new Deadline(reqText.getText(), null, dateTime);
-        Deadline.getDeadlines().remove(createdDeadline);
-        Deadline.getDeadlines().add(0, createdDeadline);
-        switchScene((Node) event.getSource(), "/application/homescreen.fxml");
+    void initialize() {
+        System.out.println("SUCCESS");
     }
 
     private FXMLLoader switchScene(Node node, String path) throws IOException {
@@ -116,4 +104,5 @@ public class DeadlineCreateScreenController {
 
         return loader;
     }
+
 }

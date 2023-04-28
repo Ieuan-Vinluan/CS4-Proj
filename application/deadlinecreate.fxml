@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NoteCreateScreenController">
+<VBox minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DeadlineCreateScreenController">
     <children>
         <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
             <children>
@@ -107,10 +107,10 @@
                      <children>
                         <Label alignment="CENTER" minWidth="-Infinity" prefHeight="45.0" prefWidth="250.0" text="Requirement" textFill="WHITE">
                            <font>
-                              <Font name="Poppins Regular" size="29.0" />
+                              <Font name="Poppins Regular" size="25.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="titleText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="625.0">
+                        <TextArea fx:id="reqText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="625.0">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -121,10 +121,10 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="7.0" prefWidth="282.0" text="Date (YYYY-MM-DD)" textFill="WHITE">
                            <font>
-                              <Font name="Poppins Regular" size="29.0" />
+                              <Font name="Poppins Regular" size="25.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="titleText1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
+                        <TextArea fx:id="dateText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
@@ -135,10 +135,10 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="7.0" prefWidth="266.0" text="Time (HH:MM)" textFill="WHITE">
                            <font>
-                              <Font name="Poppins Regular" size="29.0" />
+                              <Font name="Poppins Regular" size="25.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="titleText11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
+                        <TextArea fx:id="timeText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="625.0">
                            <font>
                               <Font name="Poppins Regular" size="18.0" />
                            </font>
