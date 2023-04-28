@@ -56,6 +56,10 @@ public class DeadlineList {
 
 		while (left < right) {
 			while (left < right && deadlines.get(left).getDeadline().isBefore(pivot.getDeadline())) {
+				if (deadlines.get(left).equals(deadlines.get(right))) {
+					left += 1;
+					break;
+				}
 				left += 1;
 			}
 
