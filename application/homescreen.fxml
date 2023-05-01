@@ -349,11 +349,19 @@
                         </FlowPane>
                         <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #20465F;">
                            <children>
-                              <Label text="Playlist Preview" textFill="#ffb703">
+                              <Label prefWidth="164.0" text="Playlist Preview" textFill="#ffb703">
                                  <font>
                                     <Font name="Montserrat Bold" size="16.0" />
                                  </font>
                               </Label>
+                              <Button fx:id="addPlaylistBtn" mnemonicParsing="false" onAction="#addPlaylist" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #023047;" text="Add" textFill="#ffb703">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
                               <VBox prefHeight="150.0" prefWidth="225.0" style="-fx-background-color: #a6e2ff;">
                                  <children>
                                     <Label fx:id="playlist1" onMouseClicked="#openClickedPlaylist" prefHeight="30.0" prefWidth="326.0" text="Blinding Lights - The Weeknd" textFill="#023047">

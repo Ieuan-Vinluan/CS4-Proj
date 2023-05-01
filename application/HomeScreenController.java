@@ -155,6 +155,9 @@ public class HomeScreenController {
     @FXML
     private Button quizzes;
 
+    @FXML
+    private Button addPlaylistBtn;
+
     private ArrayList<Label> lgs = new ArrayList<>();
     private ArrayList<Label> noteLabels = new ArrayList<>();
     private ArrayList<Label> quizLabels = new ArrayList<>();
@@ -546,6 +549,11 @@ public class HomeScreenController {
    @FXML
     void addDeadline(ActionEvent actionEvent) throws IOException {
         DeadlineCreateScreenController dcsc = switchScene((Node) actionEvent.getSource(), "/application/deadlinecreate.fxml").getController();
+    }
+
+    @FXML
+    void addPlaylist(ActionEvent event) throws IOException {
+        PlaylistCreateScreenController pcsc = switchScene((Node) event.getSource(), "/application/playlistcreate.fxml").getController();
     }
 
 }
