@@ -3,3 +3,4 @@
 - Added functionality for adding notes (maximum of 5 notes) // 23 Apr 2023
 - Updated layout of the home screen // 23 Apr 2023
 - Added functionality for adding deadlines // 28 Apr 2023)
+- Added functionality for creating playlists // 02 May 2023
