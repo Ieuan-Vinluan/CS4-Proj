@@ -97,7 +97,10 @@ public class PlaylistCreateScreenController {
     @FXML
     void addSong(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File("application/music"));
+        String url = getClass().getResource("music").toString();
+        url = url.replaceAll("%20", " ");
+        url = url.replaceAll("file:/", "");
+        fileChooser.setInitialDirectory(new File(url));
         File song = fileChooser.showOpenDialog(new Stage());
         String path = song.getAbsolutePath();
         path = song.getAbsolutePath().substring(path.indexOf("music") + 6, path.length());
