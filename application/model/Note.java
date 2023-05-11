@@ -2,6 +2,9 @@ package application.model;
 
 import java.util.ArrayList;
 
+/**
+ * The Note class has
+ */
 public class Note {
 	private String content;
 	private Subject subject;
@@ -48,18 +51,6 @@ public class Note {
 
 	public static void setNotes(ArrayList<Note> notes) {
 		Note.notes = notes;
-	}
-
-	public void write(String text) {
-		this.content = text;
-	}
-	
-	public String getUserInput() {
-		String text = "";
-		
-		// Code that gets user input and stores it in text
-		
-		return text;
 	}
 	
 	public void delete() {
