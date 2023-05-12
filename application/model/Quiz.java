@@ -74,22 +74,4 @@ public class Quiz {
 	public static void setQuizzes(ArrayList<Quiz> quizzes) {
 		Quiz.quizzes = quizzes;
 	}
-
-	public void startQuiz() {
-		for (Question q : questions) {
-			// show window that contains question
-			
-			String userAnswer = "";
-			
-			// take user input and store it in userAnswer
-			
-			q.answer(userAnswer);
-		}
-		
-		// code that shows user score in window
-	}
-	
-	public void quitQuiz() {
-		// code that closes the quiz window
-	}
 }

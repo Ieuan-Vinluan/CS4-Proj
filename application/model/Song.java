@@ -85,10 +85,5 @@ public class Song {
 
 	public void toggleSong() {
 		this.isPlaying = !this.isPlaying;
-		if (this.isPlaying) {
-			// code that plays the song
-		} else {
-			// code that pauses the song
-		}
 	}
 }

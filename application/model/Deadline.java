@@ -133,7 +133,7 @@ public class Deadline {
 	}
 
 	/**
-	 * Sets the ArrayList of all created Deadlines to another ArrayList
+	 * Sets the ArrayList of all created Deadlines to another ArrayList containing Deadlines
 	 * @param deadlines the new ArrayList of Deadlines
 	 */
 	public static void setDeadlines(ArrayList<Deadline> deadlines) {
