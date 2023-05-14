@@ -232,7 +232,12 @@ public class PlaylistController {
             return;
         }
         mp.stop();
-        mp = new MediaPlayer(new Media(getClass().getResource("music/" + currentSong.getFilePath()).toURI().toString()));
+        try {
+            mp = new MediaPlayer(new Media(getClass().getResource("music/" + currentSong.getFilePath()).toURI().toString()));
+        } catch (NullPointerException e) {
+            Media media = new Media(currentSong.getFilePath());
+            mp = new MediaPlayer(media);
+        }
         currentSong.setPlaying(true);
         playingSong.setText(currentSong.getTitle());
         mp.play();
@@ -354,11 +359,22 @@ public class PlaylistController {
         try {
             media = new Media(getClass().getResource("music/" + song.getFilePath()).toURI().toString());
             mp = new MediaPlayer(media);
+            Media finalMedia = media;
             mp.setOnReady(() -> {
                 songTitles.get(index).setText(song.getTitle());
                 artists.get(index).setText(song.getArtist());
                 dateAdded.get(index).setText(song.getAdded());
-                durations.get(index).setText(String.format("%dm %ds", (int) Math.floor(media.getDuration().toSeconds() / 60), Math.round(media.getDuration().toSeconds() % 60)));
+                durations.get(index).setText(String.format("%dm %ds", (int) Math.floor(finalMedia.getDuration().toSeconds() / 60), Math.round(finalMedia.getDuration().toSeconds() % 60)));
+            });
+        } catch (NullPointerException e) {
+            media = new Media(song.getFilePath());
+            mp = new MediaPlayer(media);
+            Media finalMedia1 = media;
+            mp.setOnReady(() -> {
+                songTitles.get(index).setText(song.getTitle());
+                artists.get(index).setText(song.getArtist());
+                dateAdded.get(index).setText(song.getAdded());
+                durations.get(index).setText(String.format("%dm %ds", (int) Math.floor(finalMedia1.getDuration().toSeconds() / 60), Math.round(finalMedia1.getDuration().toSeconds() % 60)));
             });
         } catch (URISyntaxException e) {
             e.printStackTrace();

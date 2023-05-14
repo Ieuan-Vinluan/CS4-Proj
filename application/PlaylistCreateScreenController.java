@@ -97,13 +97,13 @@ public class PlaylistCreateScreenController {
     @FXML
     void addSong(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
-        String url = getClass().getResource("music").toString();
-        url = url.replaceAll("%20", " ");
-        url = url.replaceAll("file:/", "");
-        fileChooser.setInitialDirectory(new File(url));
+//        String url = getClass().getResource("music").toString();
+//        url = url.replaceAll("%20", " ");
+//        url = url.replaceAll("file:/", "");
+//        fileChooser.setInitialDirectory(new File(url));
         File song = fileChooser.showOpenDialog(new Stage());
-        String path = song.getAbsolutePath();
-        path = song.getAbsolutePath().substring(path.indexOf("music") + 6, path.length());
+        String path = song.toURI().toString();
+//        path = song.getAbsolutePath().substring(path.indexOf("music") + 6, path.length());
         LocalDate today = LocalDate.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM yyyy");
         String todayDate = today.format(dtf);
