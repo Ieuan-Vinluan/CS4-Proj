@@ -1,10 +1,5 @@
 package application;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
 import application.model.Question;
 import application.model.Quiz;
 import javafx.event.ActionEvent;
@@ -20,6 +15,11 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class QuizController {
 
@@ -238,6 +238,7 @@ public class QuizController {
             System.out.println("Error!");
         }
     }
+
     public ArrayList<Question> getQuestions() {
         return questions;
     }

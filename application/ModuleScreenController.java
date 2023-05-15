@@ -1,11 +1,9 @@
 package application;
 
 import application.model.LearningGuide;
-import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -84,7 +82,7 @@ public class ModuleScreenController {
     private Button quizzes;
 
     private ArrayList<Label> msLabels = new ArrayList<>();
-    private  ArrayList<ImageView> msImages = new ArrayList<>();
+    private ArrayList<ImageView> msImages = new ArrayList<>();
 
     @FXML
     void goToHome(ActionEvent event) throws IOException {
@@ -148,7 +146,7 @@ public class ModuleScreenController {
                 if (index > 5) return; // no need to switch their places if one does not appear on screen
                 mod1.setText(lg.getTitle());
                 mod1image.setImage(new Image("application/images/" + lg.getSubject().getImageFilename()));
-                switch(index) {
+                switch (index) {
                     case 1:
                         mod2.setText(temp.getTitle());
                         mod2image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));

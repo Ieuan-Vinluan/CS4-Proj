@@ -1,7 +1,6 @@
 package application;
 
 import application.model.Quiz;
-import application.model.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -152,7 +151,7 @@ public class QuizzesController {
                 if (index > 5) return; // no need to switch their places if one does not appear on screen
                 quiz1.setText(q.getQuizID());
                 quiz1image.setImage(new Image("application/images/" + q.getSubject().getImageFilename()));
-                switch(index) {
+                switch (index) {
                     case 1:
                         quiz2.setText(temp.getSubject().getSubjectName());
                         quiz2image.setImage(new Image("application/images/" + temp.getSubject().getImageFilename()));

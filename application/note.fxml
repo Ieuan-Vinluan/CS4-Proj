@@ -1,118 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
-<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NoteController">
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox minHeight="720.0" minWidth="1080.0" style="-fx-background-color: #203047;" xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NoteController">
     <children>
-        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #203047;">
+        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0"
+                    style="-fx-background-color: #203047;">
             <children>
-                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0">
                     <image>
-                        <Image url="@images/original images/computer science.png" />
+                        <Image url="@images/original images/computer science.png"/>
                     </image>
                 </ImageView>
-                <Label layoutX="56.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="435.0" text="TEARS - Your No. 1 Study Help" textAlignment="CENTER" textFill="#ffb703" AnchorPane.leftAnchor="60.0">
+                <Label layoutX="56.0" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0"
+                       prefWidth="435.0" text="TEARS - Your No. 1 Study Help" textAlignment="CENTER" textFill="#ffb703"
+                       AnchorPane.leftAnchor="60.0">
                     <font>
-                        <Font name="Times New Roman Bold" size="31.0" />
+                        <Font name="Times New Roman Bold" size="31.0"/>
                     </font>
                 </Label>
-                <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="1012.0" layoutY="9.0" prefHeight="42.0" prefWidth="64.0" text="Profile" textFill="#ffb307" AnchorPane.rightAnchor="4.0">
+                <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="1012.0" layoutY="9.0"
+                       prefHeight="42.0" prefWidth="64.0" text="Profile" textFill="#ffb307"
+                       AnchorPane.rightAnchor="4.0">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </Label>
-                <ImageView fitHeight="42.0" fitWidth="36.0" layoutX="978.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="66.0">
+                <ImageView fitHeight="42.0" fitWidth="36.0" layoutX="978.0" layoutY="12.0" pickOnBounds="true"
+                           preserveRatio="true" AnchorPane.rightAnchor="66.0">
                     <image>
-                        <Image url="@images/profilepic.png" />
+                        <Image url="@images/profilepic.png"/>
                     </image>
                 </ImageView>
             </children>
         </AnchorPane>
         <SplitPane style="-fx-background-color: #023047;">
             <opaqueInsets>
-                <Insets />
+                <Insets/>
             </opaqueInsets>
             <padding>
-                <Insets bottom="2.0" top="2.0" />
+                <Insets bottom="2.0" top="2.0"/>
             </padding>
             <items>
                 <HBox style="-fx-background-color: #20465F; -fx-padding: 0.5em;">
                     <children>
-                        <Button fx:id="home" mnemonicParsing="false" onAction="#goToHome" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Home" textFill="#ffb703">
+                        <Button fx:id="home" mnemonicParsing="false" onAction="#goToHome" prefHeight="26.0"
+                                prefWidth="90.0" style="-fx-background-color: transparent;" text="Home"
+                                textFill="#ffb703">
                             <font>
-                                <Font name="Montserrat Bold" size="17.0" />
+                                <Font name="Montserrat Bold" size="17.0"/>
                             </font>
                             <cursor>
-                                <Cursor fx:constant="HAND" />
+                                <Cursor fx:constant="HAND"/>
                             </cursor>
                         </Button>
-                        <Button fx:id="modules" mnemonicParsing="false" onAction="#goToModule" style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
+                        <Button fx:id="modules" mnemonicParsing="false" onAction="#goToModule"
+                                style="-fx-background-color: transparent;" text="Modules" textFill="#ffb703">
                             <font>
-                                <Font name="Montserrat Bold" size="17.0" />
+                                <Font name="Montserrat Bold" size="17.0"/>
                             </font>
                             <cursor>
-                                <Cursor fx:constant="HAND" />
+                                <Cursor fx:constant="HAND"/>
                             </cursor>
                         </Button>
-                        <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject" style="-fx-background-color: transparent;" text="Subjects" textFill="#ffb703">
+                        <Button fx:id="subject" mnemonicParsing="false" onAction="#goToSubject"
+                                style="-fx-background-color: transparent;" text="Subjects" textFill="#ffb703">
                             <font>
-                                <Font name="Montserrat Bold" size="17.0" />
+                                <Font name="Montserrat Bold" size="17.0"/>
                             </font>
                             <cursor>
-                                <Cursor fx:constant="HAND" />
+                                <Cursor fx:constant="HAND"/>
                             </cursor>
                         </Button>
-                        <Button fx:id="quizzes" mnemonicParsing="false" onAction="#goToQuizzes" style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
+                        <Button fx:id="quizzes" mnemonicParsing="false" onAction="#goToQuizzes"
+                                style="-fx-background-color: transparent;" text="Quizzes" textFill="#ffb703">
                             <font>
-                                <Font name="Montserrat Bold" size="17.0" />
+                                <Font name="Montserrat Bold" size="17.0"/>
                             </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
                         </Button>
-                        <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylists" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist" textFill="#ffb703">
+                        <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylists" prefHeight="26.0"
+                                prefWidth="90.0" style="-fx-background-color: transparent;" text="Playlist"
+                                textFill="#ffb703">
                             <font>
-                                <Font name="Montserrat Bold" size="17.0" />
+                                <Font name="Montserrat Bold" size="17.0"/>
                             </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
                         </Button>
                     </children>
                 </HBox>
             </items>
         </SplitPane>
-      <VBox prefHeight="611.0" prefWidth="1080.0" style="-fx-alignment: center;">
-         <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="800.0">
-               <children>
-                  <Label fx:id="noteTitle" layoutX="-1.0" layoutY="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="800.0" style="-fx-alignment: center; -fx-background-color: #ffb703;" text="Note Title" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Poppins Bold" size="40" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0">
-               <children>
-                  <Label fx:id="noteContent" layoutX="-8.0" layoutY="-8.0" prefHeight="450.4" prefWidth="800.0" style="-fx-alignment: center; -fx-background-color: #20465F;" text="Note Title" textAlignment="CENTER" textFill="#ffb703" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Montserrat Regular" size="30.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </VBox>
+        <VBox prefHeight="611.0" prefWidth="1080.0" style="-fx-alignment: center;">
+            <children>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                            prefHeight="80.0" prefWidth="800.0">
+                    <children>
+                        <Label fx:id="noteTitle" layoutX="-1.0" layoutY="-8.0" maxHeight="-Infinity"
+                               maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0"
+                               prefWidth="800.0" style="-fx-alignment: center; -fx-background-color: #ffb703;"
+                               text="Note Title" textFill="WHITE" AnchorPane.bottomAnchor="0.0"
+                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Poppins Bold" size="40"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0">
+                    <children>
+                        <Label fx:id="noteContent" layoutX="-8.0" layoutY="-8.0" prefHeight="450.4" prefWidth="800.0"
+                               style="-fx-alignment: center; -fx-background-color: #20465F;" text="Note Title"
+                               textAlignment="CENTER" textFill="#ffb703" wrapText="true" AnchorPane.bottomAnchor="0.0"
+                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Montserrat Regular" size="30.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
     </children>
 </VBox>

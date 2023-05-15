@@ -17,7 +17,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -155,7 +154,7 @@ public class SubjectController {
                 if (index > 5) return; // no need to switch their places if one does not appear on screen
                 sub1.setText(s.getSubjectName());
                 sub1image.setImage(new Image("application/images/" + s.getImageFilename()));
-                switch(index) {
+                switch (index) {
                     case 1:
                         sub2.setText(temp.getSubjectName());
                         sub2image.setImage(new Image("application/images/" + temp.getImageFilename()));
