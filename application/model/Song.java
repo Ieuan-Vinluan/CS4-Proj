@@ -36,10 +36,9 @@ public class Song {
     private static ArrayList<Song> songs = new ArrayList<>();
 
     /**
-     *
-     * @param title the title of the Song
-     * @param artist the name of the artist who made the song
-     * @param added the date on which the Song was added to the music player
+     * @param title    the title of the Song
+     * @param artist   the name of the artist who made the song
+     * @param added    the date on which the Song was added to the music player
      * @param playlist the Playlist that contains the Song
      * @param filePath the file path to the Song's mp3 file
      */
@@ -59,6 +58,7 @@ public class Song {
 
     /**
      * Returns the title of the Song
+     *
      * @return the title of the Song
      */
     public String getTitle() {
@@ -67,6 +67,7 @@ public class Song {
 
     /**
      * Sets the title of the Song
+     *
      * @param title the new title of the Song
      */
     public void setTitle(String title) {
@@ -75,6 +76,7 @@ public class Song {
 
     /**
      * Returns the Playlist that contains the Song
+     *
      * @return the Playlist that contains the Song
      */
     public Playlist getPlaylist() {
@@ -83,6 +85,7 @@ public class Song {
 
     /**
      * Sets the Playlist that contains the Song
+     *
      * @param playlist the new Playlist that will contain the Song
      */
     public void setPlaylist(Playlist playlist) {
@@ -91,6 +94,7 @@ public class Song {
 
     /**
      * Returns the name of the artist who made the Song
+     *
      * @return the name of the artist who made the Song
      */
     public String getArtist() {
@@ -99,6 +103,7 @@ public class Song {
 
     /**
      * Sets the name of the artist who made the song
+     *
      * @param artist the name of the artist who made the song
      */
     public void setArtist(String artist) {
@@ -107,6 +112,7 @@ public class Song {
 
     /**
      * Returns the file path of the Song's mp3 file
+     *
      * @return the file path of the Song's mp3 file
      */
     public String getFilePath() {
@@ -115,6 +121,7 @@ public class Song {
 
     /**
      * Sets the file path that points to the Song's mp3 file
+     *
      * @param filePath the new file path that will point to the Song's mp3 file
      */
     public void setFilePath(String filePath) {
@@ -123,6 +130,7 @@ public class Song {
 
     /**
      * Returns the date on which the Song was added to the music player
+     *
      * @return the date on which the Song was added to the music player
      */
     public String getAdded() {
@@ -131,28 +139,52 @@ public class Song {
 
     /**
      * Sets the date on which the Song was added to the music player
+     *
      * @param added the date on which the Song was added to the music player
      */
     public void setAdded(String added) {
         this.added = added;
     }
 
+    /**
+     * Returns the boolean value that indicates whether the Song is playing or not
+     *
+     * @return the boolean value that indicates whether the Song is playing or not
+     */
     public boolean getPlaying() {
         return isPlaying;
     }
 
+    /**
+     * Sets the boolean value that indicates whether the Song is playing or not
+     *
+     * @param isPlaying the boolean value that indicates whether the Song is playing or not
+     */
     public void setPlaying(boolean isPlaying) {
         this.isPlaying = isPlaying;
     }
 
+    /**
+     * Returns the ArrayList of all created Songs
+     *
+     * @return the ArrayList of all created Songs
+     */
     public static ArrayList<Song> getSongs() {
         return songs;
     }
 
+    /**
+     * Sets the ArrayList of all created Songs to another ArrayList containing Songs
+     *
+     * @param songs an ArrayList containing Songs
+     */
     public static void setSongs(ArrayList<Song> songs) {
         Song.songs = songs;
     }
 
+    /**
+     * Toggles the "playing state" of the Song. If it is playing, then the Song is paused (i.e., the 'isPlaying' field is set to false). If it is not playing, then the Song is played (i.e., the 'isPlaying' field is set to true).
+     */
     public void toggleSong() {
         this.isPlaying = !this.isPlaying;
     }
