@@ -88,7 +88,7 @@
                             </cursor>
                         </Button>
                         <Button fx:id="playlists" mnemonicParsing="false" onAction="#goToPlaylists" prefHeight="26.0"
-                                prefWidth="90.0" style="-fx-background-color: transparent;" text="Songs"
+                                prefWidth="100.0" style="-fx-background-color: transparent;" text="Playlists"
                                 textFill="#ffb703">
                             <font>
                                 <Font name="Montserrat Bold" size="17.0"/>
